@@ -1,0 +1,10 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.qgz binary
+*.zip binary
+*.ipynb text eol=lf
+*.csv text eol=lf
+data/reference/*.csv binary
+qgis/data/*.geojson binary

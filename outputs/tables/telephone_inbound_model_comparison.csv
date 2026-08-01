@@ -1,0 +1,2 @@
+reference,candidate,adjusted_rand_index,normalised_mutual_information,aligned_agreement,reassigned_practices
+national_14,cbt_inbound_17,0.5236133527826328,0.46895509677416825,0.8109271523178808,571

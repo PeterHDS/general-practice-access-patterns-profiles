@@ -1,0 +1,10 @@
+robustness_domain,cohort_n,result,interpretation,limitation
+Algorithmic alignment,6067,1411 practices (23.3%) differed between aligned K-Means and GMM,"Related structure, not identical membership.",Algorithm choice remains material for some practices.
+Assignment uncertainty,6067,1966 practices (32.4%) carry interpretive caution,Uncertainty is retained and mapped.,Profile assignment is not equally certain for all practices.
+Feature sensitivity,5677,Q1 14-vs-12 agreement=91.6%; ARI=0.761,Broadly related structure with non-trivial reassignment.,The 12-feature diagnostic was not promoted.
+Half-year temporal resampling,5924,H1 median reference ARI=0.960; H2=0.968,Half-year structures were highly reproducible.,"H1/H2 common-sample ARI was lower, showing temporal change."
+Half-year temporal comparison,5924,H1/H2 common-sample ARI=0.464,Profile organisation changed across the two half-years.,Annual membership is not a time-invariant state.
+CBT inbound sensitivity,3020,571 practices (18.9%) changed after CBT inbound features,Telephone activity can alter membership in the submitting cohort.,Restricted cohort; not nationally complete.
+CBT outcome-complete sensitivity,1456,17-to-raw21 changes=729; 17-to-ILR20 changes=52,Outcome composition and transformation choice matter.,"Restricted 1,456-practice cohort."
+Contextual sensitivities,5774,All five prespecified sensitivities retained 10/10 conceptual coefficient directions,Direction stability supports bounded consistency.,"Does not prove full robustness; Sensitivity D N=3,908 and changed separation; Sensitivity E excluded three unknown suppliers."
+GPPS inverse-variance,6067,5/5 outcomes diagnostic-only,Unweighted HC3 remains primary.,Weight concentration prevents confirmatory interpretation.

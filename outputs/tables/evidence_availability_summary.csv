@@ -1,0 +1,19 @@
+source_family,profile,profile_label,measure_count,minimum_primary_valid_pct,median_primary_valid_pct,maximum_primary_valid_pct,interpretation
+deprivation,1,"Profile 1: lower recorded activity, higher DNA and shorter-delay shares",3,99.37250427837992,99.37250427837992,100.0,Measure-specific evidence availability; missing evidence is not zero activity.
+deprivation,2,"Profile 2: higher face-to-face share, longer delay, lower OCS activity",3,99.39446366782006,99.39446366782006,100.0,Measure-specific evidence availability; missing evidence is not zero activity.
+deprivation,3,"Profile 3: higher recorded activity, higher same-day share, greater variation",3,99.65034965034964,99.65034965034964,100.0,Measure-specific evidence availability; missing evidence is not zero activity.
+gpps,1,"Profile 1: lower recorded activity, higher DNA and shorter-delay shares",6,99.71477467199088,99.94295493439816,100.0,Measure-specific evidence availability; missing evidence is not zero activity.
+gpps,2,"Profile 2: higher face-to-face share, longer delay, lower OCS activity",6,99.87024221453288,100.0,100.0,Measure-specific evidence availability; missing evidence is not zero activity.
+gpps,3,"Profile 3: higher recorded activity, higher same-day share, greater variation",6,99.75024975024976,100.0,100.0,Measure-specific evidence availability; missing evidence is not zero activity.
+organisational_geography,1,"Profile 1: lower recorded activity, higher DNA and shorter-delay shares",1,100.0,100.0,100.0,Measure-specific evidence availability; missing evidence is not zero activity.
+organisational_geography,2,"Profile 2: higher face-to-face share, longer delay, lower OCS activity",1,100.0,100.0,100.0,Measure-specific evidence availability; missing evidence is not zero activity.
+organisational_geography,3,"Profile 3: higher recorded activity, higher same-day share, greater variation",1,100.0,100.0,100.0,Measure-specific evidence availability; missing evidence is not zero activity.
+population_age,1,"Profile 1: lower recorded activity, higher DNA and shorter-delay shares",4,100.0,100.0,100.0,Measure-specific evidence availability; missing evidence is not zero activity.
+population_age,2,"Profile 2: higher face-to-face share, longer delay, lower OCS activity",4,100.0,100.0,100.0,Measure-specific evidence availability; missing evidence is not zero activity.
+population_age,3,"Profile 3: higher recorded activity, higher same-day share, greater variation",4,100.0,100.0,100.0,Measure-specific evidence availability; missing evidence is not zero activity.
+rurality,1,"Profile 1: lower recorded activity, higher DNA and shorter-delay shares",2,99.37250427837992,99.68625213918996,100.0,Measure-specific evidence availability; missing evidence is not zero activity.
+rurality,2,"Profile 2: higher face-to-face share, longer delay, lower OCS activity",2,99.9567474048443,99.97837370242215,100.0,Measure-specific evidence availability; missing evidence is not zero activity.
+rurality,3,"Profile 3: higher recorded activity, higher same-day share, greater variation",2,99.8001998001998,99.9000999000999,100.0,Measure-specific evidence availability; missing evidence is not zero activity.
+workforce,1,"Profile 1: lower recorded activity, higher DNA and shorter-delay shares",5,80.14831717056475,95.20821448944666,99.88590986879636,Measure-specific evidence availability; missing evidence is not zero activity.
+workforce,2,"Profile 2: higher face-to-face share, longer delay, lower OCS activity",5,89.3598615916955,94.29065743944636,100.0,Measure-specific evidence availability; missing evidence is not zero activity.
+workforce,3,"Profile 3: higher recorded activity, higher same-day share, greater variation",5,89.6103896103896,94.005994005994,100.0,Measure-specific evidence availability; missing evidence is not zero activity.

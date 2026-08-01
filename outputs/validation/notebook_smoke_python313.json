@@ -1,0 +1,161 @@
+{
+  "mode": "check",
+  "environment": {
+    "python": "3.13.14",
+    "dependencies": {
+      "numpy": "2.5.1",
+      "pandas": "3.0.3",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.18.0",
+      "ipykernel": "7.1.0",
+      "jupyterlab": "4.4.10",
+      "matplotlib": "3.11.1",
+      "nbclient": "0.11.0",
+      "nbformat": "5.10.4"
+    }
+  },
+  "tracked_notebooks_unchanged": true,
+  "changed_notebooks": [],
+  "notebooks": [
+    {
+      "notebook": "01_validate_the_access_profile_inputs.ipynb",
+      "status": "passed",
+      "started_utc": "2026-08-01T04:43:47.609000+00:00",
+      "finished_utc": "2026-08-01T04:44:12.373128+00:00",
+      "output_sha256": "D408A677DA5DDA120E4F609838BF6C447D87259C5C428F4E312D3F9000841C2C",
+      "execution_error": "",
+      "python_version": "3.13.14",
+      "dependency_versions": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scikit-learn": "1.9.0",
+        "scipy": "1.18.0",
+        "ipykernel": "7.1.0",
+        "jupyterlab": "4.4.10",
+        "matplotlib": "3.11.1",
+        "nbclient": "0.11.0",
+        "nbformat": "5.10.4"
+      }
+    },
+    {
+      "notebook": "02_select_national_access_pressure_profiles.ipynb",
+      "status": "passed",
+      "started_utc": "2026-08-01T04:44:12.373275+00:00",
+      "finished_utc": "2026-08-01T04:44:25.783451+00:00",
+      "output_sha256": "A2537A4CEA48989B61745E2A3C6AB73ACC8D46C247B281C60E40923DF136A7B6",
+      "execution_error": "",
+      "python_version": "3.13.14",
+      "dependency_versions": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scikit-learn": "1.9.0",
+        "scipy": "1.18.0",
+        "ipykernel": "7.1.0",
+        "jupyterlab": "4.4.10",
+        "matplotlib": "3.11.1",
+        "nbclient": "0.11.0",
+        "nbformat": "5.10.4"
+      }
+    },
+    {
+      "notebook": "03_test_telephone_inbound_evidence.ipynb",
+      "status": "passed",
+      "started_utc": "2026-08-01T04:44:25.783673+00:00",
+      "finished_utc": "2026-08-01T04:44:37.400876+00:00",
+      "output_sha256": "2E658D869B2F8E846E57AE529782DF4D544FED568A5A9880CC36C10DE97339AF",
+      "execution_error": "",
+      "python_version": "3.13.14",
+      "dependency_versions": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scikit-learn": "1.9.0",
+        "scipy": "1.18.0",
+        "ipykernel": "7.1.0",
+        "jupyterlab": "4.4.10",
+        "matplotlib": "3.11.1",
+        "nbclient": "0.11.0",
+        "nbformat": "5.10.4"
+      }
+    },
+    {
+      "notebook": "04_test_telephone_outcome_composition.ipynb",
+      "status": "passed",
+      "started_utc": "2026-08-01T04:44:37.401019+00:00",
+      "finished_utc": "2026-08-01T04:44:46.725356+00:00",
+      "output_sha256": "2D40595758CB5A0A0C536CF4E0BC207310DB2F4AF1D689CCAAAE7ED2BB2442CA",
+      "execution_error": "",
+      "python_version": "3.13.14",
+      "dependency_versions": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scikit-learn": "1.9.0",
+        "scipy": "1.18.0",
+        "ipykernel": "7.1.0",
+        "jupyterlab": "4.4.10",
+        "matplotlib": "3.11.1",
+        "nbclient": "0.11.0",
+        "nbformat": "5.10.4"
+      }
+    },
+    {
+      "notebook": "05_assess_temporal_persistence.ipynb",
+      "status": "passed",
+      "started_utc": "2026-08-01T04:44:46.725462+00:00",
+      "finished_utc": "2026-08-01T04:44:49.083677+00:00",
+      "output_sha256": "94EA664CF791744845286C5ED72162E16D8F36ECFBF7DFDED036F415E2FA7F3C",
+      "execution_error": "",
+      "python_version": "3.13.14",
+      "dependency_versions": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scikit-learn": "1.9.0",
+        "scipy": "1.18.0",
+        "ipykernel": "7.1.0",
+        "jupyterlab": "4.4.10",
+        "matplotlib": "3.11.1",
+        "nbclient": "0.11.0",
+        "nbformat": "5.10.4"
+      }
+    },
+    {
+      "notebook": "06_interpret_profiles_with_external_context.ipynb",
+      "status": "passed",
+      "started_utc": "2026-08-01T04:44:49.083750+00:00",
+      "finished_utc": "2026-08-01T04:44:51.967597+00:00",
+      "output_sha256": "63496E2010B901528B9473F92974BE533D01454AEC30A6E6F803D6B61FEE7812",
+      "execution_error": "",
+      "python_version": "3.13.14",
+      "dependency_versions": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scikit-learn": "1.9.0",
+        "scipy": "1.18.0",
+        "ipykernel": "7.1.0",
+        "jupyterlab": "4.4.10",
+        "matplotlib": "3.11.1",
+        "nbclient": "0.11.0",
+        "nbformat": "5.10.4"
+      }
+    },
+    {
+      "notebook": "07_translate_profiles_into_evidence_readiness.ipynb",
+      "status": "passed",
+      "started_utc": "2026-08-01T04:44:51.967715+00:00",
+      "finished_utc": "2026-08-01T04:44:54.737105+00:00",
+      "output_sha256": "C76616C609C27F0FA50DA255A38B0A080802CDD6A65007757EA56CCFC1C0E47C",
+      "execution_error": "",
+      "python_version": "3.13.14",
+      "dependency_versions": {
+        "numpy": "2.5.1",
+        "pandas": "3.0.3",
+        "scikit-learn": "1.9.0",
+        "scipy": "1.18.0",
+        "ipykernel": "7.1.0",
+        "jupyterlab": "4.4.10",
+        "matplotlib": "3.11.1",
+        "nbclient": "0.11.0",
+        "nbformat": "5.10.4"
+      }
+    }
+  ]
+}

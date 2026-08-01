@@ -1,0 +1,20 @@
+check,passed
+Every recorded computational validation passed,True
+Authoritative source checksum remains locked,True
+"All three current specifications contain 1,456 practices",True
+ILR full-cohort ARI with 17 exceeds raw-21 ARI,True
+ILR full-cohort NMI with 17 exceeds raw-21 NMI,True
+ILR full-cohort agreement with 17 exceeds raw-21 agreement,True
+ILR reassigns fewer practices from 17 than raw 21,True
+ILR full-data silhouette exceeds raw-21 silhouette,True
+ILR full-data Calinski–Harabasz exceeds raw 21,True
+ILR full-data Davies–Bouldin is lower than raw 21,True
+ILR reference 5th-percentile ARI exceeds raw 21,True
+ILR reference minimum ARI exceeds raw 21,True
+ILR pairwise median ARI exceeds raw 21,True
+ILR pairwise 5th-percentile ARI exceeds raw 21,True
+Same-sample 17-to-ILR median ARI exceeds 17-to-raw,True
+Same-sample 17-to-ILR 5th-percentile ARI exceeds 17-to-raw,True
+Same-sample 17-to-ILR median agreement exceeds 17-to-raw,True
+Aligned profile-shift audit is finite,True
+Practice assignment output remains complete and unique,True

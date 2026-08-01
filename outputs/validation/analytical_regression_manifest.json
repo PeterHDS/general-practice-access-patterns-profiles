@@ -1,0 +1,60 @@
+{
+  "contract_version": "1.1",
+  "configuration_sha256": "98010993A4CB866FF80CF40288371710BB53561F22663B78C467D3FF62BB5020",
+  "source_matrix": "cbt_outcomes_sensitivity_clustering_matrix_21_features.csv",
+  "source_matrix_sha256": "D3D2E70C1A718260DD332B59F835EB6316826677A1DF5CEB928ED563C0FC1021",
+  "practices": 1456,
+  "outcome_order": [
+    "cbt_answered_share_cbt003",
+    "cbt_missed_share",
+    "cbt_ivr_share",
+    "cbt_callback_request_share"
+  ],
+  "coordinate_order": [
+    "ilr_dealt_vs_missed",
+    "ilr_answered_vs_ivr_callback",
+    "ilr_ivr_vs_callback"
+  ],
+  "basis": [
+    [
+      0.2886751345948129,
+      -0.8660254037844387,
+      0.2886751345948129,
+      0.2886751345948129
+    ],
+    [
+      0.8164965809277261,
+      0.0,
+      -0.4082482904638631,
+      -0.4082482904638631
+    ],
+    [
+      0.0,
+      0.0,
+      0.7071067811865475,
+      -0.7071067811865475
+    ]
+  ],
+  "pseudocount_used": false,
+  "inverse_reconstruction_max_abs_error": 4.440892098500626e-16,
+  "inbound_aligned_assignment_sha256": "892AFAF3EC4CEB9D6B1D7DC659580CE3E11C8809ED7D792A87AA7DC8BA67FDD3",
+  "ilr_aligned_assignment_sha256": "8E2B9618DE15BB363EA28F2946F7DDBD530845AC413507265D7450EFA137376C",
+  "ilr_raw_assignment_sha256_diagnostic": "0CC2A4DC8DC64771F4F9E6251D3DC6877783D747BC720BB507BD2D75F6D2ACE0",
+  "assignment_checksum_method": "maximum-agreement alignment; stable practice_code_standardised ordering; UTF-8 CSV with LF line endings; SHA-256",
+  "model": {
+    "clusters": 3,
+    "random_seed": 2026,
+    "n_init": 100,
+    "max_iter": 500,
+    "algorithm": "lloyd"
+  },
+  "outputs": {
+    "telephone_inbound_model_comparison.csv": "1C4C4DE61692165EB99FED337008A3E6A25392A739F5BB7F42AA643260A114DD",
+    "telephone_inbound_model_diagnostics.csv": "F6465BCBD5801550AF93B305725F802EA2BBA9C076BA1A270AE8278B2A1E699B",
+    "telephone_inbound_aligned_assignments.csv": "892AFAF3EC4CEB9D6B1D7DC659580CE3E11C8809ED7D792A87AA7DC8BA67FDD3",
+    "telephone_outcome_model_comparison.csv": "C46BAE3594F3FC0A9A32344F644713371B49BD1550832F347523C6F85559B080",
+    "telephone_outcome_model_diagnostics.csv": "BDB49F1727B898EA22E1D88F1DE2221A31E7089DD21364664072C13BC1C2ABEF",
+    "telephone_outcome_model_assignments.csv": "B79A1F32886F23D9D9C908B0B6A843D4100FFC1254C7348F07A49B548571015C",
+    "analytical_regression_results.csv": "1CBCF459A73C08B6A88C6E2C4A246314A4DCE6E39847AE687684F91A625666F0"
+  }
+}

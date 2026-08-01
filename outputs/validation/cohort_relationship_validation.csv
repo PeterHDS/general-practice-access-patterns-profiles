@@ -1,0 +1,5 @@
+test,expected,observed,passed
+CBT inbound practices are nested in national,0,0,True
+CBT outcome-complete practices are nested in CBT inbound,0,0,True
+CBT inbound inherits all national feature values exactly,0,0,True
+CBT outcome-complete inherits all national feature values exactly,0,0,True

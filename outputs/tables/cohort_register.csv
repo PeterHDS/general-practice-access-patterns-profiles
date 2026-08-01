@@ -1,0 +1,9 @@
+cohort_id,purpose,n,denominator_or_eligibility,source
+COHORT-NATIONAL,Frozen national OCS–GPAD profile solution,6067,Exactly 12 months of validated OCS and GPAD features,external_interpretation/01_frozen_inputs/national_profiles/national_practice_profile_master_ods_enriched.csv
+COHORT-CBT-INBOUND,CBT inbound feature sensitivity,3020,Practices in the submitted CBT inbound-restricted cohort,external_interpretation/01_frozen_inputs/national_profiles/national_practice_profile_master_ods_enriched.csv
+COHORT-CBT-OUTCOME,CBT outcome-complete sensitivity,1456,Practices with complete CBT outcome composition,external_interpretation/01_frozen_inputs/national_profiles/national_practice_profile_master_ods_enriched.csv
+COHORT-TEMP-HALF,Half-year temporal robustness,5924,Common eligible half-year cohort,external_interpretation/01_frozen_inputs/temporal_evidence/123_task3_closure_gate.json
+COHORT-TEMP-QUARTER,Quarterly temporal robustness,5677,Common eligible quarterly cohort,external_interpretation/01_frozen_inputs/temporal_evidence/123_task3_closure_gate.json
+COHORT-MNLOGIT,Primary contextual multinomial model,5774,Complete-case prespecified contextual cohort,external_interpretation/06_external_profile_analysis/closure_repair/context_multinomial_model_cohort_exclusion_audit.csv
+COHORT-SENS-D,Assignment-caution exclusion sensitivity,3908,Primary-model eligible and no assignment-caution flag,external_interpretation/06_external_profile_analysis/closure_repair/context_multinomial_sensitivity_summary_corrected.csv
+COHORT-SENS-E,Supplier-adjusted sensitivity,5771,Primary-model eligible with known supplier; three unknown-supplier exclusions,external_interpretation/06_external_profile_analysis/closure_repair/context_multinomial_sensitivity_summary_corrected.csv

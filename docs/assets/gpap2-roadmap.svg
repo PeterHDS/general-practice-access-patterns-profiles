@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="720" viewBox="0 0 1400 720" role="img" aria-labelledby="title desc">
+  <title id="title">GPAP² cumulative analytical sequence</title>
+  <desc id="desc">A single seven-stage sequence moves from validated PCADI modelling inputs through national model justification, profile definition, robustness, external context, geography and evidence readiness.</desc>
+  <rect width="1400" height="720" fill="#f6f8fa"/>
+  <text x="70" y="68" font-family="Segoe UI, Arial" font-size="36" font-weight="700" fill="#13263a">From validated modelling inputs to evidence readiness</text>
+  <text x="70" y="104" font-family="Segoe UI, Arial" font-size="18" fill="#445566">One dependency-led analytical sequence | England | 1 April 2025 to 31 March 2026</text>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#64788a"/></marker>
+  </defs>
+  <g font-family="Segoe UI, Arial">
+    <g transform="translate(70,155)">
+      <rect width="270" height="135" rx="16" fill="#173f5f"/>
+      <text x="24" y="38" font-size="18" font-weight="700" fill="white">1. Validated interface</text>
+      <text x="24" y="72" font-size="15" fill="white">PCADI contracts</text>
+      <text x="24" y="98" font-size="15" fill="white">cohort nesting</text>
+      <text x="24" y="121" font-size="14" fill="#d9edf7">6,067 national practices</text>
+    </g>
+    <g transform="translate(395,155)">
+      <rect width="270" height="135" rx="16" fill="#20639b"/>
+      <text x="24" y="38" font-size="18" font-weight="700" fill="white">2. National model</text>
+      <text x="24" y="72" font-size="15" fill="white">model role and selection</text>
+      <text x="24" y="98" font-size="15" fill="white">exact K-Means reproduction</text>
+      <text x="24" y="121" font-size="14" fill="#d9edf7">14 features | k = 3</text>
+    </g>
+    <g transform="translate(720,155)">
+      <rect width="270" height="135" rx="16" fill="#347fab"/>
+      <text x="24" y="38" font-size="18" font-weight="700" fill="white">3. Profiles and uncertainty</text>
+      <text x="24" y="72" font-size="15" fill="white">neutral definitions</text>
+      <text x="24" y="98" font-size="15" fill="white">assignment caution retained</text>
+      <text x="24" y="121" font-size="14" fill="#e8f3f8">not performance tiers</text>
+    </g>
+    <g transform="translate(1045,155)">
+      <rect width="285" height="135" rx="16" fill="#3caea3"/>
+      <text x="24" y="38" font-size="18" font-weight="700" fill="#082f32">4. Robustness envelope</text>
+      <text x="24" y="70" font-size="15" fill="#082f32">algorithm and specification</text>
+      <text x="24" y="94" font-size="15" fill="#082f32">CBT inbound and outcomes</text>
+      <text x="24" y="118" font-size="15" fill="#082f32">temporal persistence</text>
+    </g>
+    <g transform="translate(235,405)">
+      <rect width="270" height="135" rx="16" fill="#f6d55c"/>
+      <text x="24" y="38" font-size="18" font-weight="700" fill="#493b00">5. External context</text>
+      <text x="24" y="72" font-size="15" fill="#493b00">patient experience</text>
+      <text x="24" y="98" font-size="15" fill="#493b00">population, workforce, place</text>
+      <text x="24" y="121" font-size="14" fill="#493b00">descriptive associations</text>
+    </g>
+    <g transform="translate(565,405)">
+      <rect width="270" height="135" rx="16" fill="#ed9f44"/>
+      <text x="24" y="38" font-size="18" font-weight="700" fill="#402000">6. Geography</text>
+      <text x="24" y="72" font-size="15" fill="#402000">ICB profile composition</text>
+      <text x="24" y="98" font-size="15" fill="#402000">assignment-caution map</text>
+      <text x="24" y="121" font-size="14" fill="#402000">portable QGIS project</text>
+    </g>
+    <g transform="translate(895,405)">
+      <rect width="270" height="135" rx="16" fill="#bd6b53"/>
+      <text x="24" y="38" font-size="18" font-weight="700" fill="white">7. Evidence readiness</text>
+      <text x="24" y="72" font-size="15" fill="white">claims and cohorts</text>
+      <text x="24" y="98" font-size="15" fill="white">limits and prohibited wording</text>
+      <text x="24" y="121" font-size="14" fill="#fff0e8">reporting authority</text>
+    </g>
+    <g stroke="#64788a" stroke-width="5" fill="none" marker-end="url(#arrow)">
+      <path d="M340 222 H380"/>
+      <path d="M665 222 H705"/>
+      <path d="M990 222 H1030"/>
+      <path d="M1187 290 V350 H370 V390"/>
+      <path d="M505 472 H550"/>
+      <path d="M835 472 H880"/>
+    </g>
+  </g>
+  <text x="700" y="635" text-anchor="middle" font-family="Segoe UI, Arial" font-size="18" fill="#445566">Every stage inherits the validated contracts and decisions established before it.</text>
+  <text x="700" y="670" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" fill="#667788">Telephone and temporal analyses are parallel components of the robustness envelope.</text>
+</svg>

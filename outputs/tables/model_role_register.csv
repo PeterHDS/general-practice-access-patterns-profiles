@@ -1,0 +1,11 @@
+analytical_object,cohort,final_role,decision
+14-feature national OCS–GPAD K-Means model,"6,067 practices",Primary national hard-partition access-pressure model,Retain unchanged
+12-feature OCS construct-validity model,"6,067 practices",National construct-validity comparator,Retain as sensitivity only
+14-feature matched CBT inbound control,"3,020 practices",Matched-cohort benchmark for the inbound experiment,Retain as inbound benchmark
+17-feature CBT inbound sensitivity,"3,020 practices",Informative inbound-activity sensitivity,Retain without replacing the matched control
+14-feature outcome-complete matched control,"1,456 practices",Cohort control in the earlier 14–17–21 comparison,Retain as part of the completed outcome sequence
+17-feature outcome-complete fit,"1,456 practices",Immediate baseline for the outcome-composition comparison,"Retain as comparator, not as a new primary model"
+20-feature CBT ILR model,"1,456 practices",Preferred composition-aware CBT outcome sensitivity,Use when interpreting independent outcome balance
+21-feature raw CBT outcome model,"1,456 practices",Raw-share feature-representation comparator,"Retain, but do not prefer as the outcome partition"
+Gaussian mixture model,National modelling cohort,Probabilistic membership and uncertainty companion,Retain as supporting uncertainty evidence
+Agglomerative clustering,National modelling cohort,Hierarchical structural diagnostic,Retain as supporting method-comparison evidence

@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use GPAP², please cite this software and the exact official data sources used in your analysis."
+title: "GPAP²: From Digital Activity to Access Pressure Profiles"
+type: software
+authors:
+  - family-names: Oluwatimilehin
+    given-names: Peter
+version: 0.1.0
+license: MIT
+keywords:
+  - primary care
+  - digital access
+  - clustering
+  - reproducible research
+  - NHS England
