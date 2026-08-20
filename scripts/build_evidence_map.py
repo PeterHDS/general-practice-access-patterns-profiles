@@ -6,6 +6,7 @@ from __future__ import annotations
 
 import csv
 import html
+import re
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -62,17 +63,23 @@ def read_csv(path: Path) -> list[dict[str, str]]:
 
 def population_scope(row: dict[str, str]) -> tuple[str, str]:
     cohort = row["relevant_cohort"]
-    if "1,456" in cohort:
+    cohort_sizes = {int(value.replace(",", "")) for value in re.findall(r"\b\d{1,3}(?:,\d{3})+\b", cohort)}
+    if {3020, 1456}.issubset(cohort_sizes):
+        return (
+            "Telephone-route evidence is available in nested cohorts: inbound indicators represent 3,020 practices, while outcome-composition evidence represents the 1,456-practice outcome-complete subset. Both are restricted reporting populations rather than national telephony coverage.",
+            "outputs/tables/cbt_inbound_cohort_flow.csv;outputs/tables/cbt_outcome_cohort_flow.csv;outputs/tables/cbt_inbound_selection_categorical.csv;outputs/tables/cbt_outcome_selection_categorical.csv",
+        )
+    if 1456 in cohort_sizes:
         return (
             "Directly represents the 1,456-practice outcome-complete CBT cohort; selection is strongly concentrated geographically.",
             "outputs/tables/cbt_outcome_cohort_flow.csv;outputs/tables/cbt_outcome_selection_continuous.csv;outputs/tables/cbt_outcome_selection_categorical.csv",
         )
-    if "3,020" in cohort:
+    if 3020 in cohort_sizes:
         return (
             "Directly represents the 3,020-practice CBT inbound cohort; evidence availability is geographically concentrated.",
             "outputs/tables/cbt_inbound_cohort_flow.csv;outputs/tables/cbt_inbound_selection_continuous.csv;outputs/tables/cbt_inbound_selection_categorical.csv",
         )
-    if "5,924" in cohort or "5,677" in cohort:
+    if 5924 in cohort_sizes or 5677 in cohort_sizes:
         return (
             "Directly represents the stated shorter-period calculable cohort; it is smaller than the 6,067-practice annual population.",
             "outputs/tables/temporal_canonical_period_metrics.csv;outputs/tables/temporal_structural_period_metrics.csv",
@@ -86,6 +93,13 @@ def population_scope(row: dict[str, str]) -> tuple[str, str]:
         return (
             "No valid analytical cohort exists for this construct in the available evidence.",
             "outputs/tables/claim_to_evidence_matrix.csv",
+        )
+    if "descriptively" in cohort.casefold() and (
+        "complete" in cohort.casefold() or "mnlogit" in cohort.casefold()
+    ):
+        return (
+            "The canonical cohort distinguishes the descriptive practice population from the smaller complete-case contextual model; each result represents its stated population.",
+            "outputs/tables/population_scope_register.csv;outputs/tables/numeric_profile_descriptive_summary.csv;outputs/tables/context_multinomial_average_marginal_effects.csv",
         )
     if row["primary_claim_domain"] in {"PATIENT_EXPERIENCE", "WORKLOAD", "EQUITY"}:
         return (
@@ -163,10 +177,12 @@ def build_html(
             for category in SUPPORT_ORDER
             if row[category.lower()]
         )
+        claim_count = int(row["claim_count"])
+        claim_label = "claim" if claim_count == 1 else "claims"
         summary_cards.append(
             f'<section class="domain-summary"><h2>{html.escape(str(row["domain_label"]))}</h2>'
             f"<p>{html.escape(str(row['question_addressed']))}</p>"
-            f"<p><strong>{row['claim_count']} claims.</strong> {html.escape(breakdown)}.</p></section>"
+            f"<p><strong>{claim_count} {claim_label}.</strong> {html.escape(breakdown)}.</p></section>"
         )
     claim_cards = []
     for claim in claims:

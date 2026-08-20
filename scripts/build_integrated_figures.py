@@ -267,13 +267,22 @@ def build_evidence_readiness_figure() -> None:
         )
         for bar, value in zip(bars, values, strict=True):
             if value:
+                label_colour = (
+                    INK
+                    if category
+                    in {
+                        "ASSOCIATIVELY_EXAMINABLE",
+                        "PARTIALLY_SUPPORTABLE_WITH_MAJOR_QUALIFICATION",
+                    }
+                    else "white"
+                )
                 axis.text(
                     bar.get_x() + bar.get_width() / 2,
                     bar.get_y() + bar.get_height() / 2,
                     str(int(value)),
                     ha="center",
                     va="center",
-                    color="white",
+                    color=label_colour,
                     fontsize=9,
                 )
         left += values

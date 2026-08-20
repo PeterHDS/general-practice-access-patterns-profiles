@@ -37,7 +37,7 @@
     "National three-profile composition",
     "Assignment-caution share"
   ],
-  "validation_timestamp_utc": "2026-08-20T15:14:43.460644+00:00",
+  "validation_timestamp_utc": "2026-08-20T17:11:28.752873+00:00",
   "validation_route": "PyQGIS open, source-resolution and feature-count validation",
   "validation_status": "passed",
   "notes": "All four layers resolve the package-relative GeoJSON. Required ONS and OS attribution is retained in the adjacent QGIS and geography documentation."

@@ -16,7 +16,6 @@ AUTHORITY_FILES = [
     "outputs/tables/national_profile_assignments.csv",
     "outputs/tables/national_profile_quality.csv",
     "outputs/tables/model_role_register.csv",
-    "outputs/tables/cohort_register.csv",
     "outputs/tables/robustness_summary.csv",
     "outputs/tables/temporal_canonical_period_metrics.csv",
     "outputs/tables/temporal_structural_period_metrics.csv",

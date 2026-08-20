@@ -263,7 +263,7 @@ def configure_layer(theme: dict[str, object]) -> QgsVectorLayer:
                 "NHS primary care",
                 "ICB",
                 "practice profile composition",
-                "publication-safe",
+                "ICB profile themes",
             ]
         }
     )
@@ -594,7 +594,7 @@ def main() -> None:
             ),
         )
 
-        group = project.layerTreeRoot().addGroup("Publication-safe ICB themes")
+        group = project.layerTreeRoot().addGroup("ICB profile themes")
         layers: list[QgsVectorLayer] = []
         for index, theme in enumerate(THEMES):
             layer = configure_layer(theme)

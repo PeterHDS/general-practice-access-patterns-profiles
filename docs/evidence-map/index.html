@@ -15,7 +15,7 @@
     <p>Explore 42 claims across six domains. Each entry links the proposed interpretation to its population, method, evidence status and wording boundary.</p>
     <nav aria-label="Evidence downloads"><a href="../../outputs/tables/claim_to_evidence_matrix.csv">Download the canonical claim authority</a> · <a href="../evidence-map.md">Read the text version</a> · <a href="../population-and-generalisability.md">Understand population scope</a></nav>
   </header>
-  <section class="domain-grid" aria-label="Evidence domain summary"><section class="domain-summary"><h2>Access</h2><p>What do recorded activity patterns and their robustness show?</p><p><strong>20 claims.</strong> Descriptively supported: 6, Associatively examinable: 1, Major qualification required: 6, Additional evidence required: 7.</p></section><section class="domain-summary"><h2>Patient experience</h2><p>How do fixed profiles relate to reported patient experience?</p><p><strong>8 claims.</strong> Descriptively supported: 2, Associatively examinable: 5, Additional evidence required: 1.</p></section><section class="domain-summary"><h2>Workload</h2><p>What can recorded activity and workforce context say about workload?</p><p><strong>5 claims.</strong> Associatively examinable: 2, Additional evidence required: 3.</p></section><section class="domain-summary"><h2>Equity</h2><p>Which practice-level inequalities can be examined with available context?</p><p><strong>6 claims.</strong> Associatively examinable: 4, Additional evidence required: 2.</p></section><section class="domain-summary"><h2>Safety</h2><p>Which safety claims require linked outcomes or pathway evidence?</p><p><strong>2 claims.</strong> Additional evidence required: 2.</p></section><section class="domain-summary"><h2>Value</h2><p>Which value claims require cost and outcome evidence?</p><p><strong>1 claims.</strong> Additional evidence required: 1.</p></section></section>
+  <section class="domain-grid" aria-label="Evidence domain summary"><section class="domain-summary"><h2>Access</h2><p>What do recorded activity patterns and their robustness show?</p><p><strong>20 claims.</strong> Descriptively supported: 6, Associatively examinable: 1, Major qualification required: 6, Additional evidence required: 7.</p></section><section class="domain-summary"><h2>Patient experience</h2><p>How do fixed profiles relate to reported patient experience?</p><p><strong>8 claims.</strong> Descriptively supported: 2, Associatively examinable: 5, Additional evidence required: 1.</p></section><section class="domain-summary"><h2>Workload</h2><p>What can recorded activity and workforce context say about workload?</p><p><strong>5 claims.</strong> Associatively examinable: 2, Additional evidence required: 3.</p></section><section class="domain-summary"><h2>Equity</h2><p>Which practice-level inequalities can be examined with available context?</p><p><strong>6 claims.</strong> Associatively examinable: 4, Additional evidence required: 2.</p></section><section class="domain-summary"><h2>Safety</h2><p>Which safety claims require linked outcomes or pathway evidence?</p><p><strong>2 claims.</strong> Additional evidence required: 2.</p></section><section class="domain-summary"><h2>Value</h2><p>Which value claims require cost and outcome evidence?</p><p><strong>1 claim.</strong> Additional evidence required: 1.</p></section></section>
   <section class="controls" aria-label="Filter claims">
     <label for="search">Search claims<input id="search" type="search" autocomplete="off"></label>
     <label for="domain">Domain<select id="domain"><option value="">All domains</option><option value="ACCESS">Access</option><option value="PATIENT_EXPERIENCE">Patient experience</option><option value="WORKLOAD">Workload</option><option value="EQUITY">Equity</option><option value="SAFETY">Safety</option><option value="VALUE">Value</option></select></label>
@@ -190,7 +190,7 @@
   <h2>CBT provides recorded telephone-route activity indicators among submitting practices.</h2>
   <p><strong>Observed construct:</strong> Recorded inbound and outcome-related CBT indicators under supplier and completeness restrictions.</p>
   <p><strong>Population:</strong> 3,020 inbound-submitting and 1,456 outcome-complete practices</p>
-  <p class="scope"><strong>Population scope:</strong> Directly represents the 1,456-practice outcome-complete CBT cohort; selection is strongly concentrated geographically.</p>
+  <p class="scope"><strong>Population scope:</strong> Telephone-route evidence is available in nested cohorts: inbound indicators represent 3,020 practices, while outcome-composition evidence represents the 1,456-practice outcome-complete subset. Both are restricted reporting populations rather than national telephony coverage.</p>
   <details><summary>Evidence, wording and limits</summary>
     <dl>
       <dt>Source datasets</dt><dd>Cloud Based Telephony activity</dd>
@@ -200,7 +200,7 @@
       <dt>Prohibited wording</dt><dd>CBT measures total telephone pressure or represents all practices.</dd>
       <dt>Uncertainty and bias</dt><dd>Cohort counts, aligned assignment changes and composition checks; no HC3 or WLS model was used. Supplier coverage, selective submission and outcome completeness.</dd>
       <dt>Additional evidence</dt><dd>Consistent national submission plus call-journey linkage would support stronger claims.</dd>
-      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/cbt_outcome_cohort_flow.csv">cbt_outcome_cohort_flow.csv</a>, <a href="../../outputs/tables/cbt_outcome_selection_continuous.csv">cbt_outcome_selection_continuous.csv</a>, <a href="../../outputs/tables/cbt_outcome_selection_categorical.csv">cbt_outcome_selection_categorical.csv</a></dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/cbt_inbound_cohort_flow.csv">cbt_inbound_cohort_flow.csv</a>, <a href="../../outputs/tables/cbt_outcome_cohort_flow.csv">cbt_outcome_cohort_flow.csv</a>, <a href="../../outputs/tables/cbt_inbound_selection_categorical.csv">cbt_inbound_selection_categorical.csv</a>, <a href="../../outputs/tables/cbt_outcome_selection_categorical.csv">cbt_outcome_selection_categorical.csv</a></dd>
     </dl>
   </details>
 </article><article class="claim-card" data-domain="PATIENT_EXPERIENCE" data-support="ASSOCIATIVELY_EXAMINABLE" data-search="b04 profiles differ in overall practice experience. overall practice experience rated good gp patient survey 2026 practice estimates linked to frozen profiles 6,066 practices with a valid measure overall-experience differences were small in rank-based effect-size terms. profiles were associated with differences in practice-level overall-experience estimates.">
@@ -334,7 +334,7 @@
   <h2>Profiles differ by registered-list size.</h2>
   <p><strong>Observed construct:</strong> Registered list size</p>
   <p><strong>Population:</strong> 6,067 descriptively; 5,774 in the complete primary MNLogit cohort</p>
-  <p class="scope"><strong>Population scope:</strong> Directly represents the 6,067 practices in the national analytical cohort unless the claim records a narrower valid population.</p>
+  <p class="scope"><strong>Population scope:</strong> The canonical cohort distinguishes the descriptive practice population from the smaller complete-case contextual model; each result represents its stated population.</p>
   <details><summary>Evidence, wording and limits</summary>
     <dl>
       <dt>Source datasets</dt><dd>Registered population, workforce, IMD 2025 and rurality context as applicable</dd>
@@ -344,7 +344,7 @@
       <dt>Prohibited wording</dt><dd>The contextual characteristic caused profile membership or individual access outcomes.</dd>
       <dt>Uncertainty and bias</dt><dd>Rank effect sizes with bootstrap intervals; robust MNLogit standard errors and marginal-effect confidence intervals. Residual confounding, measurement timing differences and model specification.</dd>
       <dt>Additional evidence</dt><dd>Longitudinal multilevel or quasi-experimental data are required for causal interpretation.</dd>
-      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/national_profile_assignments.csv">national_profile_assignments.csv</a>, <a href="../../outputs/tables/national_profile_quality.csv">national_profile_quality.csv</a>, <a href="../../outputs/tables/national_cohort_flow.csv">national_cohort_flow.csv</a></dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/population_scope_register.csv">population_scope_register.csv</a>, <a href="../../outputs/tables/numeric_profile_descriptive_summary.csv">numeric_profile_descriptive_summary.csv</a>, <a href="../../outputs/tables/context_multinomial_average_marginal_effects.csv">context_multinomial_average_marginal_effects.csv</a></dd>
     </dl>
   </details>
 </article><article class="claim-card" data-domain="EQUITY" data-support="ASSOCIATIVELY_EXAMINABLE" data-search="c02 profiles differ by age composition. registered population aged 65 years and over registered population, workforce, imd 2025 and rurality context as applicable 6,067 descriptively; 5,774 in the complete primary mnlogit cohort age composition showed a large omnibus rank effect and was included in mnlogit. registered age composition was associated with profile membership.">
@@ -352,7 +352,7 @@
   <h2>Profiles differ by age composition.</h2>
   <p><strong>Observed construct:</strong> Registered population aged 65 years and over</p>
   <p><strong>Population:</strong> 6,067 descriptively; 5,774 in the complete primary MNLogit cohort</p>
-  <p class="scope"><strong>Population scope:</strong> Uses the measure-specific valid practice population recorded in the claim authority.</p>
+  <p class="scope"><strong>Population scope:</strong> The canonical cohort distinguishes the descriptive practice population from the smaller complete-case contextual model; each result represents its stated population.</p>
   <details><summary>Evidence, wording and limits</summary>
     <dl>
       <dt>Source datasets</dt><dd>Registered population, workforce, IMD 2025 and rurality context as applicable</dd>
@@ -362,7 +362,7 @@
       <dt>Prohibited wording</dt><dd>The contextual characteristic caused profile membership or individual access outcomes.</dd>
       <dt>Uncertainty and bias</dt><dd>Rank effect sizes with bootstrap intervals; robust MNLogit standard errors and marginal-effect confidence intervals. Residual confounding, measurement timing differences and model specification.</dd>
       <dt>Additional evidence</dt><dd>Longitudinal multilevel or quasi-experimental data are required for causal interpretation.</dd>
-      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/evidence_availability_summary.csv">evidence_availability_summary.csv</a>, <a href="../../outputs/tables/numeric_profile_descriptive_summary.csv">numeric_profile_descriptive_summary.csv</a></dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/population_scope_register.csv">population_scope_register.csv</a>, <a href="../../outputs/tables/numeric_profile_descriptive_summary.csv">numeric_profile_descriptive_summary.csv</a>, <a href="../../outputs/tables/context_multinomial_average_marginal_effects.csv">context_multinomial_average_marginal_effects.csv</a></dd>
     </dl>
   </details>
 </article><article class="claim-card" data-domain="WORKLOAD" data-support="ASSOCIATIVELY_EXAMINABLE" data-search="c03 profiles differ by gp workforce capacity. fully qualified gp fte per 10,000 registered patients registered population, workforce, imd 2025 and rurality context as applicable 5,801 descriptively; 5,774 in the complete primary mnlogit cohort gp workforce capacity was included in the primary mnlogit model. gp workforce capacity was associated with profile membership.">
@@ -370,7 +370,7 @@
   <h2>Profiles differ by GP workforce capacity.</h2>
   <p><strong>Observed construct:</strong> Fully qualified GP FTE per 10,000 registered patients</p>
   <p><strong>Population:</strong> 5,801 descriptively; 5,774 in the complete primary MNLogit cohort</p>
-  <p class="scope"><strong>Population scope:</strong> Uses the measure-specific valid practice population recorded in the claim authority.</p>
+  <p class="scope"><strong>Population scope:</strong> The canonical cohort distinguishes the descriptive practice population from the smaller complete-case contextual model; each result represents its stated population.</p>
   <details><summary>Evidence, wording and limits</summary>
     <dl>
       <dt>Source datasets</dt><dd>Registered population, workforce, IMD 2025 and rurality context as applicable</dd>
@@ -380,7 +380,7 @@
       <dt>Prohibited wording</dt><dd>The contextual characteristic caused profile membership or individual access outcomes.</dd>
       <dt>Uncertainty and bias</dt><dd>Rank effect sizes with bootstrap intervals; robust MNLogit standard errors and marginal-effect confidence intervals. Residual confounding, measurement timing differences and model specification.</dd>
       <dt>Additional evidence</dt><dd>Longitudinal multilevel or quasi-experimental data are required for causal interpretation.</dd>
-      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/evidence_availability_summary.csv">evidence_availability_summary.csv</a>, <a href="../../outputs/tables/numeric_profile_descriptive_summary.csv">numeric_profile_descriptive_summary.csv</a></dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/population_scope_register.csv">population_scope_register.csv</a>, <a href="../../outputs/tables/numeric_profile_descriptive_summary.csv">numeric_profile_descriptive_summary.csv</a>, <a href="../../outputs/tables/context_multinomial_average_marginal_effects.csv">context_multinomial_average_marginal_effects.csv</a></dd>
     </dl>
   </details>
 </article><article class="claim-card" data-domain="WORKLOAD" data-support="ASSOCIATIVELY_EXAMINABLE" data-search="c04 profiles differ by non-gp workforce. direct patient care, nurse and other non-gp workforce capacity measures. nhs workforce context nurse 5,615; direct patient care 5,265; administrative/non-clinical 5,711 non-gp workforce measures were described and tested separately; they were not primary mnlogit predictors. non-gp workforce capacity differed across profiles in descriptive practice-level comparisons.">
@@ -406,7 +406,7 @@
   <h2>Profiles differ by deprivation.</h2>
   <p><strong>Observed construct:</strong> Patient-weighted average IMD 2025 score</p>
   <p><strong>Population:</strong> 6,035 descriptively; 5,774 in the complete primary MNLogit cohort</p>
-  <p class="scope"><strong>Population scope:</strong> Uses the measure-specific valid practice population recorded in the claim authority.</p>
+  <p class="scope"><strong>Population scope:</strong> The canonical cohort distinguishes the descriptive practice population from the smaller complete-case contextual model; each result represents its stated population.</p>
   <details><summary>Evidence, wording and limits</summary>
     <dl>
       <dt>Source datasets</dt><dd>Registered population, workforce, IMD 2025 and rurality context as applicable</dd>
@@ -416,7 +416,7 @@
       <dt>Prohibited wording</dt><dd>The contextual characteristic caused profile membership or individual access outcomes.</dd>
       <dt>Uncertainty and bias</dt><dd>Rank effect sizes with bootstrap intervals; robust MNLogit standard errors and marginal-effect confidence intervals. Residual confounding, measurement timing differences and model specification.</dd>
       <dt>Additional evidence</dt><dd>Longitudinal multilevel or quasi-experimental data are required for causal interpretation.</dd>
-      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/evidence_availability_summary.csv">evidence_availability_summary.csv</a>, <a href="../../outputs/tables/numeric_profile_descriptive_summary.csv">numeric_profile_descriptive_summary.csv</a></dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/population_scope_register.csv">population_scope_register.csv</a>, <a href="../../outputs/tables/numeric_profile_descriptive_summary.csv">numeric_profile_descriptive_summary.csv</a>, <a href="../../outputs/tables/context_multinomial_average_marginal_effects.csv">context_multinomial_average_marginal_effects.csv</a></dd>
     </dl>
   </details>
 </article><article class="claim-card" data-domain="EQUITY" data-support="ASSOCIATIVELY_EXAMINABLE" data-search="c06 profiles differ by rurality. patient-weighted rural share registered population, workforce, imd 2025 and rurality context as applicable 6,051 descriptively; 5,774 in the complete primary mnlogit cohort rurality was included in the primary mnlogit model. patient-weighted rural share was associated with profile membership.">
@@ -424,7 +424,7 @@
   <h2>Profiles differ by rurality.</h2>
   <p><strong>Observed construct:</strong> Patient-weighted rural share</p>
   <p><strong>Population:</strong> 6,051 descriptively; 5,774 in the complete primary MNLogit cohort</p>
-  <p class="scope"><strong>Population scope:</strong> Uses the measure-specific valid practice population recorded in the claim authority.</p>
+  <p class="scope"><strong>Population scope:</strong> The canonical cohort distinguishes the descriptive practice population from the smaller complete-case contextual model; each result represents its stated population.</p>
   <details><summary>Evidence, wording and limits</summary>
     <dl>
       <dt>Source datasets</dt><dd>Registered population, workforce, IMD 2025 and rurality context as applicable</dd>
@@ -434,7 +434,7 @@
       <dt>Prohibited wording</dt><dd>The contextual characteristic caused profile membership or individual access outcomes.</dd>
       <dt>Uncertainty and bias</dt><dd>Rank effect sizes with bootstrap intervals; robust MNLogit standard errors and marginal-effect confidence intervals. Residual confounding, measurement timing differences and model specification.</dd>
       <dt>Additional evidence</dt><dd>Longitudinal multilevel or quasi-experimental data are required for causal interpretation.</dd>
-      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/evidence_availability_summary.csv">evidence_availability_summary.csv</a>, <a href="../../outputs/tables/numeric_profile_descriptive_summary.csv">numeric_profile_descriptive_summary.csv</a></dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/population_scope_register.csv">population_scope_register.csv</a>, <a href="../../outputs/tables/numeric_profile_descriptive_summary.csv">numeric_profile_descriptive_summary.csv</a>, <a href="../../outputs/tables/context_multinomial_average_marginal_effects.csv">context_multinomial_average_marginal_effects.csv</a></dd>
     </dl>
   </details>
 </article><article class="claim-card" data-domain="EQUITY" data-support="ASSOCIATIVELY_EXAMINABLE" data-search="c07 region and icb profile composition varies. practice profile composition across seven regions and 42 march 2026 reference-period icbs. frozen march 2026 organisational geography 6,067 practices across seven regions and 42 icbs bias-corrected cramér’s v was 0.272 for region and 0.332 for icb. profile composition varied across the frozen reference-period geographies.">

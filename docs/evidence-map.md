@@ -119,7 +119,7 @@ What do recorded activity patterns and their robustness show?
 - **Evidence status:** ▲ Major qualification required
 - **Observed construct:** Recorded inbound and outcome-related CBT indicators under supplier and completeness restrictions.
 - **Population:** 3,020 inbound-submitting and 1,456 outcome-complete practices
-- **Population scope:** Directly represents the 1,456-practice outcome-complete CBT cohort; selection is strongly concentrated geographically.
+- **Population scope:** Telephone-route evidence is available in nested cohorts: inbound indicators represent 3,020 practices, while outcome-composition evidence represents the 1,456-practice outcome-complete subset. Both are restricted reporting populations rather than national telephony coverage.
 - **Method:** Restricted-cohort descriptive sensitivity; no GPPS regression
 - **Main result:** CBT indicators changed 571 inbound-cohort assignments; outcome sensitivities were evaluated in 1,456 practices.
 - **Permitted wording:** CBT provides recorded telephone-route activity indicators among submitting practices.
@@ -131,7 +131,7 @@ What do recorded activity patterns and their robustness show?
 - **Evidence status:** ◆ Associatively examinable
 - **Observed construct:** Registered list size
 - **Population:** 6,067 descriptively; 5,774 in the complete primary MNLogit cohort
-- **Population scope:** Directly represents the 6,067 practices in the national analytical cohort unless the claim records a narrower valid population.
+- **Population scope:** The canonical cohort distinguishes the descriptive practice population from the smaller complete-case contextual model; each result represents its stated population.
 - **Method:** Kruskal-Wallis/Dunn effect sizes; robust-covariance MNLogit and average marginal effects
 - **Main result:** Log registered list size was included in the primary MNLogit model.
 - **Permitted wording:** Registered-list size was associated with profile membership.
@@ -355,7 +355,7 @@ What can recorded activity and workforce context say about workload?
 - **Evidence status:** ◆ Associatively examinable
 - **Observed construct:** Fully qualified GP FTE per 10,000 registered patients
 - **Population:** 5,801 descriptively; 5,774 in the complete primary MNLogit cohort
-- **Population scope:** Uses the measure-specific valid practice population recorded in the claim authority.
+- **Population scope:** The canonical cohort distinguishes the descriptive practice population from the smaller complete-case contextual model; each result represents its stated population.
 - **Method:** Kruskal-Wallis/Dunn effect sizes; robust-covariance MNLogit and average marginal effects
 - **Main result:** GP workforce capacity was included in the primary MNLogit model.
 - **Permitted wording:** GP workforce capacity was associated with profile membership.
@@ -419,7 +419,7 @@ Which practice-level inequalities can be examined with available context?
 - **Evidence status:** ◆ Associatively examinable
 - **Observed construct:** Registered population aged 65 years and over
 - **Population:** 6,067 descriptively; 5,774 in the complete primary MNLogit cohort
-- **Population scope:** Uses the measure-specific valid practice population recorded in the claim authority.
+- **Population scope:** The canonical cohort distinguishes the descriptive practice population from the smaller complete-case contextual model; each result represents its stated population.
 - **Method:** Kruskal-Wallis/Dunn effect sizes; robust-covariance MNLogit and average marginal effects
 - **Main result:** Age composition showed a large omnibus rank effect and was included in MNLogit.
 - **Permitted wording:** Registered age composition was associated with profile membership.
@@ -431,7 +431,7 @@ Which practice-level inequalities can be examined with available context?
 - **Evidence status:** ◆ Associatively examinable
 - **Observed construct:** Patient-weighted average IMD 2025 score
 - **Population:** 6,035 descriptively; 5,774 in the complete primary MNLogit cohort
-- **Population scope:** Uses the measure-specific valid practice population recorded in the claim authority.
+- **Population scope:** The canonical cohort distinguishes the descriptive practice population from the smaller complete-case contextual model; each result represents its stated population.
 - **Method:** Kruskal-Wallis/Dunn effect sizes; robust-covariance MNLogit and average marginal effects
 - **Main result:** Deprivation was included in the primary MNLogit model.
 - **Permitted wording:** Patient-weighted average IMD 2025 score was associated with profile membership.
@@ -443,7 +443,7 @@ Which practice-level inequalities can be examined with available context?
 - **Evidence status:** ◆ Associatively examinable
 - **Observed construct:** Patient-weighted rural share
 - **Population:** 6,051 descriptively; 5,774 in the complete primary MNLogit cohort
-- **Population scope:** Uses the measure-specific valid practice population recorded in the claim authority.
+- **Population scope:** The canonical cohort distinguishes the descriptive practice population from the smaller complete-case contextual model; each result represents its stated population.
 - **Method:** Kruskal-Wallis/Dunn effect sizes; robust-covariance MNLogit and average marginal effects
 - **Main result:** Rurality was included in the primary MNLogit model.
 - **Permitted wording:** Patient-weighted rural share was associated with profile membership.

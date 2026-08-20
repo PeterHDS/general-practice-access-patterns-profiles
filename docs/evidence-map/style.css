@@ -6,10 +6,10 @@
   --muted: light-dark(#4b5966, #b7c1ca);
   --line: light-dark(#cbd3da, #46515a);
   --link: light-dark(#005eb8, #79b8ff);
-  --blue: #0072b2;
-  --green: #009e73;
-  --orange: #e69f00;
-  --grey: #767676;
+  --blue: light-dark(#006da8, #70c7ff);
+  --green: light-dark(#006b4f, #67ddb8);
+  --orange: light-dark(#8a5900, #ffc65c);
+  --grey: light-dark(#666666, #c7c7c7);
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--surface); color: var(--ink); font: 1rem/1.55 system-ui, sans-serif; }

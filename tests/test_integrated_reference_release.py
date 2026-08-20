@@ -91,3 +91,83 @@ def test_evidence_map_has_text_and_static_html_routes() -> None:
         encoding="utf-8", newline=""
     ) as stream:
         assert len(list(csv.DictReader(stream))) == 6
+    for target in ("style.css", "app.js"):
+        assert (ROOT / "docs/evidence-map" / target).is_file()
+        assert target in html
+    script = (ROOT / "docs/evidence-map/app.js").read_text(encoding="utf-8")
+    assert "addEventListener('input', update)" in script
+    assert "clear.addEventListener('click'" in script
+    assert "search.focus()" in script
+
+
+def test_evidence_map_mixed_population_scope_and_grammar() -> None:
+    presentation = pd.read_csv(
+        ROOT / "outputs/tables/evidence_map_presentation.csv"
+    ).set_index("claim_id")
+    b03 = presentation.loc["B03", "population_scope_note"]
+    assert "3,020 practices" in b03
+    assert "1,456-practice outcome-complete subset" in b03
+    c01 = presentation.loc["C01", "population_scope_note"]
+    assert "descriptive practice population" in c01
+    assert "smaller complete-case contextual model" in c01
+    html = (ROOT / "docs/evidence-map/index.html").read_text(encoding="utf-8")
+    assert "1 claims" not in html
+    assert "1 claim." in html
+
+
+def _relative_luminance(colour: str) -> float:
+    channels = [int(colour[index : index + 2], 16) / 255 for index in (1, 3, 5)]
+    linear = [
+        value / 12.92 if value <= 0.04045 else ((value + 0.055) / 1.055) ** 2.4
+        for value in channels
+    ]
+    return 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2]
+
+
+def _contrast(first: str, second: str) -> float:
+    light, dark = sorted((_relative_luminance(first), _relative_luminance(second)), reverse=True)
+    return (light + 0.05) / (dark + 0.05)
+
+
+def test_evidence_map_status_colours_meet_normal_text_contrast() -> None:
+    light = {"#006da8", "#006b4f", "#8a5900", "#666666"}
+    dark = {"#70c7ff", "#67ddb8", "#ffc65c", "#c7c7c7"}
+    assert all(_contrast(colour, "#ffffff") >= 4.5 for colour in light)
+    assert all(_contrast(colour, "#14171a") >= 4.5 for colour in dark)
+    assert _contrast("#ffffff", "#0072b2") >= 4.5
+    assert _contrast("#202124", "#009e73") >= 4.5
+    assert _contrast("#202124", "#e69f00") >= 4.5
+    assert _contrast("#ffffff", "#767676") >= 4.5
+
+
+def test_active_qgis_builder_and_reader_surfaces_exclude_development_terms() -> None:
+    builder = (ROOT / "qgis/scripts/build_qgis_project.py").read_text(encoding="utf-8")
+    assert "publication-safe" not in builder.casefold()
+    forbidden = (
+        "closure_repair",
+        "preanalysis_repair",
+        "prestart_repair",
+        "_corrected",
+        "e07b",
+        "e08a",
+        "e08b",
+    )
+    reader_paths = [ROOT / "README.md"]
+    reader_paths.extend((ROOT / "docs").rglob("*.md"))
+    reader_paths.extend(
+        path
+        for path in (ROOT / "outputs/tables").glob("*.csv")
+        if path.name != "claim_to_evidence_matrix.csv"
+    )
+    text = "\n".join(path.read_text(encoding="utf-8", errors="strict") for path in reader_paths)
+    assert all(term not in text.casefold() for term in forbidden)
+
+
+def test_social_preview_and_full_reference_workflow_use_v1_contract() -> None:
+    preview_builder = (ROOT / "scripts/build_social_preview.py").read_text(encoding="utf-8")
+    assert "General Practice Access Patterns and Profiles" in preview_builder
+    assert "Profiles · robustness · population scope · evidence map" in preview_builder
+    assert "companion" not in preview_builder.casefold()
+    workflow = (ROOT / ".github/workflows/ci.yml").read_text(encoding="utf-8")
+    assert "github.event_name == 'workflow_dispatch'" in workflow
+    assert "github.event_name == 'pull_request' && github.base_ref == 'main'" in workflow
