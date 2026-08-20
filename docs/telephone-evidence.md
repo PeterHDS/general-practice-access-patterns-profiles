@@ -2,11 +2,13 @@
 
 CBT evidence is analysed within nested practice cohorts because complete telephone reporting is not nationally available for every practice.
 
+The 3,020-practice inbound cohort retains 49.78% of the 6,067-practice national population. The 1,456-practice outcome-complete cohort retains 48.21% of the inbound population. The [cohort-selection audit](population-and-generalisability.md) documents measured differences between retained and non-retained practices, so telephone conclusions apply directly to these reporting populations rather than automatically to all practices in England.
+
 ## Inbound-call sensitivity
 
 The 3,020-practice cohort adds inbound calls per 1,000 registered patient-months, mean absolute monthly call-rate change and annual call-rate range to the fourteen national features. The matched full-data comparison retains 2,449 assignments and reassigns 571. The adjusted Rand index between specifications is 0.5236.
 
-Closed resampling evidence remains checksum-controlled. It supports within-specification stability while leaving cohort availability as an interpretation boundary.
+Checksum-controlled resampling evidence supports within-specification stability while leaving cohort availability as an interpretation boundary.
 
 ![Matched 14-feature control and 17-feature CBT inbound profile characteristics](../outputs/figures/telephone_inbound_profile_comparison.png)
 
@@ -14,7 +16,7 @@ Closed resampling evidence remains checksum-controlled. It supports within-speci
 
 The 1,456-practice cohort contains four strictly positive recorded outcome shares in this order: answered, missed, IVR exit and callback request. The shares approximately sum to one, so entering all four as independent robust-scaled Euclidean variables repeats influence from one constrained family.
 
-The preferred sensitivity closes each row to one and calculates three named NHS-aligned balances:
+The registered composition-aware sensitivity closes each row to one and calculates three named NHS-aligned balances:
 
 1. dealt versus missed;
 2. answered versus IVR and callback;

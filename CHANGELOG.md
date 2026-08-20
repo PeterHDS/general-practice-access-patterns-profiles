@@ -1,14 +1,13 @@
 # Changelog
 
-## 0.1.0 candidate, 31 July 2026
+## 1.0.0, 20 August 2026
 
-- established the public GPAP² analytical path from validated PCADI inputs;
-- added exact contracts for the national and nested CBT matrices;
-- reproduced the frozen three-profile national partition;
-- documented CBT inbound and composition-aware outcome sensitivities;
-- added temporal, external-context, geographic and evidence-readiness routes;
-- packaged the validated portable QGIS project; and
-- added seven executed public notebooks, tests, CI and publication-safe evidence.
-
-This is a local publication candidate. No public release has been created.
-
+- establishes the reference GPAP² analysis from validated PCADI inputs;
+- reproduces the 6,067-practice, three-profile national partition;
+- documents model selection, assignment uncertainty and algorithmic and feature sensitivity;
+- evaluates CBT inbound and outcome-composition evidence in nested 3,020-practice and 1,456-practice populations;
+- integrates the native-R cohort-selection and generalisability audit;
+- retains temporal, patient-experience, workforce, population, deprivation and rurality evidence;
+- supplies the validated portable QGIS project for 42 March 2026 ICB organisations;
+- presents the canonical 42-claim scientific authority through the GPAP² Evidence Map; and
+- provides executable notebooks, tests, validation records and reproducibility-release documentation.

@@ -43,19 +43,15 @@ from qgis.core import (
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
-SOURCE = ROOT / "data" / "icb_profile_mapping_layer_publication_safe.geojson"
-SOURCE_RELATIVE = "./data/icb_profile_mapping_layer_publication_safe.geojson"
+SOURCE = ROOT / "data" / "icb_profile_mapping_layer.geojson"
+SOURCE_RELATIVE = "./data/icb_profile_mapping_layer.geojson"
 PROJECT_FILE = ROOT / "GPAP2_Digital_GP_Access_Profiles_March_2026.qgz"
 RUNTIME_RECORD = ROOT.parent / "outputs" / "validation" / "qgis_runtime_validation.json"
 PROFILE_LAYOUT_PREVIEW = ROOT / "previews" / "national_three_profile_map_preview.png"
 CAUTION_LAYOUT_PREVIEW = ROOT / "previews" / "assignment_caution_map_preview.png"
 
-EXPECTED_SOURCE_SHA256 = (
-    "fd501eb2a2de54f9bc2c17a34df53a8cf40d4bdd6dc28706e759524e42d4bfe1"
-)
-INTERPRETATION_NOTE = (
-    "Practice composition, not patient prevalence or ICB performance"
-)
+EXPECTED_SOURCE_SHA256 = "79ceaf2f84b866cfabae22f95c825523ebe3ff100584d404a83b7afe03e71d30"
+INTERPRETATION_NOTE = "Practice composition, not patient prevalence or ICB performance"
 ANALYSIS_PERIOD = "1 April 2025 to 31 March 2026"
 BOUNDARY_VINTAGE = "April 2023 ICB boundaries"
 ORGANISATION_REFERENCE_DATE = "31 March 2026"
@@ -64,7 +60,9 @@ GEOGRAPHY_NOTE = (
     "normalised-name crosswalk to ONS April 2023 ICB boundaries; no "
     "post-1-April-2026 remapping"
 )
-ONS_ATTRIBUTION = "Source: Office for National Statistics licensed under the Open Government Licence v.3.0"
+ONS_ATTRIBUTION = (
+    "Source: Office for National Statistics licensed under the Open Government Licence v.3.0"
+)
 OS_ATTRIBUTION = "Contains OS data © Crown copyright and database right 2026"
 
 THEMES = (
@@ -231,9 +229,7 @@ def configure_layer(theme: dict[str, object]) -> QgsVectorLayer:
     )
     layer.setCustomProperty("gpap2/analysis_period", ANALYSIS_PERIOD)
     layer.setCustomProperty("gpap2/boundary_vintage", BOUNDARY_VINTAGE)
-    layer.setCustomProperty(
-        "gpap2/organisation_reference_date", ORGANISATION_REFERENCE_DATE
-    )
+    layer.setCustomProperty("gpap2/organisation_reference_date", ORGANISATION_REFERENCE_DATE)
     layer.setCustomProperty("gpap2/geography_note", GEOGRAPHY_NOTE)
     layer.setCustomProperty("gpap2/source_sha256", EXPECTED_SOURCE_SHA256)
     layer.setCustomProperty("gpap2/interpretation_boundary", INTERPRETATION_NOTE)
@@ -297,9 +293,7 @@ def add_label(
     label.setVAlign(Qt.AlignVCenter)
     layout.addLayoutItem(label)
     label.attemptMove(QgsLayoutPoint(x, y, QgsUnitTypes.LayoutMillimeters))
-    label.attemptResize(
-        QgsLayoutSize(width, height, QgsUnitTypes.LayoutMillimeters)
-    )
+    label.attemptResize(QgsLayoutSize(width, height, QgsUnitTypes.LayoutMillimeters))
     return label
 
 
@@ -320,18 +314,14 @@ def add_map(
     item = QgsLayoutItemMap(layout)
     layout.addLayoutItem(item)
     item.attemptMove(QgsLayoutPoint(x, y, QgsUnitTypes.LayoutMillimeters))
-    item.attemptResize(
-        QgsLayoutSize(width, height, QgsUnitTypes.LayoutMillimeters)
-    )
+    item.attemptResize(QgsLayoutSize(width, height, QgsUnitTypes.LayoutMillimeters))
     item.setLayers([layer])
     item.setKeepLayerSet(True)
     item.setKeepLayerStyles(True)
     item.setExtent(padded_extent(layer))
     # setExtent can adapt the item geometry to the source aspect ratio. Reapply
     # the requested frame size so the print layout retains its designed grid.
-    item.attemptResize(
-        QgsLayoutSize(width, height, QgsUnitTypes.LayoutMillimeters)
-    )
+    item.attemptResize(QgsLayoutSize(width, height, QgsUnitTypes.LayoutMillimeters))
     item.setFrameEnabled(True)
     item.setFrameStrokeColor(QColor("#737373"))
     item.setBackgroundColor(QColor("#ffffff"))
@@ -374,9 +364,7 @@ def add_legend(
     legend.setStyleMargin(QgsLegendStyle.Symbol, 0.6)
     layout.addLayoutItem(legend)
     legend.attemptMove(QgsLayoutPoint(x, y, QgsUnitTypes.LayoutMillimeters))
-    legend.attemptResize(
-        QgsLayoutSize(width, height, QgsUnitTypes.LayoutMillimeters)
-    )
+    legend.attemptResize(QgsLayoutSize(width, height, QgsUnitTypes.LayoutMillimeters))
     return legend
 
 
@@ -385,9 +373,7 @@ def build_profile_layout(project: QgsProject, layers: list[QgsVectorLayer]) -> Q
     layout.initializeDefaults()
     layout.setName("National three-profile composition")
     page = layout.pageCollection().page(0)
-    page.setPageSize(
-        QgsLayoutSize(420, 297, QgsUnitTypes.LayoutMillimeters)
-    )
+    page.setPageSize(QgsLayoutSize(420, 297, QgsUnitTypes.LayoutMillimeters))
 
     add_label(
         layout,
@@ -458,9 +444,7 @@ def build_caution_layout(project: QgsProject, layer: QgsVectorLayer) -> QgsPrint
     layout.initializeDefaults()
     layout.setName("Assignment-caution share")
     page = layout.pageCollection().page(0)
-    page.setPageSize(
-        QgsLayoutSize(297, 210, QgsUnitTypes.LayoutMillimeters)
-    )
+    page.setPageSize(QgsLayoutSize(297, 210, QgsUnitTypes.LayoutMillimeters))
 
     add_label(
         layout,
@@ -535,9 +519,7 @@ def sanitise_qgz_writer_identity(path: Path) -> None:
 
     temporary = path.with_name(path.name + ".tmp")
     with zipfile.ZipFile(path, "r") as source_archive:
-        members = {
-            name: source_archive.read(name) for name in source_archive.namelist()
-        }
+        members = {name: source_archive.read(name) for name in source_archive.namelist()}
     qgs_name = next(name for name in members if name.endswith(".qgs"))
     qgs_xml = members[qgs_name].decode("utf-8")
     qgs_xml = re.sub(r'saveUserFull="[^"]*"', 'saveUserFull="GPAP2"', qgs_xml)
@@ -555,8 +537,7 @@ def main() -> None:
     observed_hash = sha256(SOURCE)
     if observed_hash != EXPECTED_SOURCE_SHA256:
         raise RuntimeError(
-            f"Source checksum mismatch: expected {EXPECTED_SOURCE_SHA256}, "
-            f"observed {observed_hash}"
+            f"Source checksum mismatch: expected {EXPECTED_SOURCE_SHA256}, observed {observed_hash}"
         )
 
     # QGIS resolves the portable data source from the project directory.
@@ -599,15 +580,11 @@ def main() -> None:
         )
         project.writeEntry("GPAP2", "analysis_period", ANALYSIS_PERIOD)
         project.writeEntry("GPAP2", "boundary_vintage", BOUNDARY_VINTAGE)
-        project.writeEntry(
-            "GPAP2", "organisation_reference_date", ORGANISATION_REFERENCE_DATE
-        )
+        project.writeEntry("GPAP2", "organisation_reference_date", ORGANISATION_REFERENCE_DATE)
         project.writeEntry("GPAP2", "geography_note", GEOGRAPHY_NOTE)
         project.writeEntry("GPAP2", "ons_attribution", ONS_ATTRIBUTION)
         project.writeEntry("GPAP2", "os_attribution", OS_ATTRIBUTION)
-        project.writeEntry(
-            "GPAP2", "interpretation_boundary", INTERPRETATION_NOTE
-        )
+        project.writeEntry("GPAP2", "interpretation_boundary", INTERPRETATION_NOTE)
         project.writeEntry(
             "GPAP2",
             "prohibited_analyses",

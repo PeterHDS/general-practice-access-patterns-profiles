@@ -1,0 +1,4 @@
+"analytical_stage","parent_n","selected_n","comparison_n","public_interpretation"
+"National analytical cohort",6130,6067,63,"Small-to-moderate measured differences; national analytical base is the 6,067 eligible practices."
+"CBT inbound-eligible cohort",6067,3020,3047,"Strong measured geographic concentration; CBT inbound findings apply directly to the 3,020 eligible practices."
+"CBT outcome-complete cohort",3020,1456,1564,"Very strong measured geographic concentration; outcome findings apply directly to the 1,456 outcome-complete practices."

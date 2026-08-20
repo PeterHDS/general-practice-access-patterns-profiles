@@ -1,15 +1,12 @@
-# Selected analytical evidence
+# Analytical evidence
 
-This directory contains the smallest set of publication-safe objects needed to inspect the public analytical story.
+This directory contains selected machine-readable objects used to inspect and reproduce the GPAP² findings.
 
-- `tables/` holds profile summaries, robustness results, evidence availability and claim authority.
-- `figures/` holds selected national, telephone, temporal and contextual figures.
-- `maps/` holds selected rendered geographic previews.
-- `validation/` records checksums and public-build gates.
+- `tables/` contains profile assignments and summaries, model-selection evidence, cohort-selection audits, temporal and telephone comparisons, contextual results, the population scope register and the canonical 42-claim authority.
+- `figures/` contains selected national, population, telephone, temporal, contextual and evidence-readiness figures.
+- `maps/` contains rendered geographic summaries.
+- `validation/` records checksums, lineage, figure provenance and execution checks.
 
-`validation/figure_provenance.csv` classifies every public image as matrix-recomputed,
-authority-table regenerated, checksum-validated frozen authority, or QGIS-rendered output. A blank
-generator is intentional only where exact regeneration would require excluded practice-level or
-resampling data; the included checksum and aggregate source tables remain the inspection route.
+`validation/figure_provenance.csv` gives every image's source table, generator where available, source checksum, analytical period, geography and alternative text. Images fall into four reproducibility classes: recomputed from included matrices, regenerated from included authority tables, checksum-validated frozen authorities, and QGIS-rendered outputs.
 
-Full raw NHS downloads, large assignment manifests, resampling manifests and private development notebooks remain outside Git.
+Raw NHS downloads, respondent-level survey records, large resampling arrays and working databases are governed by their source repositories or reproducibility releases rather than duplicated here.

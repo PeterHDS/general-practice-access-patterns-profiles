@@ -10,10 +10,10 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "qgis_project_checksums.csv"
 FILES = (
     ROOT / "GPAP2_Digital_GP_Access_Profiles_March_2026.qgz",
-    ROOT / "data" / "icb_profile_mapping_layer_publication_safe.geojson",
+    ROOT / "data" / "icb_profile_mapping_layer.geojson",
     ROOT / "scripts" / "build_qgis_project.py",
     ROOT / "scripts" / "validate_qgis_project.py",
-    ROOT / "scripts" / "separate_reference_metadata.py",
+    ROOT / "scripts" / "validate_qgis_runtime.py",
     ROOT / "scripts" / "build_qgis_checksums.py",
     ROOT / "qgis_project_layer_inventory.csv",
     ROOT / "previews" / "national_three_profile_map_preview.png",

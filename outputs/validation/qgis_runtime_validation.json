@@ -2,42 +2,43 @@
   "qgis_version": "3.44.12-Solothurn",
   "operating_system": "Windows-11-10.0.26200-SP0",
   "project_path": "qgis/GPAP2_Digital_GP_Access_Profiles_March_2026.qgz",
+  "project_sha256": "5AA8BDB3C67A5318A1B98FC8485D79F853C98C4A7995E298297EB048A3D2218C",
+  "source_path": "qgis/data/icb_profile_mapping_layer.geojson",
+  "source_sha256": "79CEAF2F84B866CFABAE22F95C825523EBE3FF100584D404A83B7AFE03E71D30",
   "project_open_status": true,
   "missing_layer_count": 0,
   "layers": [
     {
+      "name": "Assignment-caution share",
+      "feature_count": 42,
+      "source": "icb_profile_mapping_layer.geojson",
+      "valid": true
+    },
+    {
       "name": "Profile 1 within-ICB share",
-      "feature_count": 42
+      "feature_count": 42,
+      "source": "icb_profile_mapping_layer.geojson",
+      "valid": true
     },
     {
       "name": "Profile 2 within-ICB share",
-      "feature_count": 42
+      "feature_count": 42,
+      "source": "icb_profile_mapping_layer.geojson",
+      "valid": true
     },
     {
       "name": "Profile 3 within-ICB share",
-      "feature_count": 42
-    },
-    {
-      "name": "Assignment-caution share",
-      "feature_count": 42
+      "feature_count": 42,
+      "source": "icb_profile_mapping_layer.geojson",
+      "valid": true
     }
   ],
   "layouts": [
     "National three-profile composition",
     "Assignment-caution share"
   ],
-  "rendered_previews": [
-    {
-      "path": "qgis/previews/national_three_profile_map_preview.png",
-      "sha256": "80bdf34fecdf5f312ed74fe582459e326b887adc38ccbad7c0d0af6e0c47f8e1"
-    },
-    {
-      "path": "qgis/previews/assignment_caution_map_preview.png",
-      "sha256": "8ed40174b0505a793057717495d41697011e060a0673ad5fd695071865836157"
-    }
-  ],
-  "validation_timestamp_utc": "2026-08-01T03:33:58.759632+00:00",
-  "validation_route": "automated PyQGIS project build, open-layer validation and layout export",
+  "validation_timestamp_utc": "2026-08-20T15:14:43.460644+00:00",
+  "validation_route": "PyQGIS open, source-resolution and feature-count validation",
   "validation_status": "passed",
-  "notes": "All four layers use the portable relative GeoJSON source. Both layouts include the required ONS and OS attribution."
+  "notes": "All four layers resolve the package-relative GeoJSON. Required ONS and OS attribution is retained in the adjacent QGIS and geography documentation."
 }

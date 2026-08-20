@@ -65,12 +65,11 @@ def test_notebooks_one_to_four_show_generated_method_contracts(repository_root: 
     )
     for path in notebook_paths:
         notebook = nbformat.read(path, as_version=4)
-        markdown = "\n".join(
-            cell.source for cell in notebook.cells if cell.cell_type == "markdown"
-        )
+        markdown = "\n".join(cell.source for cell in notebook.cells if cell.cell_type == "markdown")
         code = "\n".join(cell.source for cell in notebook.cells if cell.cell_type == "code")
         assert "## Method contract" in markdown
-        assert "Stage handover" in markdown
+        assert "What this establishes" in markdown
+        assert "Inherited contract" not in markdown
         assert "gpap2.notebook_reporting" in code
         assert "build_output_contract_table" in code or "build_comparison_contract_table" in code
         assert not any(literal in code for literal in forbidden_code_literals)

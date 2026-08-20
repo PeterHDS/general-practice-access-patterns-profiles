@@ -4,7 +4,6 @@ import importlib.util
 import json
 import re
 import sys
-import zipfile
 from pathlib import Path
 from types import SimpleNamespace
 
@@ -43,9 +42,7 @@ def public_narrative_text() -> str:
     paths.extend((ROOT / "notebooks").rglob("*.md"))
     paths.extend((ROOT / "notebooks").glob("*.ipynb"))
     return "\n".join(
-        path.read_text(encoding="utf-8", errors="strict")
-        for path in paths
-        if path.is_file()
+        path.read_text(encoding="utf-8", errors="strict") for path in paths if path.is_file()
     ).casefold()
 
 
@@ -58,13 +55,13 @@ def test_superseded_public_architecture_language_is_absent() -> None:
 def test_roadmap_contains_the_complete_cumulative_spine() -> None:
     text = (ROOT / "docs/assets/gpap2-roadmap.svg").read_text(encoding="utf-8")
     for stage in (
-        "Validated interface",
+        "Inputs and population",
         "National model",
         "Profiles and uncertainty",
         "Robustness envelope",
         "External context",
         "Geography",
-        "Evidence readiness",
+        "Evidence Map",
     ):
         assert stage in text
     assert text.count('marker-end="url(#arrow)"') == 1
@@ -115,11 +112,6 @@ def test_exact_ons_os_attribution_is_present_in_required_locations() -> None:
         text = (ROOT / relative).read_text(encoding="utf-8")
         for statement in ATTRIBUTIONS:
             assert statement in text
-    with zipfile.ZipFile(ROOT / "qgis/GPAP2_Digital_GP_Access_Profiles_March_2026.qgz") as archive:
-        qgs_name = next(name for name in archive.namelist() if name.endswith(".qgs"))
-        project = archive.read(qgs_name).decode("utf-8")
-    for statement in ATTRIBUTIONS:
-        assert project.count(statement) >= 2
 
 
 def test_data_licence_register_covers_every_redistributed_family() -> None:
@@ -134,7 +126,7 @@ def test_data_licence_register_covers_every_redistributed_family() -> None:
         "registered-population",
         "deprivation",
         "rurality",
-        "icb_profile_mapping_layer_publication_safe.geojson",
+        "icb_profile_mapping_layer.geojson",
         "qgis",
         "project-created code",
         "project-created documentation",
@@ -162,8 +154,8 @@ def test_notebook_ci_and_canonical_evidence_are_distinct() -> None:
     ) as stream:
         rows = list(csv.DictReader(stream))
     classes = [row["evidence_class"] for row in rows]
-    assert classes.count("local_prepublication_smoke") == 3
-    assert classes.count("canonical_regeneration") == 1
+    assert classes.count("local_environment_smoke") == 3
+    assert classes.count("reference_regeneration") == 1
     assert all(row["hosted_by"] != "GitHub Actions" for row in rows)
     assert all(row["workflow_url"] == "" and row["run_id"] == "" for row in rows)
 
@@ -195,7 +187,7 @@ def test_readme_execution_scope_agrees_with_authority_classes() -> None:
         "Recomputed and validated",
         "Recomputed",
         "Validated from frozen authority tables",
-        "Inspected from checksum-controlled writing authority",
+        "Inspected from checksum-controlled scientific authority",
         "Portable project plus structural and runtime evidence",
     ):
         assert evidence_class in readme

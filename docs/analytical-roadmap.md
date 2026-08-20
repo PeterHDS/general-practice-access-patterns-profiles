@@ -1,39 +1,35 @@
 # Analytical roadmap
 
-GPAP² follows one cumulative route from checksum-verified annual practice matrices to bounded interpretation. Every stage inherits the decisions and contracts established earlier.
+GPAP² moves from validated practice-activity inputs to bounded research claims. Population scope is checked at every point where evidence availability narrows the practices represented.
 
-## Validate the modelling interface
+## 1. Validate inputs and define populations
 
-PCADI supplies one national OCS-GPAD matrix and two nested CBT matrices. GPAP² checks exact filenames, byte sizes, SHA-256 checksums, dimensions, feature order, numeric validity, unique practice codes, booking-feature semantics, cohort nesting and inherited national values.
+PCADI supplies one national OCS and GPAD matrix and two nested CBT matrices. GPAP² verifies file identity, dimensions, feature order, numeric validity, practice-code uniqueness and inherited values. The cohort audit then records the three evidence boundaries: 6,130 to 6,067, 6,067 to 3,020 and 3,020 to 1,456.
 
-## Justify and reproduce the national profile model
+## 2. Select and reproduce the national model
 
-The model-role register makes the fourteen-feature K-Means model the national benchmark; alternative algorithms and feature specifications remain robustness evidence. Four high-skew activity and change measures receive `log1p`. All fourteen features are scaled by their medians and interquartile ranges. K-Means uses three clusters, 100 initialisations, a maximum of 500 iterations, seed 2026 and the Lloyd algorithm. Labels are aligned to the frozen public profile numbers and must reproduce all 6,067 assignments exactly.
+Four high-skew activity and change measures receive `log1p`; all fourteen features receive median and interquartile-range scaling. K-Means with three profiles is the selected descriptive model. Ward clustering, a spherical Gaussian mixture model and a 12-feature comparator test different aspects of structure, uncertainty and construct sensitivity.
 
-## Define profiles and assignment uncertainty
+## 3. Describe profiles and retain uncertainty
 
-The three profiles receive neutral recorded-activity descriptions. Practice-level silhouette values, GMM posterior evidence, retention and algorithm disagreement remain attached so the hard partition is not mistaken for uniform certainty.
+Profile descriptions use observed feature configurations rather than performance labels. Practice-level silhouette, GMM posterior, retention and algorithm-disagreement evidence remain attached so the hard partition is not mistaken for uniform certainty.
 
-## Test the robustness envelope
+## 4. Test the robustness envelope
 
-Retained-specification, algorithm and assignment-uncertainty evidence establish the general robustness boundary. Telephone and temporal analyses add parallel sensitivity evidence within that boundary.
+Three complementary branches ask whether the national pattern persists:
 
-### CBT inbound and outcome evidence
+- algorithm and feature-specification comparisons;
+- CBT inbound and outcome-composition comparisons in the 3,020 and 1,456 practice populations;
+- half-year and quarterly temporal comparisons within April 2025 to March 2026.
 
-CBT reporting creates nested evidence-availability cohorts. A 3,020-practice comparison tests three inbound-call features. A 1,456-practice comparison tests complete recorded telephone outcomes. The preferred outcome sensitivity uses three NHS-aligned ILR coordinates for the four positive outcome shares. The raw 21-feature model remains a representation comparator.
+The ILR outcome sensitivity represents four strictly positive dependent telephone-outcome shares with three orthonormal balances and no pseudocount.
 
-### Temporal persistence within the year
+## 5. Interpret external and geographic context
 
-Checksum-verified half-year and quarterly authorities show how shorter windows relate to the annual model. The annual model remains the reference because shorter windows reduce the calculable cohort and introduce assignment variability.
+Frozen national assignments are linked to selected practice-level evidence for patient experience, workforce, registered population, deprivation and rurality. The QGIS project then describes within-ICB profile composition and assignment-caution shares across 42 March 2026 ICB organisations.
 
-## Inspect external context
+## 6. Translate findings into bounded claims
 
-Frozen profile assignments are linked to selected practice-level public evidence for patient experience, workforce, registered population, deprivation, rurality and March 2026 organisational geography. Associations are descriptive and preserve measure-specific denominators.
+The Evidence Map links 42 research claims to their construct, analytical population, evidence, limitations and permitted language. It distinguishes descriptive support, associative examination, major qualification and questions requiring additional evidence.
 
-## Examine geography and system distribution
-
-The portable QGIS project shows within-ICB profile composition and assignment-caution shares across 42 March 2026 ICB organisations. It uses April 2023 ONS boundaries and preserves the distinction between practice composition, patient prevalence and system performance.
-
-## Translate evidence readiness
-
-Claims are linked to their empirical sources, cohorts, limitations and prohibited interpretations. This prevents a profile label from being treated as a patient pathway, performance ranking or causal mechanism.
+The roadmap is cumulative but not mechanically linear. Telephone and temporal analyses are parallel sensitivity branches; external context and geography interpret fixed national assignments rather than refitting the national model.

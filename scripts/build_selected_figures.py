@@ -20,8 +20,7 @@ from gpap2.config import load_config  # noqa: E402
 from gpap2.io import read_contract_csv  # noqa: E402
 from gpap2.preprocessing import prepare_national_features  # noqa: E402
 from gpap2.profile_labels import PROFILE_SHORT_LABELS  # noqa: E402
-
-PROFILE_COLOURS = {1: "#d95f5f", 2: "#78b77a", 3: "#5c82a8"}
+from gpap2.visual_style import PROFILE_COLOURS, apply_figure_style  # noqa: E402
 
 
 def _feature_label(name: str) -> str:
@@ -43,6 +42,7 @@ def _feature_label(name: str) -> str:
 
 
 def build_national_profile_figure() -> None:
+    apply_figure_style()
     config = load_config(ROOT / "configs" / "reference_apr2025_mar2026.json")
     matrix = read_contract_csv(
         config.resolve(config.input_directory) / config.specification("national_14").source_file
@@ -163,7 +163,8 @@ def _polygon_rings(geometry: dict[str, object]) -> list[list[list[float]]]:
 
 
 def build_icb_composition_map() -> None:
-    source = ROOT / "qgis/data/icb_profile_mapping_layer_publication_safe.geojson"
+    apply_figure_style()
+    source = ROOT / "qgis/data/icb_profile_mapping_layer.geojson"
     features = json.loads(source.read_text(encoding="utf-8"))["features"]
     fig, axes = plt.subplots(1, 3, figsize=(18, 9))
     for profile, axis in zip((1, 2, 3), axes, strict=True):
@@ -213,6 +214,7 @@ def build_icb_composition_map() -> None:
 
 
 def build_temporal_summary() -> None:
+    apply_figure_style()
     tables = ROOT / "outputs" / "tables"
     canonical = pd.read_csv(tables / "temporal_canonical_period_metrics.csv")
     structural = pd.read_csv(tables / "temporal_structural_period_metrics.csv")
@@ -259,10 +261,10 @@ def build_temporal_summary() -> None:
 
 def build_inbound_profile_comparison() -> None:
     """Regenerate the matched 14- versus 17-feature profile heatmap from included matrices."""
+    apply_figure_style()
     config = load_config(ROOT / "configs" / "reference_apr2025_mar2026.json")
     source = (
-        config.resolve(config.input_directory)
-        / config.specification("cbt_inbound_17").source_file
+        config.resolve(config.input_directory) / config.specification("cbt_inbound_17").source_file
     )
     frame = read_contract_csv(source)
     comparison = compare_inbound_models(frame, config)

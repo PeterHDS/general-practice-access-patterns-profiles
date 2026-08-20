@@ -1,0 +1,7 @@
+domain,domain_label,question_addressed,claim_count,descriptively_supported,associatively_examinable,partially_supportable_with_major_qualification,not_supportable_with_current_public_data
+ACCESS,Access,What do recorded activity patterns and their robustness show?,20,6,1,6,7
+PATIENT_EXPERIENCE,Patient experience,How do fixed profiles relate to reported patient experience?,8,2,5,0,1
+WORKLOAD,Workload,What can recorded activity and workforce context say about workload?,5,0,2,0,3
+EQUITY,Equity,Which practice-level inequalities can be examined with available context?,6,0,4,0,2
+SAFETY,Safety,Which safety claims require linked outcomes or pathway evidence?,2,0,0,0,2
+VALUE,Value,Which value claims require cost and outcome evidence?,1,0,0,0,1

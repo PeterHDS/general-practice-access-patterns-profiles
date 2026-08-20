@@ -1,0 +1,4 @@
+"stage","parent_stage","practices","reason"
+"COMPLETE_SOURCE_PARENT","",6130,""
+"NATIONAL_ANALYTICAL_COHORT","COMPLETE_SOURCE_PARENT",6067,"Meets final annual OCS activity and feature-definability rule"
+"NATIONAL_EXCLUDED","COMPLETE_SOURCE_PARENT",63,"Annual OCS activity = 0; required OCS composition measures undefined"

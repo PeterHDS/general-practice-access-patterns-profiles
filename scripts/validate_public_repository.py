@@ -90,7 +90,11 @@ def scan_text(relative: Path, text: str, failures: list[str]) -> None:
             failures.append(f"private absolute path in {relative}")
     if relative.suffix.lower() == ".md":
         for heading in re.findall(r"^#{1,6}\s+(.+)$", text, flags=re.MULTILINE):
-            if re.search(r"\b(?:Scenario|Task|E0[0-9][A-Z]?)\b", heading, re.IGNORECASE):
+            internal_code = re.search(
+                r"\b(?:Scenario|Task|E0[0-9][A-Z]?)\b", heading, re.IGNORECASE
+            )
+            evidence_claim_id = re.match(r"^E\d{2}:", heading, re.IGNORECASE)
+            if internal_code and not evidence_claim_id:
                 failures.append(f"internal stage code in heading {relative}: {heading}")
         for target in re.findall(r"\[[^\]]+\]\(([^)]+)\)", text):
             target = unquote(target.split("#", 1)[0].strip("<>"))
@@ -165,16 +169,50 @@ def main() -> None:
         with claims.open("r", encoding="utf-8-sig", newline="") as stream:
             claim_rows = list(csv.DictReader(stream))
         required = {
-            "private_build_lineage_id",
-            "public_evidence_path",
-            "official_source_reference",
-            "public_evidence_status",
-            "public_evidence_note",
+            "claim_id",
+            "proposed_claim",
+            "support_category",
+            "primary_claim_domain",
+            "permitted_wording",
+            "prohibited_wording",
+            "linked_table_figure",
+            "source_lineage",
+            "construct_evidence_link",
         }
         if claim_rows and not required.issubset(claim_rows[0]):
-            failures.append("claim evidence matrix lacks the public/private lineage contract")
-        for row in claim_rows:
-            for value in row.get("public_evidence_path", "").split(";"):
+            failures.append("claim evidence matrix lacks the scientific evidence contract")
+        if len(claim_rows) != 42:
+            failures.append(f"claim evidence matrix has {len(claim_rows)} rows, expected 42")
+        claim_ids = [row.get("claim_id", "") for row in claim_rows]
+        if len(set(claim_ids)) != len(claim_ids) or "" in claim_ids:
+            failures.append("claim evidence matrix claim IDs are blank or duplicated")
+        domains = {row.get("primary_claim_domain", "") for row in claim_rows}
+        if domains != {
+            "ACCESS",
+            "PATIENT_EXPERIENCE",
+            "WORKLOAD",
+            "EQUITY",
+            "SAFETY",
+            "VALUE",
+        }:
+            failures.append(f"unexpected claim domains: {sorted(domains)}")
+        support = {row.get("support_category", "") for row in claim_rows}
+        if support != {
+            "DESCRIPTIVELY_SUPPORTED",
+            "ASSOCIATIVELY_EXAMINABLE",
+            "PARTIALLY_SUPPORTABLE_WITH_MAJOR_QUALIFICATION",
+            "NOT_SUPPORTABLE_WITH_CURRENT_PUBLIC_DATA",
+        }:
+            failures.append(f"unexpected claim support categories: {sorted(support)}")
+
+    presentation = ROOT / "outputs/tables/evidence_map_presentation.csv"
+    if presentation.exists():
+        with presentation.open("r", encoding="utf-8-sig", newline="") as stream:
+            presentation_rows = list(csv.DictReader(stream))
+        if len(presentation_rows) != 42:
+            failures.append("evidence-map presentation layer must contain 42 claims")
+        for row in presentation_rows:
+            for value in row.get("repository_evidence_paths", "").split(";"):
                 value = value.strip()
                 if not value or not (ROOT / value).is_file():
                     failures.append(

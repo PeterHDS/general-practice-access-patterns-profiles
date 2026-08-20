@@ -19,10 +19,6 @@ Contains OS data © Crown copyright and database right 2026
 
 The maps represent practice composition, not patient prevalence or ICB performance. No spatial statistic, rank or post-April-2026 boundary conversion is applied.
 
-The portable data deliberately separates three concepts:
-
-- `analysis_period`: 1 April 2025 to 31 March 2026;
-- `boundary_vintage`: April 2023;
-- `organisation_reference_date`: 31 March 2026.
+The registered `reference_period` records the combined geographic frame: frozen March 2026 organisational geography using April 2023 ICB boundaries. The analytical values cover 1 April 2025 to 31 March 2026.
 
 The March 2026 ODS ICB organisations were linked to the April 2023 ONS boundaries through the audited normalised-name crosswalk. This is a practice-location context layer, not a patient-residence geography.

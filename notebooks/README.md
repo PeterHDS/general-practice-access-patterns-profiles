@@ -1,7 +1,7 @@
-# Purpose-led notebook sequence
+# Analytical notebook sequence
 
 The notebooks form one dependency-led analytical sequence. Reusable calculations live in
-`src/gpap2`; every notebook states its inherited contract, purpose, result or decision, and handover.
+`src/gpap2`; every notebook states its data and method contract, analytical purpose, result and the evidence it establishes.
 The telephone and temporal notebooks contribute parallel evidence to the robustness envelope and
 do not falsely imply a computational dependency between those analyses.
 
@@ -18,4 +18,4 @@ Run `python scripts/fetch_pcadi_inputs.py` before the first four notebooks. The 
 Run every notebook from a clean kernel with
 `python scripts/execute_public_notebooks.py --check`. This executes disposable copies, does not
 rewrite tracked notebooks and does not allow stored errors. The maintainer-only
-`--write-canonical` mode requires the exact locked publication environment.
+`--write-canonical` mode requires the exact registered environment.
