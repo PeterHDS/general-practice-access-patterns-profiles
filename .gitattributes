@@ -8,3 +8,22 @@
 *.csv text eol=lf
 data/reference/*.csv binary
 qgis/data/*.geojson binary
+
+# Frozen scientific evidence copied from the registered bundles retains its exact bytes.
+outputs/tables/claim_to_evidence_matrix.csv binary
+outputs/tables/cohort_selection_stage_summary.csv binary
+outputs/tables/national_cohort_flow.csv binary
+outputs/tables/cbt_inbound_cohort_flow.csv binary
+outputs/tables/cbt_outcome_cohort_flow.csv binary
+outputs/tables/national_selection_continuous.csv binary
+outputs/tables/national_selection_categorical.csv binary
+outputs/tables/cbt_inbound_selection_continuous.csv binary
+outputs/tables/cbt_inbound_selection_categorical.csv binary
+outputs/tables/cbt_outcome_selection_continuous.csv binary
+outputs/tables/cbt_outcome_selection_categorical.csv binary
+outputs/tables/national_model_selection_summary.csv binary
+outputs/tables/national_confirmatory_stability_summary.csv binary
+outputs/tables/national_uncertainty_summary.csv binary
+outputs/tables/national_12_feature_comparator_evidence.csv binary
+outputs/tables/temporal_half_year_direct_comparison.csv binary
+outputs/tables/temporal_half_year_resampling_summary.csv binary
