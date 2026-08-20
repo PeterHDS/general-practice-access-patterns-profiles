@@ -34,9 +34,9 @@ PCADI calculates annual rates from validated monthly registered-patient counts. 
 
 ## Larger downstream masters
 
-Two full local research masters support later analysis but are not required to execute the compact public route:
+Two full research masters support later analysis but are not required to execute the compact repository route:
 
 - a 6,067 x 148 organisationally enriched profile master, SHA-256 `E94F50D98E9E4AB2F6B83E8F4A136DA47DDA9516C0CB061E764A3A5FBE747596`;
 - a 6,067 x 194 temporal master, SHA-256 `3271053E206E81BCC87DEFC842E0B75CB8DCAACE6F16BF1F65934F1343AAC454`.
 
-Selected publication-safe summaries and their checksums are included. The full masters can be supplied as separately governed release assets if approved.
+Selected disclosure-controlled summaries and their checksums are included. The full masters are governed through the registered reproducibility releases.

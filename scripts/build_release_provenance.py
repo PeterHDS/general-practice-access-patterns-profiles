@@ -65,7 +65,7 @@ def build_payload(archive: Path | None, test_summary: str) -> dict[str, object]:
     )
     notebook_ci = pd.read_csv(NOTEBOOK_CI_PATH) if NOTEBOOK_CI_PATH.is_file() else pd.DataFrame()
     archive_finalised = archive is not None
-    archive_name = archive.name if archive else "gpap2-publication-candidate.zip"
+    archive_name = archive.name if archive else "gpap2-v1.0.0-reference-source.zip"
     return {
         "schema_version": "1.0",
         "repository_url": repository_url(),
@@ -100,12 +100,12 @@ def build_payload(archive: Path | None, test_summary: str) -> dict[str, object]:
         "pcadi_repository": config["pcadi"]["repository"],
         "pcadi_commit": config["pcadi"]["commit_sha"],
         "pcadi_tag": config["pcadi"]["tag"],
-        "notebook_canonical_regeneration_status": (
+        "notebook_reference_regeneration_status": (
             "passed"
             if not notebook_ci.empty
             and (
                 notebook_ci.loc[
-                    notebook_ci["evidence_class"].eq("canonical_regeneration"), "status"
+                    notebook_ci["evidence_class"].eq("reference_regeneration"), "status"
                 ]
                 == "passed"
             ).all()

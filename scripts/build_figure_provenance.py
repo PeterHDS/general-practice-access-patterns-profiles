@@ -19,6 +19,72 @@ PROFILE_AUTHORITY = "src/gpap2/profile_labels.py"
 
 FIGURES = [
     {
+        "figure_path": "outputs/figures/model_selection_and_uncertainty.png",
+        "public_role": "Complementary model-selection and uncertainty evidence",
+        "sources": [
+            "outputs/tables/national_model_selection_summary.csv",
+            "outputs/tables/national_12_feature_comparator_evidence.csv",
+        ],
+        "generator_path": "scripts/build_integrated_figures.py",
+        "authority_source": "Bundle 01 model-selection and comparator authorities",
+        "reproducibility_class": "regenerated_from_included_authority_tables",
+        "canonical_environment": CANONICAL_PYTHON,
+        "notes": "Contrasts silhouette, repeated-sample recovery and aligned agreement without treating any single diagnostic as decisive.",
+    },
+    {
+        "figure_path": "outputs/figures/population_selection_and_generalisability.png",
+        "public_role": "Nested analytical populations and measured selection differences",
+        "sources": [
+            "outputs/tables/cohort_selection_stage_summary.csv",
+            "outputs/tables/population_scope_register.csv",
+        ],
+        "generator_path": "scripts/build_integrated_figures.py",
+        "authority_source": "Bundle 03 cohort-selection authorities",
+        "reproducibility_class": "regenerated_from_included_authority_tables",
+        "canonical_environment": CANONICAL_PYTHON,
+        "notes": "Shows retained populations and absolute SMD or Cramer's V anchors; these are population-scope measures, not quality scores.",
+    },
+    {
+        "figure_path": "outputs/figures/evidence_readiness_overview.png",
+        "public_role": "Evidence readiness across six claim domains",
+        "sources": ["outputs/tables/claim_to_evidence_matrix.csv"],
+        "generator_path": "scripts/build_integrated_figures.py",
+        "authority_source": "Bundle 02 canonical 42-claim scientific authority",
+        "reproducibility_class": "regenerated_from_included_authority_tables",
+        "canonical_environment": CANONICAL_PYTHON,
+        "notes": "Counts claims by evidence category; categories are interpretation controls rather than a score.",
+    },
+    {
+        "figure_path": "outputs/figures/national_cohort_selection.png",
+        "public_role": "National analytical population selection",
+        "sources": ["outputs/tables/national_cohort_flow.csv"],
+        "generator_path": "",
+        "authority_source": "Bundle 03 native-R cohort-selection audit",
+        "reproducibility_class": "checksum_validated_frozen_authority",
+        "canonical_environment": "R 4.5.1 reference audit environment",
+        "notes": "Frozen figure for the 6,130 to 6,067 national boundary.",
+    },
+    {
+        "figure_path": "outputs/figures/cbt_inbound_cohort_selection.png",
+        "public_role": "CBT inbound evidence population selection",
+        "sources": ["outputs/tables/cbt_inbound_cohort_flow.csv"],
+        "generator_path": "",
+        "authority_source": "Bundle 03 native-R cohort-selection audit",
+        "reproducibility_class": "checksum_validated_frozen_authority",
+        "canonical_environment": "R 4.5.1 reference audit environment",
+        "notes": "Frozen figure for the 6,067 to 3,020 CBT inbound boundary.",
+    },
+    {
+        "figure_path": "outputs/figures/cbt_outcome_cohort_selection.png",
+        "public_role": "CBT outcome-complete evidence population selection",
+        "sources": ["outputs/tables/cbt_outcome_cohort_flow.csv"],
+        "generator_path": "",
+        "authority_source": "Bundle 03 native-R cohort-selection audit",
+        "reproducibility_class": "checksum_validated_frozen_authority",
+        "canonical_environment": "R 4.5.1 reference audit environment",
+        "notes": "Frozen figure for the 3,020 to 1,456 outcome-complete boundary.",
+    },
+    {
         "figure_path": "outputs/figures/national_profile_characteristics_and_uncertainty.png",
         "public_role": "Primary national profile characteristics and practice-level uncertainty",
         "sources": [
@@ -58,9 +124,9 @@ FIGURES = [
     {
         "figure_path": "outputs/maps/icb_profile_composition.png",
         "public_role": "Within-ICB composition of the three national profiles",
-        "sources": ["qgis/data/icb_profile_mapping_layer_publication_safe.geojson"],
+        "sources": ["qgis/data/icb_profile_mapping_layer.geojson"],
         "generator_path": "scripts/build_selected_figures.py",
-        "authority_source": "Publication-safe GeoJSON with audited geography metadata",
+        "authority_source": "Disclosure-controlled GeoJSON with audited geography metadata",
         "reproducibility_class": "regenerated_from_included_authority_tables",
         "canonical_environment": CANONICAL_PYTHON,
         "notes": "Includes mandatory ONS and OS attribution; eight small Profile 1 cells remain suppressed.",
@@ -68,9 +134,9 @@ FIGURES = [
     {
         "figure_path": "qgis/previews/national_three_profile_map_preview.png",
         "public_role": "QGIS print-layout preview of national profile composition",
-        "sources": ["qgis/data/icb_profile_mapping_layer_publication_safe.geojson"],
+        "sources": ["qgis/data/icb_profile_mapping_layer.geojson"],
         "generator_path": "qgis/scripts/build_qgis_project.py",
-        "authority_source": "Portable QGIS project and publication-safe GeoJSON",
+        "authority_source": "Portable QGIS project and disclosure-controlled GeoJSON",
         "reproducibility_class": "qgis_rendered_output",
         "canonical_environment": "QGIS 3.44.12 LTR on Windows 11",
         "notes": "Runtime record proves four resolved layers, two layouts and regenerated preview checksums.",
@@ -78,9 +144,9 @@ FIGURES = [
     {
         "figure_path": "qgis/previews/assignment_caution_map_preview.png",
         "public_role": "QGIS print-layout preview of assignment-caution share",
-        "sources": ["qgis/data/icb_profile_mapping_layer_publication_safe.geojson"],
+        "sources": ["qgis/data/icb_profile_mapping_layer.geojson"],
         "generator_path": "qgis/scripts/build_qgis_project.py",
-        "authority_source": "Portable QGIS project and publication-safe GeoJSON",
+        "authority_source": "Portable QGIS project and disclosure-controlled GeoJSON",
         "reproducibility_class": "qgis_rendered_output",
         "canonical_environment": "QGIS 3.44.12 LTR on Windows 11",
         "notes": "Runtime record proves four resolved layers, two layouts and regenerated preview checksums.",
@@ -98,7 +164,10 @@ FIGURES = [
     {
         "figure_path": "outputs/figures/national_profile_stability_and_sensitivity.png",
         "public_role": "National algorithm and feature-specification stability evidence",
-        "sources": ["outputs/tables/robustness_summary.csv", "outputs/tables/model_role_register.csv"],
+        "sources": [
+            "outputs/tables/robustness_summary.csv",
+            "outputs/tables/model_role_register.csv",
+        ],
         "generator_path": "",
         "authority_source": "Closed resampling analysis; figure checksum controlled in the release manifest",
         "reproducibility_class": "checksum_validated_frozen_authority",
@@ -156,6 +225,9 @@ def main() -> None:
                 "source_table_paths": ";".join(source_paths),
                 "source_checksums": ";".join(checksums),
                 "profile_label_authority": PROFILE_AUTHORITY,
+                "analysis_period": "1 April 2025 to 31 March 2026",
+                "geography": "England general practices",
+                "alt_text": record["public_role"],
             }
         )
     columns = [
@@ -168,6 +240,9 @@ def main() -> None:
         "reproducibility_class",
         "canonical_environment",
         "profile_label_authority",
+        "analysis_period",
+        "geography",
+        "alt_text",
         "notes",
     ]
     output = ROOT / "outputs" / "validation" / "figure_provenance.csv"

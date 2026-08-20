@@ -1,4 +1,4 @@
-"""Summarise canonical notebook execution separately from local multi-version smoke tests."""
+"""Summarise reference notebook execution separately from local multi-version smoke tests."""
 
 from __future__ import annotations
 
@@ -32,11 +32,11 @@ def main() -> None:
         rows.append(
             {
                 "evidence_object": "seven-notebook disposable smoke execution",
-                "evidence_class": "local_prepublication_smoke",
-                "hosted_by": "local Windows final-gate environment",
+                "evidence_class": "local_environment_smoke",
+                "hosted_by": "local Windows validation environment",
                 "workflow_url": "",
                 "run_id": "",
-                "source_commit": "prepublication_worktree",
+                "source_commit": "working_tree",
                 "python_version": report["environment"]["python"],
                 "notebooks_expected": len(notebooks),
                 "notebooks_passed": passed,
@@ -52,20 +52,20 @@ def main() -> None:
     canonical = pd.read_csv(canonical_path)
     rows.append(
         {
-            "evidence_object": "canonical seven-notebook regeneration",
-            "evidence_class": "canonical_regeneration",
-            "hosted_by": "locked local publication environment",
+            "evidence_object": "reference seven-notebook regeneration",
+            "evidence_class": "reference_regeneration",
+            "hosted_by": "registered local reference environment",
             "workflow_url": "",
             "run_id": "",
-            "source_commit": "prepublication_worktree",
+            "source_commit": "working_tree",
             "python_version": "3.13.14",
             "notebooks_expected": len(canonical),
             "notebooks_passed": int(canonical["passed"].sum()),
             "status": "passed" if canonical["passed"].all() else "failed",
-            "execution_date_utc": "recorded by the publication build",
+            "execution_date_utc": "recorded by the reference build",
             "artifact_path": canonical_path.relative_to(ROOT).as_posix(),
             "artifact_sha256": sha256(canonical_path),
-            "notes": "Canonical stored-output evidence; distinct from disposable smoke execution.",
+            "notes": "Stored-output evidence; distinct from disposable smoke execution.",
         }
     )
     output = VALIDATION / "notebook_ci_summary.csv"

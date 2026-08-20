@@ -26,13 +26,13 @@ def main() -> None:
     draw.text((72, 58), "GPAP²", font=font(74, True), fill="white")
     draw.text(
         (72, 160),
-        "From digital activity to access pressure profiles",
+        "General Practice Access Patterns and Profiles",
         font=font(39, True),
         fill="#e8f2f5",
     )
     draw.text(
         (74, 220),
-        "Recorded activity | Machine learning | Evidence readiness",
+        "Profiles · robustness · population scope · evidence map",
         font=font(25),
         fill="#9fd8d3",
     )
@@ -50,7 +50,7 @@ def main() -> None:
 
     draw.text(
         (72, 566),
-        "England | April 2025 to March 2026 | Reproducible analytical companion",
+        "England | April 2025–March 2026",
         font=font(22),
         fill="#c9dbe3",
     )

@@ -1,4 +1,4 @@
-"""Build the seven purpose-led public notebooks from executable source cells."""
+"""Build the seven analytical notebooks from executable source cells."""
 
 from __future__ import annotations
 
@@ -71,7 +71,7 @@ def main() -> None:
         [
             markdown("""# Validate the access-profile inputs
 
-**Inherited contract:** the three immutable matrices published by the pinned PCADI reference release.
+**Data and method:** the three immutable matrices published by the pinned PCADI reference release.
 
 **Purpose:** confirm that the modelling inputs satisfy their complete contracts before any model is fitted.
 
@@ -108,13 +108,15 @@ output_contract = build_output_contract_table({
     'validated matrices': int(matrix_checks['passed'].sum()),
     'validated cohort relationships': int(cohort_checks['passed'].sum()),
     'failed gates': int((~quality_gates['passed']).sum()),
-    'handover': 'fixed national matrix and feature contract',
+    'next evidence': 'fixed national matrix and feature contract',
 })
 output_contract"""),
             markdown("""## Decision
 
 The checksum-controlled PCADI outputs can enter GPAP² without recalculation or imputation. The practice identifier is retained for traceability and excluded from every numerical model."""),
-            markdown("""**Stage handover:** The validated matrix and feature contract become the fixed input to national profile modelling."""),
+            markdown(
+                """**What this establishes:** The validated matrix and feature contract form the fixed input to national profile modelling."""
+            ),
         ],
     )
 
@@ -123,7 +125,7 @@ The checksum-controlled PCADI outputs can enter GPAP² without recalculation or 
         [
             markdown("""# Reproduce and justify the selected national access-pressure model
 
-**Inherited contract:** the validated 6,067-practice national matrix, fourteen-feature specification and locked preprocessing controls.
+**Data and method:** the validated 6,067-practice national matrix, fourteen-feature specification and locked preprocessing controls.
 
 **Purpose:** show why the fourteen-feature K-Means model with three profiles is the national benchmark, then reproduce its frozen partition under one configuration-controlled contract.
 
@@ -227,8 +229,10 @@ assert transformation_contract['iqr_gate_passed'].all()
 print('Every frozen national profile assignment was reproduced exactly.')"""),
             markdown("""## Decision
 
-The configuration-controlled implementation exactly reproduces all 6,067 frozen assignments. The output uses final public profile labels 1 to 3; no zero-based label is presented as the analytical result."""),
-            markdown("""**Stage handover:** The selected national profiles provide the reference partition against which restricted-cohort, representation, temporal, contextual, and geographic evidence is interpreted."""),
+The configuration-controlled implementation exactly reproduces all 6,067 registered assignments. The output uses profile labels 1 to 3; no zero-based label is presented as the analytical result."""),
+            markdown(
+                """**What this establishes:** The selected national profiles provide the reference partition for restricted-cohort, representation, temporal, contextual and geographic comparisons."""
+            ),
         ],
     )
 
@@ -237,7 +241,7 @@ The configuration-controlled implementation exactly reproduces all 6,067 frozen 
         [
             markdown("""# Test what telephone inbound evidence adds
 
-**Inherited contract:** the reproduced national benchmark and the nested 3,020-practice CBT inbound cohort.
+**Data and method:** the reproduced national benchmark and the nested 3,020-practice CBT inbound cohort.
 
 **Purpose:** calculate the matched comparison between the 14-feature control and 17-feature CBT inbound model on the same 3,020 practices.
 
@@ -302,7 +306,9 @@ comparison_contract"""),
             markdown("""## Decision
 
 Inbound telephone activity is an informative restricted-cohort sensitivity. It changes a material set of assignments but does not replace the national OCS-GPAD profile model or imply national CBT coverage."""),
-            markdown("""**Stage handover:** The inbound result remains a restricted evidence-availability sensitivity and defines the baseline for testing whether telephone-outcome representation changes that sensitivity. It does not replace or rerun the national model."""),
+            markdown(
+                """**What this establishes:** The inbound result is a restricted evidence-availability sensitivity and defines the baseline for testing whether telephone-outcome representation changes that sensitivity. It does not replace or rerun the national model."""
+            ),
         ],
     )
 
@@ -311,7 +317,7 @@ Inbound telephone activity is an informative restricted-cohort sensitivity. It c
         [
             markdown("""# Test telephone outcome composition without repeated weighting
 
-**Inherited contract:** the national benchmark, inbound sensitivity and the nested 1,456-practice outcome-complete cohort.
+**Data and method:** the national benchmark, inbound sensitivity and the nested 1,456-practice outcome-complete cohort.
 
 **Purpose:** calculate the authoritative NHS-aligned three-coordinate representation of four CBT outcome shares and compare 17-feature, raw 21-feature and ILR 20-feature models on the same 1,456 practices.
 
@@ -413,7 +419,9 @@ comparison_contract"""),
             markdown("""## Decision
 
 The NHS-aligned 20-feature ILR model is the preferred outcome-representation sensitivity. The raw 21-feature model remains a representation comparator. Neither restricted-cohort model replaces the national model."""),
-            markdown("""**Stage handover:** The outcome-representation result joins inbound, algorithmic, feature and temporal evidence in the cumulative robustness envelope."""),
+            markdown(
+                """**What this establishes:** The outcome-representation result contributes to the robustness evidence alongside inbound, algorithmic, feature and temporal comparisons."""
+            ),
         ],
     )
 
@@ -422,7 +430,7 @@ The NHS-aligned 20-feature ILR model is the preferred outcome-representation sen
         [
             markdown("""# Assess whether profiles persist over time
 
-**Inherited contract:** the national benchmark and its algorithm, feature and telephone sensitivity boundaries. The temporal calculation is parallel to the telephone calculations, not computationally downstream from them.
+**Data and method:** the national benchmark and its algorithm, feature and telephone sensitivity boundaries. The temporal calculation is parallel to the telephone calculations, not computationally downstream from them.
 
 **Purpose:** inspect checksum-verified half-year and quarterly authority tables and decide whether shorter windows support or replace the annual model.
 
@@ -450,7 +458,9 @@ summary"""),
             markdown("""## Decision
 
 Half-year and quarterly partitions retain related structure but show genuine within-year reassignment. The April 2025 to March 2026 annual model remains the reference; temporal results are sensitivity evidence rather than replacement profiles."""),
-            markdown("""**Handover:** the completed robustness envelope bounds the external-context interpretation of the fixed national profiles."""),
+            markdown(
+                """**What this establishes:** the robustness evidence bounds the external-context interpretation of the fixed national profiles."""
+            ),
         ],
     )
 
@@ -459,7 +469,7 @@ Half-year and quarterly partitions retain related structure but show genuine wit
         [
             markdown("""# Inspect external context for the frozen profiles
 
-**Inherited contract:** the fixed national profiles, their uncertainty signals and the completed robustness envelope.
+**Data and method:** the fixed national profiles, their uncertainty signals and the completed robustness evidence.
 
 **Purpose:** inspect selected population, workforce, place and patient-experience authorities without allowing contextual variables to redefine the frozen activity profiles.
 
@@ -487,7 +497,9 @@ tables['narratives'][['frozen_profile_number', 'approved_descriptive_label', 'na
             markdown("""## Interpretation contract
 
 Patient experience, workforce, population, deprivation, rurality and geography are practice-level external evidence. Denominators differ by measure. Associations can describe context and test coherence; they cannot establish patient-level mechanisms, performance rankings or causal effects."""),
-            markdown("""**Handover:** contextual findings pass to the geography stage and then to the final claim-to-evidence synthesis."""),
+            markdown(
+                """**What this establishes:** contextual findings inform the geographic account and the claim-to-evidence synthesis."""
+            ),
         ],
     )
 
@@ -496,7 +508,7 @@ Patient experience, workforce, population, deprivation, rurality and geography a
         [
             markdown("""# Translate the analysis into evidence-ready claims
 
-**Inherited contract:** the validated benchmark, profile definitions, complete robustness envelope, external context and documented geography evidence.
+**Data and method:** the validated benchmark, profile definitions, robustness evidence, external context and documented geography evidence.
 
 **Purpose:** inspect checksum-verified writing authorities that connect each proposed conclusion to its empirical source, cohort and language boundary.
 
@@ -515,23 +527,30 @@ pd.DataFrame({
     'authority': ['claim-to-evidence matrix', 'evidence-availability summary'],
     'rows': [len(claims), len(availability)],
 })"""),
-            code("""required_public_fields = {
-    'private_build_lineage_id',
-    'public_evidence_path',
-    'official_source_reference',
-    'public_evidence_status',
-    'public_evidence_note',
+            code("""required_scientific_fields = {
+    'claim_id',
+    'primary_claim_domain',
+    'exact_construct_observed',
+    'support_category',
+    'linked_table_figure',
+    'source_lineage',
+    'construct_evidence_link',
+    'permitted_wording',
+    'prohibited_wording',
 }
-assert required_public_fields.issubset(claims.columns)
-claims[['claim_id', 'proposed_claim', 'support_category', 'public_evidence_path', 'public_evidence_status', 'permitted_wording', 'prohibited_wording']].head(10)"""),
+assert required_scientific_fields.issubset(claims.columns)
+assert len(claims) == 42 and claims['claim_id'].is_unique
+claims[['claim_id', 'primary_claim_domain', 'proposed_claim', 'support_category', 'permitted_wording', 'prohibited_wording']].head(10)"""),
             markdown("""## Decision
 
-The public evidence supports descriptive practice-level activity profiles, bounded robustness results and contextual associations. Linked pathway, outcome, safety, cost and implementation evidence is required before extending those results to causal or patient-level claims."""),
-            markdown("""**Handover:** this stage closes the cumulative analytical argument and defines the evidence that may be reported."""),
+The evidence supports descriptive practice-level activity profiles, bounded robustness results and contextual associations. Linked pathway, outcome, safety, cost and implementation evidence is required before extending those results to causal or patient-level claims."""),
+            markdown(
+                """**What this establishes:** the 42-claim authority defines the evidence that may be reported and the interpretations that require additional data."""
+            ),
         ],
     )
 
-    print("built seven public notebooks")
+    print("built seven analytical notebooks")
 
 
 if __name__ == "__main__":

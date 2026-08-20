@@ -1,0 +1,6 @@
+"stage","parent_stage","practices","reason"
+"NATIONAL_ANALYTICAL_PARENT","",6067,""
+"CBT_INBOUND_ELIGIBLE","NATIONAL_ANALYTICAL_PARENT",3020,"Matched annual CBT evidence; 12 complete inbound months; 12 valid mapping months"
+"NOT_RETAINED","NATIONAL_ANALYTICAL_PARENT",3047,"Does not meet inbound eligibility"
+"NO_MATCHED_ANNUAL_CBT_EVIDENCE","NOT_RETAINED",1138,"No matched annual CBT evidence"
+"MATCHED_EVIDENCE_BUT_INCOMPLETE","NOT_RETAINED",1909,"Matched evidence but inbound completeness and mapping validity are both below 12 months"

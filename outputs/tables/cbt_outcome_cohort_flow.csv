@@ -1,0 +1,7 @@
+"stage","parent_stage","practices","reason"
+"CBT_INBOUND_PARENT","",3020,""
+"CBT_OUTCOME_COMPLETE","CBT_INBOUND_PARENT",1456,"12 complete outcome months and no integrity gap"
+"NOT_OUTCOME_COMPLETE","CBT_INBOUND_PARENT",1564,"Does not meet outcome-completeness rule"
+"OUTCOME_12_INTEGRITY_GAP","NOT_OUTCOME_COMPLETE",457,"12 outcome months plus integrity gap"
+"OUTCOME_LT12_NO_INTEGRITY_GAP","NOT_OUTCOME_COMPLETE",507,"Fewer than 12 outcome months with no integrity gap"
+"OUTCOME_LT12_INTEGRITY_GAP","NOT_OUTCOME_COMPLETE",600,"Fewer than 12 outcome months plus integrity gap"

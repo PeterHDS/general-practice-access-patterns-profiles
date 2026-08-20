@@ -1,6 +1,6 @@
 # Portable QGIS project
 
-Open `GPAP2_Digital_GP_Access_Profiles_March_2026.qgz` in QGIS 3.44 LTR or a compatible later version. The project reads `data/icb_profile_mapping_layer_publication_safe.geojson` through a relative path.
+Open `GPAP2_Digital_GP_Access_Profiles_March_2026.qgz` in QGIS 3.44 LTR or a compatible later version. The project reads `data/icb_profile_mapping_layer.geojson` through a relative path. Both files are the checksum-registered Bundle 02 geographic authorities.
 
 The package contains four styled layers and two print layouts. It maps within-ICB practice-profile composition and assignment-caution share across 42 March 2026 ICB organisations. The analysis covers 1 April 2025 to 31 March 2026 and uses April 2023 ICB boundaries. Small Profile 1 counts below five are suppressed.
 

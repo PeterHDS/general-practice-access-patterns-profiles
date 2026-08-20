@@ -1,0 +1,787 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GPAP² Evidence Map</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#claims">Skip to claims</a>
+<main>
+  <header class="page-header">
+    <p class="eyebrow">GPAP² research evidence</p>
+    <h1>Evidence Map</h1>
+    <p>Explore 42 claims across six domains. Each entry links the proposed interpretation to its population, method, evidence status and wording boundary.</p>
+    <nav aria-label="Evidence downloads"><a href="../../outputs/tables/claim_to_evidence_matrix.csv">Download the canonical claim authority</a> · <a href="../evidence-map.md">Read the text version</a> · <a href="../population-and-generalisability.md">Understand population scope</a></nav>
+  </header>
+  <section class="domain-grid" aria-label="Evidence domain summary"><section class="domain-summary"><h2>Access</h2><p>What do recorded activity patterns and their robustness show?</p><p><strong>20 claims.</strong> Descriptively supported: 6, Associatively examinable: 1, Major qualification required: 6, Additional evidence required: 7.</p></section><section class="domain-summary"><h2>Patient experience</h2><p>How do fixed profiles relate to reported patient experience?</p><p><strong>8 claims.</strong> Descriptively supported: 2, Associatively examinable: 5, Additional evidence required: 1.</p></section><section class="domain-summary"><h2>Workload</h2><p>What can recorded activity and workforce context say about workload?</p><p><strong>5 claims.</strong> Associatively examinable: 2, Additional evidence required: 3.</p></section><section class="domain-summary"><h2>Equity</h2><p>Which practice-level inequalities can be examined with available context?</p><p><strong>6 claims.</strong> Associatively examinable: 4, Additional evidence required: 2.</p></section><section class="domain-summary"><h2>Safety</h2><p>Which safety claims require linked outcomes or pathway evidence?</p><p><strong>2 claims.</strong> Additional evidence required: 2.</p></section><section class="domain-summary"><h2>Value</h2><p>Which value claims require cost and outcome evidence?</p><p><strong>1 claim.</strong> Additional evidence required: 1.</p></section></section>
+  <section class="controls" aria-label="Filter claims">
+    <label for="search">Search claims<input id="search" type="search" autocomplete="off"></label>
+    <label for="domain">Domain<select id="domain"><option value="">All domains</option><option value="ACCESS">Access</option><option value="PATIENT_EXPERIENCE">Patient experience</option><option value="WORKLOAD">Workload</option><option value="EQUITY">Equity</option><option value="SAFETY">Safety</option><option value="VALUE">Value</option></select></label>
+    <label for="support">Evidence status<select id="support"><option value="">All statuses</option><option value="DESCRIPTIVELY_SUPPORTED">Descriptively supported</option><option value="ASSOCIATIVELY_EXAMINABLE">Associatively examinable</option><option value="PARTIALLY_SUPPORTABLE_WITH_MAJOR_QUALIFICATION">Major qualification required</option><option value="NOT_SUPPORTABLE_WITH_CURRENT_PUBLIC_DATA">Additional evidence required</option></select></label>
+    <button id="clear" type="button">Clear filters</button>
+  </section>
+  <p id="count" aria-live="polite">42 claims shown</p>
+  <section id="claims" class="claim-grid" aria-label="Claims"><article class="claim-card" data-domain="ACCESS" data-support="DESCRIPTIVELY_SUPPORTED" data-search="a01 national ocs–gpad profiles exist. fixed three-profile membership derived from 14 annual ocs and gpad features. ocs and gpad, april 2025 to march 2026 6,067 practices with complete 12-month primary features 6,067 practices were assigned once to three profiles: 1,753, 2,312 and 2,002. three national practice-level recorded-activity profiles were identified.">
+  <header><span class="claim-id">A01</span><span class="support support-descriptively_supported">● Descriptively supported</span></header>
+  <h2>National OCS–GPAD profiles exist.</h2>
+  <p><strong>Observed construct:</strong> Fixed three-profile membership derived from 14 annual OCS and GPAD features.</p>
+  <p><strong>Population:</strong> 6,067 practices with complete 12-month primary features</p>
+  <p class="scope"><strong>Population scope:</strong> Directly represents the 6,067 practices in the national analytical cohort unless the claim records a narrower valid population.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>OCS and GPAD, April 2025 to March 2026</dd>
+      <dt>Method</dt><dd>K-Means clustering; frozen assignment reconciliation</dd>
+      <dt>Main result</dt><dd>6,067 practices were assigned once to three profiles: 1,753, 2,312 and 2,002.</dd>
+      <dt>Permitted wording</dt><dd>Three national practice-level recorded-activity profiles were identified.</dd>
+      <dt>Prohibited wording</dt><dd>The profiles are performance tiers or direct measures of access quality.</dd>
+      <dt>Uncertainty and bias</dt><dd>Silhouette, aligned K-Means/GMM disagreement and caution flags quantify assignment uncertainty. Recorded activity may reflect submission, configuration and coding differences.</dd>
+      <dt>Additional evidence</dt><dd>No additional data are required for the bounded descriptive statement.</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/national_profile_assignments.csv">national_profile_assignments.csv</a>, <a href="../../outputs/tables/national_profile_quality.csv">national_profile_quality.csv</a>, <a href="../../outputs/tables/national_cohort_flow.csv">national_cohort_flow.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="ACCESS" data-support="PARTIALLY_SUPPORTABLE_WITH_MAJOR_QUALIFICATION" data-search="a02 profiles are sufficiently stable for cautious descriptive use. assignment uncertainty across silhouette, gmm posterior evidence and resampling. frozen ocs–gpad profiles and uncertainty diagnostics 6,067 practices 1,966 practices (32.4%) carry an interpretive-caution flag. the profiles support cautious descriptive use with explicit uncertainty.">
+  <header><span class="claim-id">A02</span><span class="support support-partially_supportable_with_major_qualification">▲ Major qualification required</span></header>
+  <h2>Profiles are sufficiently stable for cautious descriptive use.</h2>
+  <p><strong>Observed construct:</strong> Assignment uncertainty across silhouette, GMM posterior evidence and resampling.</p>
+  <p><strong>Population:</strong> 6,067 practices</p>
+  <p class="scope"><strong>Population scope:</strong> Directly represents the 6,067 practices in the national analytical cohort unless the claim records a narrower valid population.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>Frozen OCS–GPAD profiles and uncertainty diagnostics</dd>
+      <dt>Method</dt><dd>Silhouette, GMM posterior, algorithm disagreement and temporal resampling</dd>
+      <dt>Main result</dt><dd>1,966 practices (32.4%) carry an interpretive-caution flag.</dd>
+      <dt>Permitted wording</dt><dd>The profiles support cautious descriptive use with explicit uncertainty.</dd>
+      <dt>Prohibited wording</dt><dd>The profiles are definitive, permanent or equally certain for every practice.</dd>
+      <dt>Uncertainty and bias</dt><dd>Multiple complementary assignment diagnostics; not a single probability of truth. Cluster geometry and algorithm choice influence assignment.</dd>
+      <dt>Additional evidence</dt><dd>Longer longitudinal replication would test persistence beyond the study year.</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/national_profile_assignments.csv">national_profile_assignments.csv</a>, <a href="../../outputs/tables/national_profile_quality.csv">national_profile_quality.csv</a>, <a href="../../outputs/tables/national_cohort_flow.csv">national_cohort_flow.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="ACCESS" data-support="DESCRIPTIVELY_SUPPORTED" data-search="a03 alternative algorithms recover related but non-identical structure. aligned membership comparison between primary k-means and spherical gmm. frozen ocs–gpad feature matrix and aligned algorithm assignments 6,067 practices 1,411 practices (23.3%) differed between aligned k-means and gmm assignments. alternative algorithms recovered related but non-identical structure.">
+  <header><span class="claim-id">A03</span><span class="support support-descriptively_supported">● Descriptively supported</span></header>
+  <h2>Alternative algorithms recover related but non-identical structure.</h2>
+  <p><strong>Observed construct:</strong> Aligned membership comparison between primary K-Means and spherical GMM.</p>
+  <p><strong>Population:</strong> 6,067 practices</p>
+  <p class="scope"><strong>Population scope:</strong> Directly represents the 6,067 practices in the national analytical cohort unless the claim records a narrower valid population.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>Frozen OCS–GPAD feature matrix and aligned algorithm assignments</dd>
+      <dt>Method</dt><dd>Aligned K-Means versus spherical-GMM assignment comparison</dd>
+      <dt>Main result</dt><dd>1,411 practices (23.3%) differed between aligned K-Means and GMM assignments.</dd>
+      <dt>Permitted wording</dt><dd>Alternative algorithms recovered related but non-identical structure.</dd>
+      <dt>Prohibited wording</dt><dd>Alternative algorithms reproduced identical membership.</dd>
+      <dt>Uncertainty and bias</dt><dd>Exact disagreement count and aligned membership comparison. Alignment can preserve broad interpretation while masking local assignment differences.</dd>
+      <dt>Additional evidence</dt><dd>No additional longitudinal data are required to decide whether these observed assignments were identical.</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/national_profile_assignments.csv">national_profile_assignments.csv</a>, <a href="../../outputs/tables/national_profile_quality.csv">national_profile_quality.csv</a>, <a href="../../outputs/tables/national_cohort_flow.csv">national_cohort_flow.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="ACCESS" data-support="PARTIALLY_SUPPORTABLE_WITH_MAJOR_QUALIFICATION" data-search="a04 feature sensitivity supports a related, non-identical profile interpretation. quarter-1 14-feature versus 12-feature assignment comparison. ocs and gpad temporal sensitivity evidence 5,677 quarter-eligible practices q1 assignment agreement was 91.6% and ari was 0.761. the reduced feature set recovered broadly related structure with some reassignment.">
+  <header><span class="claim-id">A04</span><span class="support support-partially_supportable_with_major_qualification">▲ Major qualification required</span></header>
+  <h2>Feature sensitivity supports a related, non-identical profile interpretation.</h2>
+  <p><strong>Observed construct:</strong> Quarter-1 14-feature versus 12-feature assignment comparison.</p>
+  <p><strong>Population:</strong> 5,677 quarter-eligible practices</p>
+  <p class="scope"><strong>Population scope:</strong> Directly represents the stated shorter-period calculable cohort; it is smaller than the 6,067-practice annual population.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>OCS and GPAD temporal sensitivity evidence</dd>
+      <dt>Method</dt><dd>Assignment agreement and adjusted Rand index</dd>
+      <dt>Main result</dt><dd>Q1 assignment agreement was 91.6% and ARI was 0.761.</dd>
+      <dt>Permitted wording</dt><dd>The reduced feature set recovered broadly related structure with some reassignment.</dd>
+      <dt>Prohibited wording</dt><dd>Feature choice had no effect on membership.</dd>
+      <dt>Uncertainty and bias</dt><dd>Agreement and adjusted Rand index quantify consistency. Feature removal can reassign practices and alter distances.</dd>
+      <dt>Additional evidence</dt><dd>Replication with future releases would test whether feature sensitivity persists.</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/temporal_canonical_period_metrics.csv">temporal_canonical_period_metrics.csv</a>, <a href="../../outputs/tables/temporal_structural_period_metrics.csv">temporal_structural_period_metrics.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="ACCESS" data-support="PARTIALLY_SUPPORTABLE_WITH_MAJOR_QUALIFICATION" data-search="a05 temporal robustness supports the annual solution with material within-year variation. half-year and quarterly recurrence of profile structure. monthly ocs–gpad temporal master 5,924 half-year-eligible and 5,677 quarter-eligible practices median reference ari was 0.960 for h1 and 0.968 for h2; common-sample h1/h2 ari was 0.464. the annual profiles recur strongly within half-years, alongside meaningful within-year reassignment.">
+  <header><span class="claim-id">A05</span><span class="support support-partially_supportable_with_major_qualification">▲ Major qualification required</span></header>
+  <h2>Temporal robustness supports the annual solution with material within-year variation.</h2>
+  <p><strong>Observed construct:</strong> Half-year and quarterly recurrence of profile structure.</p>
+  <p><strong>Population:</strong> 5,924 half-year-eligible and 5,677 quarter-eligible practices</p>
+  <p class="scope"><strong>Population scope:</strong> Directly represents the stated shorter-period calculable cohort; it is smaller than the 6,067-practice annual population.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>Monthly OCS–GPAD temporal master</dd>
+      <dt>Method</dt><dd>Temporal resampling, adjusted Rand index and transition summaries</dd>
+      <dt>Main result</dt><dd>Median reference ARI was 0.960 for H1 and 0.968 for H2; common-sample H1/H2 ARI was 0.464.</dd>
+      <dt>Permitted wording</dt><dd>The annual profiles recur strongly within half-years, alongside meaningful within-year reassignment.</dd>
+      <dt>Prohibited wording</dt><dd>Every practice retained the same profile throughout the year.</dd>
+      <dt>Uncertainty and bias</dt><dd>ARI, transition counts and resampling distributions. Seasonality, reporting changes and changing practice configuration may affect profiles.</dd>
+      <dt>Additional evidence</dt><dd>Additional years are required for long-run persistence claims.</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/temporal_canonical_period_metrics.csv">temporal_canonical_period_metrics.csv</a>, <a href="../../outputs/tables/temporal_structural_period_metrics.csv">temporal_structural_period_metrics.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="ACCESS" data-support="PARTIALLY_SUPPORTABLE_WITH_MAJOR_QUALIFICATION" data-search="a06 cbt inbound sensitivity produces a related profile structure in submitting practices. assignment change after adding recorded cbt inbound activity indicators. ocs, gpad and cbt inbound sensitivity features 3,020 cbt inbound-submitting practices 571 of 3,020 practices changed aligned assignment after cbt inbound features were added. adding cbt inbound indicators altered some assignments within the submitting-practice cohort.">
+  <header><span class="claim-id">A06</span><span class="support support-partially_supportable_with_major_qualification">▲ Major qualification required</span></header>
+  <h2>CBT inbound sensitivity produces a related profile structure in submitting practices.</h2>
+  <p><strong>Observed construct:</strong> Assignment change after adding recorded CBT inbound activity indicators.</p>
+  <p><strong>Population:</strong> 3,020 CBT inbound-submitting practices</p>
+  <p class="scope"><strong>Population scope:</strong> Directly represents the 3,020-practice CBT inbound cohort; evidence availability is geographically concentrated.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>OCS, GPAD and CBT inbound sensitivity features</dd>
+      <dt>Method</dt><dd>Restricted-cohort aligned assignment sensitivity</dd>
+      <dt>Main result</dt><dd>571 of 3,020 practices changed aligned assignment after CBT inbound features were added.</dd>
+      <dt>Permitted wording</dt><dd>Adding CBT inbound indicators altered some assignments within the submitting-practice cohort.</dd>
+      <dt>Prohibited wording</dt><dd>CBT sensitivity represents all English practices or total telephone demand.</dd>
+      <dt>Uncertainty and bias</dt><dd>Aligned assignment-change indicator and cohort-specific silhouettes. Supplier participation and submission coverage may be selective.</dd>
+      <dt>Additional evidence</dt><dd>Consistent national CBT submission would improve generalisability.</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/cbt_inbound_cohort_flow.csv">cbt_inbound_cohort_flow.csv</a>, <a href="../../outputs/tables/cbt_inbound_selection_continuous.csv">cbt_inbound_selection_continuous.csv</a>, <a href="../../outputs/tables/cbt_inbound_selection_categorical.csv">cbt_inbound_selection_categorical.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="ACCESS" data-support="PARTIALLY_SUPPORTABLE_WITH_MAJOR_QUALIFICATION" data-search="a07 cbt outcome-complete sensitivity is composition-dependent within its restricted cohort. assignment change across cbt outcome representations. ocs, gpad and complete cbt outcome-composition features 1,456 cbt outcome-complete practices 729 practices changed from 17 to raw-21 features, while 52 changed from 17 to ilr-20 features. cbt outcome sensitivity depended on feature representation in the complete-outcome cohort.">
+  <header><span class="claim-id">A07</span><span class="support support-partially_supportable_with_major_qualification">▲ Major qualification required</span></header>
+  <h2>CBT outcome-complete sensitivity is composition-dependent within its restricted cohort.</h2>
+  <p><strong>Observed construct:</strong> Assignment change across CBT outcome representations.</p>
+  <p><strong>Population:</strong> 1,456 CBT outcome-complete practices</p>
+  <p class="scope"><strong>Population scope:</strong> Directly represents the 1,456-practice outcome-complete CBT cohort; selection is strongly concentrated geographically.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>OCS, GPAD and complete CBT outcome-composition features</dd>
+      <dt>Method</dt><dd>Restricted-cohort raw-share and ILR assignment sensitivity</dd>
+      <dt>Main result</dt><dd>729 practices changed from 17 to raw-21 features, while 52 changed from 17 to ILR-20 features.</dd>
+      <dt>Permitted wording</dt><dd>CBT outcome sensitivity depended on feature representation in the complete-outcome cohort.</dd>
+      <dt>Prohibited wording</dt><dd>CBT outcomes produce a unique national profile solution.</dd>
+      <dt>Uncertainty and bias</dt><dd>Aligned assignment changes and compositional reconciliation. Complete outcome reporting is selective and raw shares are compositionally dependent.</dd>
+      <dt>Additional evidence</dt><dd>More complete CBT outcome reporting would improve generalisability.</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/cbt_outcome_cohort_flow.csv">cbt_outcome_cohort_flow.csv</a>, <a href="../../outputs/tables/cbt_outcome_selection_continuous.csv">cbt_outcome_selection_continuous.csv</a>, <a href="../../outputs/tables/cbt_outcome_selection_categorical.csv">cbt_outcome_selection_categorical.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="ACCESS" data-support="DESCRIPTIVELY_SUPPORTED" data-search="b01 ocs activity represents visible online-route activity. recorded ocs submissions and their clinical, administrative and residual composition. online consultation systems activity 6,067 practices in the primary 12-month profile matrix ocs activity and composition contribute directly to the 14-feature primary matrix. ocs measures visible recorded online-route activity.">
+  <header><span class="claim-id">B01</span><span class="support support-descriptively_supported">● Descriptively supported</span></header>
+  <h2>OCS activity represents visible online-route activity.</h2>
+  <p><strong>Observed construct:</strong> Recorded OCS submissions and their clinical, administrative and residual composition.</p>
+  <p><strong>Population:</strong> 6,067 practices in the primary 12-month profile matrix</p>
+  <p class="scope"><strong>Population scope:</strong> Directly represents the 6,067 practices in the national analytical cohort unless the claim records a narrower valid population.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>Online Consultation Systems activity</dd>
+      <dt>Method</dt><dd>Validated annual feature construction and descriptive profile use</dd>
+      <dt>Main result</dt><dd>OCS activity and composition contribute directly to the 14-feature primary matrix.</dd>
+      <dt>Permitted wording</dt><dd>OCS measures visible recorded online-route activity.</dd>
+      <dt>Prohibited wording</dt><dd>OCS submissions equal total demand, successful access or resolved need.</dd>
+      <dt>Uncertainty and bias</dt><dd>Assignment uncertainty is reported separately; no HC3 or WLS model was used for this claim. Supplier submission, coding and participation differences.</dd>
+      <dt>Additional evidence</dt><dd>Request-level linkage would be required for resolution and journey claims.</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/national_profile_assignments.csv">national_profile_assignments.csv</a>, <a href="../../outputs/tables/national_profile_quality.csv">national_profile_quality.csv</a>, <a href="../../outputs/tables/national_cohort_flow.csv">national_cohort_flow.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="ACCESS" data-support="DESCRIPTIVELY_SUPPORTED" data-search="b02 gpad represents recorded appointment activity and configuration. recorded appointment rate, mode, dna and mutually exclusive booking-delay shares. appointments in general practice 6,067 practices in the primary 12-month profile matrix gpad appointment activity and configuration contribute directly to the 14-feature primary matrix. gpad measures recorded appointment activity and configuration.">
+  <header><span class="claim-id">B02</span><span class="support support-descriptively_supported">● Descriptively supported</span></header>
+  <h2>GPAD represents recorded appointment activity and configuration.</h2>
+  <p><strong>Observed construct:</strong> Recorded appointment rate, mode, DNA and mutually exclusive booking-delay shares.</p>
+  <p><strong>Population:</strong> 6,067 practices in the primary 12-month profile matrix</p>
+  <p class="scope"><strong>Population scope:</strong> Directly represents the 6,067 practices in the national analytical cohort unless the claim records a narrower valid population.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>Appointments in General Practice</dd>
+      <dt>Method</dt><dd>Validated annual feature construction and descriptive profile use</dd>
+      <dt>Main result</dt><dd>GPAD appointment activity and configuration contribute directly to the 14-feature primary matrix.</dd>
+      <dt>Permitted wording</dt><dd>GPAD measures recorded appointment activity and configuration.</dd>
+      <dt>Prohibited wording</dt><dd>GPAD measures total demand or time from first request to resolution.</dd>
+      <dt>Uncertainty and bias</dt><dd>Assignment uncertainty is reported separately; no HC3 or WLS model was used for this claim. Appointment-system recording and configuration differ between practices.</dd>
+      <dt>Additional evidence</dt><dd>Linked request and appointment journeys would be required for end-to-end access claims.</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/national_profile_assignments.csv">national_profile_assignments.csv</a>, <a href="../../outputs/tables/national_profile_quality.csv">national_profile_quality.csv</a>, <a href="../../outputs/tables/national_cohort_flow.csv">national_cohort_flow.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="ACCESS" data-support="PARTIALLY_SUPPORTABLE_WITH_MAJOR_QUALIFICATION" data-search="b03 cbt provides recorded telephone-route activity indicators among submitting practices. recorded inbound and outcome-related cbt indicators under supplier and completeness restrictions. cloud based telephony activity 3,020 inbound-submitting and 1,456 outcome-complete practices cbt indicators changed 571 inbound-cohort assignments; outcome sensitivities were evaluated in 1,456 practices. cbt provides recorded telephone-route activity indicators among submitting practices.">
+  <header><span class="claim-id">B03</span><span class="support support-partially_supportable_with_major_qualification">▲ Major qualification required</span></header>
+  <h2>CBT provides recorded telephone-route activity indicators among submitting practices.</h2>
+  <p><strong>Observed construct:</strong> Recorded inbound and outcome-related CBT indicators under supplier and completeness restrictions.</p>
+  <p><strong>Population:</strong> 3,020 inbound-submitting and 1,456 outcome-complete practices</p>
+  <p class="scope"><strong>Population scope:</strong> Telephone-route evidence is available in nested cohorts: inbound indicators represent 3,020 practices, while outcome-composition evidence represents the 1,456-practice outcome-complete subset. Both are restricted reporting populations rather than national telephony coverage.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>Cloud Based Telephony activity</dd>
+      <dt>Method</dt><dd>Restricted-cohort descriptive sensitivity; no GPPS regression</dd>
+      <dt>Main result</dt><dd>CBT indicators changed 571 inbound-cohort assignments; outcome sensitivities were evaluated in 1,456 practices.</dd>
+      <dt>Permitted wording</dt><dd>CBT provides recorded telephone-route activity indicators among submitting practices.</dd>
+      <dt>Prohibited wording</dt><dd>CBT measures total telephone pressure or represents all practices.</dd>
+      <dt>Uncertainty and bias</dt><dd>Cohort counts, aligned assignment changes and composition checks; no HC3 or WLS model was used. Supplier coverage, selective submission and outcome completeness.</dd>
+      <dt>Additional evidence</dt><dd>Consistent national submission plus call-journey linkage would support stronger claims.</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/cbt_inbound_cohort_flow.csv">cbt_inbound_cohort_flow.csv</a>, <a href="../../outputs/tables/cbt_outcome_cohort_flow.csv">cbt_outcome_cohort_flow.csv</a>, <a href="../../outputs/tables/cbt_inbound_selection_categorical.csv">cbt_inbound_selection_categorical.csv</a>, <a href="../../outputs/tables/cbt_outcome_selection_categorical.csv">cbt_outcome_selection_categorical.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="PATIENT_EXPERIENCE" data-support="ASSOCIATIVELY_EXAMINABLE" data-search="b04 profiles differ in overall practice experience. overall practice experience rated good gp patient survey 2026 practice estimates linked to frozen profiles 6,066 practices with a valid measure overall-experience differences were small in rank-based effect-size terms. profiles were associated with differences in practice-level overall-experience estimates.">
+  <header><span class="claim-id">B04</span><span class="support support-associatively_examinable">◆ Associatively examinable</span></header>
+  <h2>Profiles differ in overall practice experience.</h2>
+  <p><strong>Observed construct:</strong> Overall practice experience rated good</p>
+  <p><strong>Population:</strong> 6,066 practices with a valid measure</p>
+  <p class="scope"><strong>Population scope:</strong> Uses the measure-specific valid practice population recorded in the claim authority.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>GP Patient Survey 2026 practice estimates linked to frozen profiles</dd>
+      <dt>Method</dt><dd>Kruskal-Wallis effect-size description; unadjusted OLS HC3; prespecified sensitivities</dd>
+      <dt>Main result</dt><dd>Overall-experience differences were small in rank-based effect-size terms.</dd>
+      <dt>Permitted wording</dt><dd>Profiles were associated with differences in practice-level overall-experience estimates.</dd>
+      <dt>Prohibited wording</dt><dd>The profile caused better or worse patient experience.</dd>
+      <dt>Uncertainty and bias</dt><dd>HC3 confidence intervals for primary contrasts; bootstrap intervals for medians; multiplicity-adjusted p-values. Survey non-response, residual confounding and differing observation windows.</dd>
+      <dt>Additional evidence</dt><dd>Longitudinal patient-level linkage and a causal design are required for improvement claims.</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/evidence_availability_summary.csv">evidence_availability_summary.csv</a>, <a href="../../outputs/tables/numeric_profile_descriptive_summary.csv">numeric_profile_descriptive_summary.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="PATIENT_EXPERIENCE" data-support="ASSOCIATIVELY_EXAMINABLE" data-search="b05 profiles differ in contact experience. experience of contacting the practice rated good gp patient survey 2026 practice estimates linked to frozen profiles 6,066 practices with a valid measure contact-experience differences were small in rank-based effect-size terms. profiles were associated with differences in practice-level contact-experience estimates.">
+  <header><span class="claim-id">B05</span><span class="support support-associatively_examinable">◆ Associatively examinable</span></header>
+  <h2>Profiles differ in contact experience.</h2>
+  <p><strong>Observed construct:</strong> Experience of contacting the practice rated good</p>
+  <p><strong>Population:</strong> 6,066 practices with a valid measure</p>
+  <p class="scope"><strong>Population scope:</strong> Uses the measure-specific valid practice population recorded in the claim authority.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>GP Patient Survey 2026 practice estimates linked to frozen profiles</dd>
+      <dt>Method</dt><dd>Kruskal-Wallis effect-size description; unadjusted OLS HC3; prespecified sensitivities</dd>
+      <dt>Main result</dt><dd>Contact-experience differences were small in rank-based effect-size terms.</dd>
+      <dt>Permitted wording</dt><dd>Profiles were associated with differences in practice-level contact-experience estimates.</dd>
+      <dt>Prohibited wording</dt><dd>The profile caused better or worse patient experience.</dd>
+      <dt>Uncertainty and bias</dt><dd>HC3 confidence intervals for primary contrasts; bootstrap intervals for medians; multiplicity-adjusted p-values. Survey non-response, residual confounding and differing observation windows.</dd>
+      <dt>Additional evidence</dt><dd>Longitudinal patient-level linkage and a causal design are required for improvement claims.</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/evidence_availability_summary.csv">evidence_availability_summary.csv</a>, <a href="../../outputs/tables/numeric_profile_descriptive_summary.csv">numeric_profile_descriptive_summary.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="PATIENT_EXPERIENCE" data-support="ASSOCIATIVELY_EXAMINABLE" data-search="b06 profiles differ in continuity fulfilment. preferred-professional continuity fulfilled, interpreted with q6 preferred-professional prevalence as descriptive context gp patient survey 2026 practice estimates linked to frozen profiles 6,054 practices with a valid measure continuity-fulfilment differences were small and q6 prevalence was retained as context only. profiles were associated with differences in practice-level continuity fulfilment; q6 prevalence is descriptive context.">
+  <header><span class="claim-id">B06</span><span class="support support-associatively_examinable">◆ Associatively examinable</span></header>
+  <h2>Profiles differ in continuity fulfilment.</h2>
+  <p><strong>Observed construct:</strong> Preferred-professional continuity fulfilled, interpreted with Q6 preferred-professional prevalence as descriptive context</p>
+  <p><strong>Population:</strong> 6,054 practices with a valid measure</p>
+  <p class="scope"><strong>Population scope:</strong> Uses the measure-specific valid practice population recorded in the claim authority.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>GP Patient Survey 2026 practice estimates linked to frozen profiles</dd>
+      <dt>Method</dt><dd>Kruskal-Wallis effect-size description; unadjusted OLS HC3; prespecified sensitivities</dd>
+      <dt>Main result</dt><dd>Continuity-fulfilment differences were small and Q6 prevalence was retained as context only.</dd>
+      <dt>Permitted wording</dt><dd>Profiles were associated with differences in practice-level continuity fulfilment; Q6 prevalence is descriptive context.</dd>
+      <dt>Prohibited wording</dt><dd>The profile caused better or worse patient experience.</dd>
+      <dt>Uncertainty and bias</dt><dd>HC3 confidence intervals for primary contrasts; bootstrap intervals for medians; multiplicity-adjusted p-values. Survey non-response, residual confounding and differing observation windows.</dd>
+      <dt>Additional evidence</dt><dd>Longitudinal patient-level linkage and a causal design are required for improvement claims.</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/evidence_availability_summary.csv">evidence_availability_summary.csv</a>, <a href="../../outputs/tables/numeric_profile_descriptive_summary.csv">numeric_profile_descriptive_summary.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="PATIENT_EXPERIENCE" data-support="ASSOCIATIVELY_EXAMINABLE" data-search="b07 profiles differ in next-step clarity. reported clarity about the next step gp patient survey 2026 practice estimates linked to frozen profiles 6,066 practices with a valid measure next-step-clarity differences were small in rank-based effect-size terms. profiles were associated with differences in practice-level next-step clarity.">
+  <header><span class="claim-id">B07</span><span class="support support-associatively_examinable">◆ Associatively examinable</span></header>
+  <h2>Profiles differ in next-step clarity.</h2>
+  <p><strong>Observed construct:</strong> Reported clarity about the next step</p>
+  <p><strong>Population:</strong> 6,066 practices with a valid measure</p>
+  <p class="scope"><strong>Population scope:</strong> Uses the measure-specific valid practice population recorded in the claim authority.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>GP Patient Survey 2026 practice estimates linked to frozen profiles</dd>
+      <dt>Method</dt><dd>Kruskal-Wallis effect-size description; unadjusted OLS HC3; prespecified sensitivities</dd>
+      <dt>Main result</dt><dd>Next-step-clarity differences were small in rank-based effect-size terms.</dd>
+      <dt>Permitted wording</dt><dd>Profiles were associated with differences in practice-level next-step clarity.</dd>
+      <dt>Prohibited wording</dt><dd>The profile caused better or worse patient experience.</dd>
+      <dt>Uncertainty and bias</dt><dd>HC3 confidence intervals for primary contrasts; bootstrap intervals for medians; multiplicity-adjusted p-values. Survey non-response, residual confounding and differing observation windows.</dd>
+      <dt>Additional evidence</dt><dd>Longitudinal patient-level linkage and a causal design are required for improvement claims.</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/evidence_availability_summary.csv">evidence_availability_summary.csv</a>, <a href="../../outputs/tables/numeric_profile_descriptive_summary.csv">numeric_profile_descriptive_summary.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="PATIENT_EXPERIENCE" data-support="ASSOCIATIVELY_EXAMINABLE" data-search="b08 profiles differ in long-term-condition support. long-term-condition support rated good gp patient survey 2026 practice estimates linked to frozen profiles 6,065 practices with a valid measure long-term-condition-support differences were small in rank-based effect-size terms. profiles were associated with differences in practice-level long-term-condition support.">
+  <header><span class="claim-id">B08</span><span class="support support-associatively_examinable">◆ Associatively examinable</span></header>
+  <h2>Profiles differ in long-term-condition support.</h2>
+  <p><strong>Observed construct:</strong> Long-term-condition support rated good</p>
+  <p><strong>Population:</strong> 6,065 practices with a valid measure</p>
+  <p class="scope"><strong>Population scope:</strong> Uses the measure-specific valid practice population recorded in the claim authority.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>GP Patient Survey 2026 practice estimates linked to frozen profiles</dd>
+      <dt>Method</dt><dd>Kruskal-Wallis effect-size description; unadjusted OLS HC3; prespecified sensitivities</dd>
+      <dt>Main result</dt><dd>Long-term-condition-support differences were small in rank-based effect-size terms.</dd>
+      <dt>Permitted wording</dt><dd>Profiles were associated with differences in practice-level long-term-condition support.</dd>
+      <dt>Prohibited wording</dt><dd>The profile caused better or worse patient experience.</dd>
+      <dt>Uncertainty and bias</dt><dd>HC3 confidence intervals for primary contrasts; bootstrap intervals for medians; multiplicity-adjusted p-values. Survey non-response, residual confounding and differing observation windows.</dd>
+      <dt>Additional evidence</dt><dd>Longitudinal patient-level linkage and a causal design are required for improvement claims.</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/evidence_availability_summary.csv">evidence_availability_summary.csv</a>, <a href="../../outputs/tables/numeric_profile_descriptive_summary.csv">numeric_profile_descriptive_summary.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="PATIENT_EXPERIENCE" data-support="DESCRIPTIVELY_SUPPORTED" data-search="b09 unable-to-contact prevalence provides descriptive contact context. practice-level percentage reporting inability to contact the practice. gp patient survey 2026 6,066 practices with valid unable-to-contact context profile-specific medians and bootstrap intervals were reported without a formal profile test. unable-to-contact prevalence provides bounded descriptive context.">
+  <header><span class="claim-id">B09</span><span class="support support-descriptively_supported">● Descriptively supported</span></header>
+  <h2>Unable-to-contact prevalence provides descriptive contact context.</h2>
+  <p><strong>Observed construct:</strong> Practice-level percentage reporting inability to contact the practice.</p>
+  <p><strong>Population:</strong> 6,066 practices with valid unable-to-contact context</p>
+  <p class="scope"><strong>Population scope:</strong> Uses the measure-specific valid practice population recorded in the claim authority.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>GP Patient Survey 2026</dd>
+      <dt>Method</dt><dd>Descriptive medians and bootstrap intervals only</dd>
+      <dt>Main result</dt><dd>Profile-specific medians and bootstrap intervals were reported without a formal profile test.</dd>
+      <dt>Permitted wording</dt><dd>Unable-to-contact prevalence provides bounded descriptive context.</dd>
+      <dt>Prohibited wording</dt><dd>Unable-to-contact prevalence measures total unmet need.</dd>
+      <dt>Uncertainty and bias</dt><dd>Bootstrap median confidence intervals; no HC3 or WLS model was used. Survey non-response and interval-coded small percentages.</dd>
+      <dt>Additional evidence</dt><dd>Patient-level contact-attempt and outcome linkage is needed for unmet-need claims.</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/evidence_availability_summary.csv">evidence_availability_summary.csv</a>, <a href="../../outputs/tables/numeric_profile_descriptive_summary.csv">numeric_profile_descriptive_summary.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="PATIENT_EXPERIENCE" data-support="DESCRIPTIVELY_SUPPORTED" data-search="b10 q18 describes reported pre-appointment actions. any/none and eight overlapping reported actions before trying to obtain an appointment. gp patient survey 2026 q18 6,065 primary-valid practices; 6,063 base-at-least-30 sensitivity records ten q18 measures were summarised across three profiles; overlapping options were not summed. q18 describes reported actions before trying to obtain an appointment.">
+  <header><span class="claim-id">B10</span><span class="support support-descriptively_supported">● Descriptively supported</span></header>
+  <h2>Q18 describes reported pre-appointment actions.</h2>
+  <p><strong>Observed construct:</strong> Any/none and eight overlapping reported actions before trying to obtain an appointment.</p>
+  <p><strong>Population:</strong> 6,065 primary-valid practices; 6,063 base-at-least-30 sensitivity records</p>
+  <p class="scope"><strong>Population scope:</strong> Uses the measure-specific valid practice population recorded in the claim authority.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>GP Patient Survey 2026 Q18</dd>
+      <dt>Method</dt><dd>Descriptive medians, bootstrap intervals and complement validation only</dd>
+      <dt>Main result</dt><dd>Ten Q18 measures were summarised across three profiles; overlapping options were not summed.</dd>
+      <dt>Permitted wording</dt><dd>Q18 describes reported actions before trying to obtain an appointment.</dd>
+      <dt>Prohibited wording</dt><dd>Q18 actions measure unmet need or resolved demand.</dd>
+      <dt>Uncertainty and bias</dt><dd>Bootstrap median intervals; no HC3, WLS or formal profile test was used. Multiple-response overlap, survey non-response and interpretation of prior actions.</dd>
+      <dt>Additional evidence</dt><dd>Patient-level reasons, outcomes and subsequent care are needed for stronger interpretation.</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/evidence_availability_summary.csv">evidence_availability_summary.csv</a>, <a href="../../outputs/tables/numeric_profile_descriptive_summary.csv">numeric_profile_descriptive_summary.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="ACCESS" data-support="ASSOCIATIVELY_EXAMINABLE" data-search="c01 profiles differ by registered-list size. registered list size registered population, workforce, imd 2025 and rurality context as applicable 6,067 descriptively; 5,774 in the complete primary mnlogit cohort log registered list size was included in the primary mnlogit model. registered-list size was associated with profile membership.">
+  <header><span class="claim-id">C01</span><span class="support support-associatively_examinable">◆ Associatively examinable</span></header>
+  <h2>Profiles differ by registered-list size.</h2>
+  <p><strong>Observed construct:</strong> Registered list size</p>
+  <p><strong>Population:</strong> 6,067 descriptively; 5,774 in the complete primary MNLogit cohort</p>
+  <p class="scope"><strong>Population scope:</strong> The canonical cohort distinguishes the descriptive practice population from the smaller complete-case contextual model; each result represents its stated population.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>Registered population, workforce, IMD 2025 and rurality context as applicable</dd>
+      <dt>Method</dt><dd>Kruskal-Wallis/Dunn effect sizes; robust-covariance MNLogit and average marginal effects</dd>
+      <dt>Main result</dt><dd>Log registered list size was included in the primary MNLogit model.</dd>
+      <dt>Permitted wording</dt><dd>Registered-list size was associated with profile membership.</dd>
+      <dt>Prohibited wording</dt><dd>The contextual characteristic caused profile membership or individual access outcomes.</dd>
+      <dt>Uncertainty and bias</dt><dd>Rank effect sizes with bootstrap intervals; robust MNLogit standard errors and marginal-effect confidence intervals. Residual confounding, measurement timing differences and model specification.</dd>
+      <dt>Additional evidence</dt><dd>Longitudinal multilevel or quasi-experimental data are required for causal interpretation.</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/population_scope_register.csv">population_scope_register.csv</a>, <a href="../../outputs/tables/numeric_profile_descriptive_summary.csv">numeric_profile_descriptive_summary.csv</a>, <a href="../../outputs/tables/context_multinomial_average_marginal_effects.csv">context_multinomial_average_marginal_effects.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="EQUITY" data-support="ASSOCIATIVELY_EXAMINABLE" data-search="c02 profiles differ by age composition. registered population aged 65 years and over registered population, workforce, imd 2025 and rurality context as applicable 6,067 descriptively; 5,774 in the complete primary mnlogit cohort age composition showed a large omnibus rank effect and was included in mnlogit. registered age composition was associated with profile membership.">
+  <header><span class="claim-id">C02</span><span class="support support-associatively_examinable">◆ Associatively examinable</span></header>
+  <h2>Profiles differ by age composition.</h2>
+  <p><strong>Observed construct:</strong> Registered population aged 65 years and over</p>
+  <p><strong>Population:</strong> 6,067 descriptively; 5,774 in the complete primary MNLogit cohort</p>
+  <p class="scope"><strong>Population scope:</strong> The canonical cohort distinguishes the descriptive practice population from the smaller complete-case contextual model; each result represents its stated population.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>Registered population, workforce, IMD 2025 and rurality context as applicable</dd>
+      <dt>Method</dt><dd>Kruskal-Wallis/Dunn effect sizes; robust-covariance MNLogit and average marginal effects</dd>
+      <dt>Main result</dt><dd>Age composition showed a large omnibus rank effect and was included in MNLogit.</dd>
+      <dt>Permitted wording</dt><dd>Registered age composition was associated with profile membership.</dd>
+      <dt>Prohibited wording</dt><dd>The contextual characteristic caused profile membership or individual access outcomes.</dd>
+      <dt>Uncertainty and bias</dt><dd>Rank effect sizes with bootstrap intervals; robust MNLogit standard errors and marginal-effect confidence intervals. Residual confounding, measurement timing differences and model specification.</dd>
+      <dt>Additional evidence</dt><dd>Longitudinal multilevel or quasi-experimental data are required for causal interpretation.</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/population_scope_register.csv">population_scope_register.csv</a>, <a href="../../outputs/tables/numeric_profile_descriptive_summary.csv">numeric_profile_descriptive_summary.csv</a>, <a href="../../outputs/tables/context_multinomial_average_marginal_effects.csv">context_multinomial_average_marginal_effects.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="WORKLOAD" data-support="ASSOCIATIVELY_EXAMINABLE" data-search="c03 profiles differ by gp workforce capacity. fully qualified gp fte per 10,000 registered patients registered population, workforce, imd 2025 and rurality context as applicable 5,801 descriptively; 5,774 in the complete primary mnlogit cohort gp workforce capacity was included in the primary mnlogit model. gp workforce capacity was associated with profile membership.">
+  <header><span class="claim-id">C03</span><span class="support support-associatively_examinable">◆ Associatively examinable</span></header>
+  <h2>Profiles differ by GP workforce capacity.</h2>
+  <p><strong>Observed construct:</strong> Fully qualified GP FTE per 10,000 registered patients</p>
+  <p><strong>Population:</strong> 5,801 descriptively; 5,774 in the complete primary MNLogit cohort</p>
+  <p class="scope"><strong>Population scope:</strong> The canonical cohort distinguishes the descriptive practice population from the smaller complete-case contextual model; each result represents its stated population.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>Registered population, workforce, IMD 2025 and rurality context as applicable</dd>
+      <dt>Method</dt><dd>Kruskal-Wallis/Dunn effect sizes; robust-covariance MNLogit and average marginal effects</dd>
+      <dt>Main result</dt><dd>GP workforce capacity was included in the primary MNLogit model.</dd>
+      <dt>Permitted wording</dt><dd>GP workforce capacity was associated with profile membership.</dd>
+      <dt>Prohibited wording</dt><dd>The contextual characteristic caused profile membership or individual access outcomes.</dd>
+      <dt>Uncertainty and bias</dt><dd>Rank effect sizes with bootstrap intervals; robust MNLogit standard errors and marginal-effect confidence intervals. Residual confounding, measurement timing differences and model specification.</dd>
+      <dt>Additional evidence</dt><dd>Longitudinal multilevel or quasi-experimental data are required for causal interpretation.</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/population_scope_register.csv">population_scope_register.csv</a>, <a href="../../outputs/tables/numeric_profile_descriptive_summary.csv">numeric_profile_descriptive_summary.csv</a>, <a href="../../outputs/tables/context_multinomial_average_marginal_effects.csv">context_multinomial_average_marginal_effects.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="WORKLOAD" data-support="ASSOCIATIVELY_EXAMINABLE" data-search="c04 profiles differ by non-gp workforce. direct patient care, nurse and other non-gp workforce capacity measures. nhs workforce context nurse 5,615; direct patient care 5,265; administrative/non-clinical 5,711 non-gp workforce measures were described and tested separately; they were not primary mnlogit predictors. non-gp workforce capacity differed across profiles in descriptive practice-level comparisons.">
+  <header><span class="claim-id">C04</span><span class="support support-associatively_examinable">◆ Associatively examinable</span></header>
+  <h2>Profiles differ by non-GP workforce.</h2>
+  <p><strong>Observed construct:</strong> Direct patient care, nurse and other non-GP workforce capacity measures.</p>
+  <p><strong>Population:</strong> Nurse 5,615; direct patient care 5,265; administrative/non-clinical 5,711</p>
+  <p class="scope"><strong>Population scope:</strong> Uses the measure-specific valid practice population recorded in the claim authority.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>NHS workforce context</dd>
+      <dt>Method</dt><dd>Kruskal-Wallis/Dunn effect sizes and bootstrap descriptive intervals</dd>
+      <dt>Main result</dt><dd>Non-GP workforce measures were described and tested separately; they were not primary MNLogit predictors.</dd>
+      <dt>Permitted wording</dt><dd>Non-GP workforce capacity differed across profiles in descriptive practice-level comparisons.</dd>
+      <dt>Prohibited wording</dt><dd>Non-GP workforce caused profile membership or reduced workload.</dd>
+      <dt>Uncertainty and bias</dt><dd>Rank effect sizes and bootstrap intervals; no HC3, WLS or MNLogit claim for non-GP workforce. Workforce coding, vacancies, service configuration and timing differences.</dd>
+      <dt>Additional evidence</dt><dd>Longitudinal staffing, workload and activity linkage would support mechanism testing.</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/evidence_availability_summary.csv">evidence_availability_summary.csv</a>, <a href="../../outputs/tables/numeric_profile_descriptive_summary.csv">numeric_profile_descriptive_summary.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="EQUITY" data-support="ASSOCIATIVELY_EXAMINABLE" data-search="c05 profiles differ by deprivation. patient-weighted average imd 2025 score registered population, workforce, imd 2025 and rurality context as applicable 6,035 descriptively; 5,774 in the complete primary mnlogit cohort deprivation was included in the primary mnlogit model. patient-weighted average imd 2025 score was associated with profile membership.">
+  <header><span class="claim-id">C05</span><span class="support support-associatively_examinable">◆ Associatively examinable</span></header>
+  <h2>Profiles differ by deprivation.</h2>
+  <p><strong>Observed construct:</strong> Patient-weighted average IMD 2025 score</p>
+  <p><strong>Population:</strong> 6,035 descriptively; 5,774 in the complete primary MNLogit cohort</p>
+  <p class="scope"><strong>Population scope:</strong> The canonical cohort distinguishes the descriptive practice population from the smaller complete-case contextual model; each result represents its stated population.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>Registered population, workforce, IMD 2025 and rurality context as applicable</dd>
+      <dt>Method</dt><dd>Kruskal-Wallis/Dunn effect sizes; robust-covariance MNLogit and average marginal effects</dd>
+      <dt>Main result</dt><dd>Deprivation was included in the primary MNLogit model.</dd>
+      <dt>Permitted wording</dt><dd>Patient-weighted average IMD 2025 score was associated with profile membership.</dd>
+      <dt>Prohibited wording</dt><dd>The contextual characteristic caused profile membership or individual access outcomes.</dd>
+      <dt>Uncertainty and bias</dt><dd>Rank effect sizes with bootstrap intervals; robust MNLogit standard errors and marginal-effect confidence intervals. Residual confounding, measurement timing differences and model specification.</dd>
+      <dt>Additional evidence</dt><dd>Longitudinal multilevel or quasi-experimental data are required for causal interpretation.</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/population_scope_register.csv">population_scope_register.csv</a>, <a href="../../outputs/tables/numeric_profile_descriptive_summary.csv">numeric_profile_descriptive_summary.csv</a>, <a href="../../outputs/tables/context_multinomial_average_marginal_effects.csv">context_multinomial_average_marginal_effects.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="EQUITY" data-support="ASSOCIATIVELY_EXAMINABLE" data-search="c06 profiles differ by rurality. patient-weighted rural share registered population, workforce, imd 2025 and rurality context as applicable 6,051 descriptively; 5,774 in the complete primary mnlogit cohort rurality was included in the primary mnlogit model. patient-weighted rural share was associated with profile membership.">
+  <header><span class="claim-id">C06</span><span class="support support-associatively_examinable">◆ Associatively examinable</span></header>
+  <h2>Profiles differ by rurality.</h2>
+  <p><strong>Observed construct:</strong> Patient-weighted rural share</p>
+  <p><strong>Population:</strong> 6,051 descriptively; 5,774 in the complete primary MNLogit cohort</p>
+  <p class="scope"><strong>Population scope:</strong> The canonical cohort distinguishes the descriptive practice population from the smaller complete-case contextual model; each result represents its stated population.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>Registered population, workforce, IMD 2025 and rurality context as applicable</dd>
+      <dt>Method</dt><dd>Kruskal-Wallis/Dunn effect sizes; robust-covariance MNLogit and average marginal effects</dd>
+      <dt>Main result</dt><dd>Rurality was included in the primary MNLogit model.</dd>
+      <dt>Permitted wording</dt><dd>Patient-weighted rural share was associated with profile membership.</dd>
+      <dt>Prohibited wording</dt><dd>The contextual characteristic caused profile membership or individual access outcomes.</dd>
+      <dt>Uncertainty and bias</dt><dd>Rank effect sizes with bootstrap intervals; robust MNLogit standard errors and marginal-effect confidence intervals. Residual confounding, measurement timing differences and model specification.</dd>
+      <dt>Additional evidence</dt><dd>Longitudinal multilevel or quasi-experimental data are required for causal interpretation.</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/population_scope_register.csv">population_scope_register.csv</a>, <a href="../../outputs/tables/numeric_profile_descriptive_summary.csv">numeric_profile_descriptive_summary.csv</a>, <a href="../../outputs/tables/context_multinomial_average_marginal_effects.csv">context_multinomial_average_marginal_effects.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="EQUITY" data-support="ASSOCIATIVELY_EXAMINABLE" data-search="c07 region and icb profile composition varies. practice profile composition across seven regions and 42 march 2026 reference-period icbs. frozen march 2026 organisational geography 6,067 practices across seven regions and 42 icbs bias-corrected cramér’s v was 0.272 for region and 0.332 for icb. profile composition varied across the frozen reference-period geographies.">
+  <header><span class="claim-id">C07</span><span class="support support-associatively_examinable">◆ Associatively examinable</span></header>
+  <h2>Region and ICB profile composition varies.</h2>
+  <p><strong>Observed construct:</strong> Practice profile composition across seven regions and 42 March 2026 reference-period ICBs.</p>
+  <p><strong>Population:</strong> 6,067 practices across seven regions and 42 ICBs</p>
+  <p class="scope"><strong>Population scope:</strong> Represents the 6,067 national practices aggregated across 42 March 2026 ICB organisations.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>Frozen March 2026 organisational geography</dd>
+      <dt>Method</dt><dd>Bias-corrected Cramér’s V, bootstrap interval and fixed-margin permutation</dd>
+      <dt>Main result</dt><dd>Bias-corrected Cramér’s V was 0.272 for region and 0.332 for ICB.</dd>
+      <dt>Permitted wording</dt><dd>Profile composition varied across the frozen reference-period geographies.</dd>
+      <dt>Prohibited wording</dt><dd>ICBs are ranked or the maps show performance.</dd>
+      <dt>Uncertainty and bias</dt><dd>Bootstrap interval for corrected Cramér’s V and fixed-margin permutation p-value for ICB. Practice composition, boundary choice and organisational change.</dd>
+      <dt>Additional evidence</dt><dd>Patient-residence geography is needed for population-prevalence interpretation.</dd>
+      <dt>Repository evidence</dt><dd><a href="../../qgis/data/icb_profile_mapping_layer.geojson">icb_profile_mapping_layer.geojson</a>, <a href="../../outputs/maps/icb_profile_composition.png">icb_profile_composition.png</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="ACCESS" data-support="DESCRIPTIVELY_SUPPORTED" data-search="c08 assignment uncertainty varied descriptively across icbs. icb composition of practice-level interpretive-caution flags. frozen profile uncertainty and march 2026 icb geography 6,067 practices across 42 icbs the icb-level share carrying interpretive caution was mapped descriptively. assignment uncertainty varied descriptively across icbs.">
+  <header><span class="claim-id">C08</span><span class="support support-descriptively_supported">● Descriptively supported</span></header>
+  <h2>Assignment uncertainty varied descriptively across ICBs.</h2>
+  <p><strong>Observed construct:</strong> ICB composition of practice-level interpretive-caution flags.</p>
+  <p><strong>Population:</strong> 6,067 practices across 42 ICBs</p>
+  <p class="scope"><strong>Population scope:</strong> Represents the 6,067 national practices aggregated across 42 March 2026 ICB organisations.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>Frozen profile uncertainty and March 2026 ICB geography</dd>
+      <dt>Method</dt><dd>Descriptive ICB aggregation only</dd>
+      <dt>Main result</dt><dd>The ICB-level share carrying interpretive caution was mapped descriptively.</dd>
+      <dt>Permitted wording</dt><dd>Assignment uncertainty varied descriptively across ICBs.</dd>
+      <dt>Prohibited wording</dt><dd>Assignment uncertainty is geographically patterned or shows spatial clustering.</dd>
+      <dt>Uncertainty and bias</dt><dd>Descriptive shares only; no inferential performance comparison. Variation in profile geometry and local practice mix.</dd>
+      <dt>Additional evidence</dt><dd>Additional algorithms and years would improve uncertainty characterisation.</dd>
+      <dt>Repository evidence</dt><dd><a href="../../qgis/data/icb_profile_mapping_layer.geojson">icb_profile_mapping_layer.geojson</a>, <a href="../../outputs/maps/icb_profile_composition.png">icb_profile_composition.png</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="ACCESS" data-support="DESCRIPTIVELY_SUPPORTED" data-search="c09 evidence availability differs across profiles. source-row presence and primary/sensitivity-valid coverage by profile and source family. external context source-availability indicators 6,067 practices with measure-specific validity coverage varies by source and profile; missing evidence was retained as missing rather than zero-filled. external evidence availability differed for some source-profile combinations.">
+  <header><span class="claim-id">C09</span><span class="support support-descriptively_supported">● Descriptively supported</span></header>
+  <h2>Evidence availability differs across profiles.</h2>
+  <p><strong>Observed construct:</strong> Source-row presence and primary/sensitivity-valid coverage by profile and source family.</p>
+  <p><strong>Population:</strong> 6,067 practices with measure-specific validity</p>
+  <p class="scope"><strong>Population scope:</strong> Directly represents the 6,067 practices in the national analytical cohort unless the claim records a narrower valid population.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>External context source-availability indicators</dd>
+      <dt>Method</dt><dd>Descriptive coverage and source-specific availability tests</dd>
+      <dt>Main result</dt><dd>Coverage varies by source and profile; missing evidence was retained as missing rather than zero-filled.</dd>
+      <dt>Permitted wording</dt><dd>External evidence availability differed for some source-profile combinations.</dd>
+      <dt>Prohibited wording</dt><dd>Missing external evidence indicates low activity or poor performance.</dd>
+      <dt>Uncertainty and bias</dt><dd>Cramér’s V with confidence intervals or no-variation result, depending on source. Selective source availability can bias contextual comparison.</dd>
+      <dt>Additional evidence</dt><dd>More complete source submission would reduce availability bias.</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/national_profile_assignments.csv">national_profile_assignments.csv</a>, <a href="../../outputs/tables/national_profile_quality.csv">national_profile_quality.csv</a>, <a href="../../outputs/tables/national_cohort_flow.csv">national_cohort_flow.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="ACCESS" data-support="NOT_SUPPORTABLE_WITH_CURRENT_PUBLIC_DATA" data-search="d01 the sources measure total demand. total patient demand across all routes ocs, gpad, cbt and external context do not directly measure the required construct no valid analytical cohort for this construct the public sources record selected activities, not all demand. the current data do not support the claim: the sources measure total demand.">
+  <header><span class="claim-id">D01</span><span class="support support-not_supportable_with_current_public_data">○ Additional evidence required</span></header>
+  <h2>The sources measure total demand.</h2>
+  <p><strong>Observed construct:</strong> Total patient demand across all routes</p>
+  <p><strong>Population:</strong> No valid analytical cohort for this construct</p>
+  <p class="scope"><strong>Population scope:</strong> No valid analytical cohort exists for this construct in the available evidence.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>OCS, GPAD, CBT and external context do not directly measure the required construct</dd>
+      <dt>Method</dt><dd>Evidence-gap assessment only</dd>
+      <dt>Main result</dt><dd>The public sources record selected activities, not all demand.</dd>
+      <dt>Permitted wording</dt><dd>The current data do not support the claim: The sources measure total demand.</dd>
+      <dt>Prohibited wording</dt><dd>The sources measure total demand.</dd>
+      <dt>Uncertainty and bias</dt><dd>Not estimable from the current data. Construct substitution, ecological inference and unmeasured confounding.</dd>
+      <dt>Additional evidence</dt><dd>linked demand and contact-attempt records</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/claim_to_evidence_matrix.csv">claim_to_evidence_matrix.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="ACCESS" data-support="NOT_SUPPORTABLE_WITH_CURRENT_PUBLIC_DATA" data-search="d02 the profiles identify unmet need. unmet need ocs, gpad, cbt and external context do not directly measure the required construct no valid analytical cohort for this construct no direct unmet-need construct is present. the current data do not support the claim: the profiles identify unmet need.">
+  <header><span class="claim-id">D02</span><span class="support support-not_supportable_with_current_public_data">○ Additional evidence required</span></header>
+  <h2>The profiles identify unmet need.</h2>
+  <p><strong>Observed construct:</strong> Unmet need</p>
+  <p><strong>Population:</strong> No valid analytical cohort for this construct</p>
+  <p class="scope"><strong>Population scope:</strong> No valid analytical cohort exists for this construct in the available evidence.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>OCS, GPAD, CBT and external context do not directly measure the required construct</dd>
+      <dt>Method</dt><dd>Evidence-gap assessment only</dd>
+      <dt>Main result</dt><dd>No direct unmet-need construct is present.</dd>
+      <dt>Permitted wording</dt><dd>The current data do not support the claim: The profiles identify unmet need.</dd>
+      <dt>Prohibited wording</dt><dd>The profiles identify unmet need.</dd>
+      <dt>Uncertainty and bias</dt><dd>Not estimable from the current data. Construct substitution, ecological inference and unmeasured confounding.</dd>
+      <dt>Additional evidence</dt><dd>patient-reported unmet need and outcomes</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/claim_to_evidence_matrix.csv">claim_to_evidence_matrix.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="WORKLOAD" data-support="NOT_SUPPORTABLE_WITH_CURRENT_PUBLIC_DATA" data-search="d03 digital access reduces workload. change in clinical and administrative workload ocs, gpad, cbt and external context do not directly measure the required construct no valid analytical cohort for this construct no workload outcome or causal counterfactual is present. the current data do not support the claim: digital access reduces workload.">
+  <header><span class="claim-id">D03</span><span class="support support-not_supportable_with_current_public_data">○ Additional evidence required</span></header>
+  <h2>Digital access reduces workload.</h2>
+  <p><strong>Observed construct:</strong> Change in clinical and administrative workload</p>
+  <p><strong>Population:</strong> No valid analytical cohort for this construct</p>
+  <p class="scope"><strong>Population scope:</strong> No valid analytical cohort exists for this construct in the available evidence.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>OCS, GPAD, CBT and external context do not directly measure the required construct</dd>
+      <dt>Method</dt><dd>Evidence-gap assessment only</dd>
+      <dt>Main result</dt><dd>No workload outcome or causal counterfactual is present.</dd>
+      <dt>Permitted wording</dt><dd>The current data do not support the claim: Digital access reduces workload.</dd>
+      <dt>Prohibited wording</dt><dd>Digital access reduces workload.</dd>
+      <dt>Uncertainty and bias</dt><dd>Not estimable from the current data. Construct substitution, ecological inference and unmeasured confounding.</dd>
+      <dt>Additional evidence</dt><dd>longitudinal staff-time and workload measures with a comparator</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/claim_to_evidence_matrix.csv">claim_to_evidence_matrix.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="WORKLOAD" data-support="NOT_SUPPORTABLE_WITH_CURRENT_PUBLIC_DATA" data-search="d04 the profiles reveal hidden administrative workload. unrecorded administrative work ocs, gpad, cbt and external context do not directly measure the required construct no valid analytical cohort for this construct hidden administrative work is not observed. the current data do not support the claim: the profiles reveal hidden administrative workload.">
+  <header><span class="claim-id">D04</span><span class="support support-not_supportable_with_current_public_data">○ Additional evidence required</span></header>
+  <h2>The profiles reveal hidden administrative workload.</h2>
+  <p><strong>Observed construct:</strong> Unrecorded administrative work</p>
+  <p><strong>Population:</strong> No valid analytical cohort for this construct</p>
+  <p class="scope"><strong>Population scope:</strong> No valid analytical cohort exists for this construct in the available evidence.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>OCS, GPAD, CBT and external context do not directly measure the required construct</dd>
+      <dt>Method</dt><dd>Evidence-gap assessment only</dd>
+      <dt>Main result</dt><dd>Hidden administrative work is not observed.</dd>
+      <dt>Permitted wording</dt><dd>The current data do not support the claim: The profiles reveal hidden administrative workload.</dd>
+      <dt>Prohibited wording</dt><dd>The profiles reveal hidden administrative workload.</dd>
+      <dt>Uncertainty and bias</dt><dd>Not estimable from the current data. Construct substitution, ecological inference and unmeasured confounding.</dd>
+      <dt>Additional evidence</dt><dd>workflow logs, staff time and task-level administrative records</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/claim_to_evidence_matrix.csv">claim_to_evidence_matrix.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="WORKLOAD" data-support="NOT_SUPPORTABLE_WITH_CURRENT_PUBLIC_DATA" data-search="d05 the data measure repeat contact. repeated contacts for the same episode ocs, gpad, cbt and external context do not directly measure the required construct no valid analytical cohort for this construct records are not linked into patient episodes. the current data do not support the claim: the data measure repeat contact.">
+  <header><span class="claim-id">D05</span><span class="support support-not_supportable_with_current_public_data">○ Additional evidence required</span></header>
+  <h2>The data measure repeat contact.</h2>
+  <p><strong>Observed construct:</strong> Repeated contacts for the same episode</p>
+  <p><strong>Population:</strong> No valid analytical cohort for this construct</p>
+  <p class="scope"><strong>Population scope:</strong> No valid analytical cohort exists for this construct in the available evidence.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>OCS, GPAD, CBT and external context do not directly measure the required construct</dd>
+      <dt>Method</dt><dd>Evidence-gap assessment only</dd>
+      <dt>Main result</dt><dd>Records are not linked into patient episodes.</dd>
+      <dt>Permitted wording</dt><dd>The current data do not support the claim: The data measure repeat contact.</dd>
+      <dt>Prohibited wording</dt><dd>The data measure repeat contact.</dd>
+      <dt>Uncertainty and bias</dt><dd>Not estimable from the current data. Construct substitution, ecological inference and unmeasured confounding.</dd>
+      <dt>Additional evidence</dt><dd>linked pseudonymised request/contact episodes</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/claim_to_evidence_matrix.csv">claim_to_evidence_matrix.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="ACCESS" data-support="NOT_SUPPORTABLE_WITH_CURRENT_PUBLIC_DATA" data-search="d06 requests were resolved. request resolution ocs, gpad, cbt and external context do not directly measure the required construct no valid analytical cohort for this construct no request-resolution outcome is available. the current data do not support the claim: requests were resolved.">
+  <header><span class="claim-id">D06</span><span class="support support-not_supportable_with_current_public_data">○ Additional evidence required</span></header>
+  <h2>Requests were resolved.</h2>
+  <p><strong>Observed construct:</strong> Request resolution</p>
+  <p><strong>Population:</strong> No valid analytical cohort for this construct</p>
+  <p class="scope"><strong>Population scope:</strong> No valid analytical cohort exists for this construct in the available evidence.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>OCS, GPAD, CBT and external context do not directly measure the required construct</dd>
+      <dt>Method</dt><dd>Evidence-gap assessment only</dd>
+      <dt>Main result</dt><dd>No request-resolution outcome is available.</dd>
+      <dt>Permitted wording</dt><dd>The current data do not support the claim: Requests were resolved.</dd>
+      <dt>Prohibited wording</dt><dd>Requests were resolved.</dd>
+      <dt>Uncertainty and bias</dt><dd>Not estimable from the current data. Construct substitution, ecological inference and unmeasured confounding.</dd>
+      <dt>Additional evidence</dt><dd>request-level outcome and closure status</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/claim_to_evidence_matrix.csv">claim_to_evidence_matrix.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="ACCESS" data-support="NOT_SUPPORTABLE_WITH_CURRENT_PUBLIC_DATA" data-search="d07 the data measure timeliness from first request to resolution. elapsed time from first request to resolution ocs, gpad, cbt and external context do not directly measure the required construct no valid analytical cohort for this construct the required start and resolution timestamps are absent. the current data do not support the claim: the data measure timeliness from first request to resolution.">
+  <header><span class="claim-id">D07</span><span class="support support-not_supportable_with_current_public_data">○ Additional evidence required</span></header>
+  <h2>The data measure timeliness from first request to resolution.</h2>
+  <p><strong>Observed construct:</strong> Elapsed time from first request to resolution</p>
+  <p><strong>Population:</strong> No valid analytical cohort for this construct</p>
+  <p class="scope"><strong>Population scope:</strong> No valid analytical cohort exists for this construct in the available evidence.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>OCS, GPAD, CBT and external context do not directly measure the required construct</dd>
+      <dt>Method</dt><dd>Evidence-gap assessment only</dd>
+      <dt>Main result</dt><dd>The required start and resolution timestamps are absent.</dd>
+      <dt>Permitted wording</dt><dd>The current data do not support the claim: The data measure timeliness from first request to resolution.</dd>
+      <dt>Prohibited wording</dt><dd>The data measure timeliness from first request to resolution.</dd>
+      <dt>Uncertainty and bias</dt><dd>Not estimable from the current data. Construct substitution, ecological inference and unmeasured confounding.</dd>
+      <dt>Additional evidence</dt><dd>time-stamped linked request-to-resolution journeys</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/claim_to_evidence_matrix.csv">claim_to_evidence_matrix.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="SAFETY" data-support="NOT_SUPPORTABLE_WITH_CURRENT_PUBLIC_DATA" data-search="d08 the profiles identify safer access. safety outcomes attributable to access ocs, gpad, cbt and external context do not directly measure the required construct no valid analytical cohort for this construct no safety outcome is present. the current data do not support the claim: the profiles identify safer access.">
+  <header><span class="claim-id">D08</span><span class="support support-not_supportable_with_current_public_data">○ Additional evidence required</span></header>
+  <h2>The profiles identify safer access.</h2>
+  <p><strong>Observed construct:</strong> Safety outcomes attributable to access</p>
+  <p><strong>Population:</strong> No valid analytical cohort for this construct</p>
+  <p class="scope"><strong>Population scope:</strong> No valid analytical cohort exists for this construct in the available evidence.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>OCS, GPAD, CBT and external context do not directly measure the required construct</dd>
+      <dt>Method</dt><dd>Evidence-gap assessment only</dd>
+      <dt>Main result</dt><dd>No safety outcome is present.</dd>
+      <dt>Permitted wording</dt><dd>The current data do not support the claim: The profiles identify safer access.</dd>
+      <dt>Prohibited wording</dt><dd>The profiles identify safer access.</dd>
+      <dt>Uncertainty and bias</dt><dd>Not estimable from the current data. Construct substitution, ecological inference and unmeasured confounding.</dd>
+      <dt>Additional evidence</dt><dd>linked safety incidents, clinical outcomes and risk adjustment</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/claim_to_evidence_matrix.csv">claim_to_evidence_matrix.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="SAFETY" data-support="NOT_SUPPORTABLE_WITH_CURRENT_PUBLIC_DATA" data-search="d09 the profiles identify clinical quality. clinical quality ocs, gpad, cbt and external context do not directly measure the required construct no valid analytical cohort for this construct recorded activity is not a clinical-quality measure. the current data do not support the claim: the profiles identify clinical quality.">
+  <header><span class="claim-id">D09</span><span class="support support-not_supportable_with_current_public_data">○ Additional evidence required</span></header>
+  <h2>The profiles identify clinical quality.</h2>
+  <p><strong>Observed construct:</strong> Clinical quality</p>
+  <p><strong>Population:</strong> No valid analytical cohort for this construct</p>
+  <p class="scope"><strong>Population scope:</strong> No valid analytical cohort exists for this construct in the available evidence.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>OCS, GPAD, CBT and external context do not directly measure the required construct</dd>
+      <dt>Method</dt><dd>Evidence-gap assessment only</dd>
+      <dt>Main result</dt><dd>Recorded activity is not a clinical-quality measure.</dd>
+      <dt>Permitted wording</dt><dd>The current data do not support the claim: The profiles identify clinical quality.</dd>
+      <dt>Prohibited wording</dt><dd>The profiles identify clinical quality.</dd>
+      <dt>Uncertainty and bias</dt><dd>Not estimable from the current data. Construct substitution, ecological inference and unmeasured confounding.</dd>
+      <dt>Additional evidence</dt><dd>validated clinical-quality outcomes and risk adjustment</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/claim_to_evidence_matrix.csv">claim_to_evidence_matrix.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="EQUITY" data-support="NOT_SUPPORTABLE_WITH_CURRENT_PUBLIC_DATA" data-search="d10 the analysis demonstrates individual-level equity. individual-level differential access and outcomes ocs, gpad, cbt and external context do not directly measure the required construct no valid analytical cohort for this construct practice aggregates cannot establish individual equity. the current data do not support the claim: the analysis demonstrates individual-level equity.">
+  <header><span class="claim-id">D10</span><span class="support support-not_supportable_with_current_public_data">○ Additional evidence required</span></header>
+  <h2>The analysis demonstrates individual-level equity.</h2>
+  <p><strong>Observed construct:</strong> Individual-level differential access and outcomes</p>
+  <p><strong>Population:</strong> No valid analytical cohort for this construct</p>
+  <p class="scope"><strong>Population scope:</strong> No valid analytical cohort exists for this construct in the available evidence.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>OCS, GPAD, CBT and external context do not directly measure the required construct</dd>
+      <dt>Method</dt><dd>Evidence-gap assessment only</dd>
+      <dt>Main result</dt><dd>Practice aggregates cannot establish individual equity.</dd>
+      <dt>Permitted wording</dt><dd>The current data do not support the claim: The analysis demonstrates individual-level equity.</dd>
+      <dt>Prohibited wording</dt><dd>The analysis demonstrates individual-level equity.</dd>
+      <dt>Uncertainty and bias</dt><dd>Not estimable from the current data. Construct substitution, ecological inference and unmeasured confounding.</dd>
+      <dt>Additional evidence</dt><dd>individual-level protected characteristics, need, access and outcomes</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/claim_to_evidence_matrix.csv">claim_to_evidence_matrix.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="ACCESS" data-support="NOT_SUPPORTABLE_WITH_CURRENT_PUBLIC_DATA" data-search="d11 digital access causally changes outcomes. causal effect of digital access ocs, gpad, cbt and external context do not directly measure the required construct no valid analytical cohort for this construct the study is observational, aggregate and cross-sectional. the current data do not support the claim: digital access causally changes outcomes.">
+  <header><span class="claim-id">D11</span><span class="support support-not_supportable_with_current_public_data">○ Additional evidence required</span></header>
+  <h2>Digital access causally changes outcomes.</h2>
+  <p><strong>Observed construct:</strong> Causal effect of digital access</p>
+  <p><strong>Population:</strong> No valid analytical cohort for this construct</p>
+  <p class="scope"><strong>Population scope:</strong> No valid analytical cohort exists for this construct in the available evidence.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>OCS, GPAD, CBT and external context do not directly measure the required construct</dd>
+      <dt>Method</dt><dd>Evidence-gap assessment only</dd>
+      <dt>Main result</dt><dd>The study is observational, aggregate and cross-sectional.</dd>
+      <dt>Permitted wording</dt><dd>The current data do not support the claim: Digital access causally changes outcomes.</dd>
+      <dt>Prohibited wording</dt><dd>Digital access causally changes outcomes.</dd>
+      <dt>Uncertainty and bias</dt><dd>Not estimable from the current data. Construct substitution, ecological inference and unmeasured confounding.</dd>
+      <dt>Additional evidence</dt><dd>a credible causal design with exposure timing and counterfactual</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/claim_to_evidence_matrix.csv">claim_to_evidence_matrix.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="ACCESS" data-support="NOT_SUPPORTABLE_WITH_CURRENT_PUBLIC_DATA" data-search="d12 supplier products cause profile differences. causal supplier-product effect ocs, gpad, cbt and external context do not directly measure the required construct no valid analytical cohort for this construct supplier association is confounded by selection and implementation. the current data do not support the claim: supplier products cause profile differences.">
+  <header><span class="claim-id">D12</span><span class="support support-not_supportable_with_current_public_data">○ Additional evidence required</span></header>
+  <h2>Supplier products cause profile differences.</h2>
+  <p><strong>Observed construct:</strong> Causal supplier-product effect</p>
+  <p><strong>Population:</strong> No valid analytical cohort for this construct</p>
+  <p class="scope"><strong>Population scope:</strong> No valid analytical cohort exists for this construct in the available evidence.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>OCS, GPAD, CBT and external context do not directly measure the required construct</dd>
+      <dt>Method</dt><dd>Evidence-gap assessment only</dd>
+      <dt>Main result</dt><dd>Supplier association is confounded by selection and implementation.</dd>
+      <dt>Permitted wording</dt><dd>The current data do not support the claim: Supplier products cause profile differences.</dd>
+      <dt>Prohibited wording</dt><dd>Supplier products cause profile differences.</dd>
+      <dt>Uncertainty and bias</dt><dd>Not estimable from the current data. Construct substitution, ecological inference and unmeasured confounding.</dd>
+      <dt>Additional evidence</dt><dd>product-level exposure, implementation timing and causal comparison</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/claim_to_evidence_matrix.csv">claim_to_evidence_matrix.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="VALUE" data-support="NOT_SUPPORTABLE_WITH_CURRENT_PUBLIC_DATA" data-search="d13 the profiles demonstrate economic value or cost-effectiveness. costs, consequences and incremental value ocs, gpad, cbt and external context do not directly measure the required construct no valid analytical cohort for this construct no cost or outcome valuation is present. the current data do not support the claim: the profiles demonstrate economic value or cost-effectiveness.">
+  <header><span class="claim-id">D13</span><span class="support support-not_supportable_with_current_public_data">○ Additional evidence required</span></header>
+  <h2>The profiles demonstrate economic value or cost-effectiveness.</h2>
+  <p><strong>Observed construct:</strong> Costs, consequences and incremental value</p>
+  <p><strong>Population:</strong> No valid analytical cohort for this construct</p>
+  <p class="scope"><strong>Population scope:</strong> No valid analytical cohort exists for this construct in the available evidence.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>OCS, GPAD, CBT and external context do not directly measure the required construct</dd>
+      <dt>Method</dt><dd>Evidence-gap assessment only</dd>
+      <dt>Main result</dt><dd>No cost or outcome valuation is present.</dd>
+      <dt>Permitted wording</dt><dd>The current data do not support the claim: The profiles demonstrate economic value or cost-effectiveness.</dd>
+      <dt>Prohibited wording</dt><dd>The profiles demonstrate economic value or cost-effectiveness.</dd>
+      <dt>Uncertainty and bias</dt><dd>Not estimable from the current data. Construct substitution, ecological inference and unmeasured confounding.</dd>
+      <dt>Additional evidence</dt><dd>resource use, costs, outcomes and an economic comparator</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/claim_to_evidence_matrix.csv">claim_to_evidence_matrix.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="ACCESS" data-support="NOT_SUPPORTABLE_WITH_CURRENT_PUBLIC_DATA" data-search="e01 digital access improves access. causal improvement in access ocs, gpad, cbt, gpps and contextual sources no valid analytical cohort for this construct gpad/ocs activity and gpps associations do not establish improvement. the study does not establish that digital access improves access.">
+  <header><span class="claim-id">E01</span><span class="support support-not_supportable_with_current_public_data">○ Additional evidence required</span></header>
+  <h2>Digital access improves access.</h2>
+  <p><strong>Observed construct:</strong> Causal improvement in access</p>
+  <p><strong>Population:</strong> No valid analytical cohort for this construct</p>
+  <p class="scope"><strong>Population scope:</strong> No valid analytical cohort exists for this construct in the available evidence.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>OCS, GPAD, CBT, GPPS and contextual sources</dd>
+      <dt>Method</dt><dd>Evidence-boundary assessment only</dd>
+      <dt>Main result</dt><dd>GPAD/OCS activity and GPPS associations do not establish improvement.</dd>
+      <dt>Permitted wording</dt><dd>The study does not establish that digital access improves access.</dd>
+      <dt>Prohibited wording</dt><dd>Digital access improves access.</dd>
+      <dt>Uncertainty and bias</dt><dd>Not estimable as a causal improvement effect. Ecological fallacy, confounding, selection and temporal mismatch.</dd>
+      <dt>Additional evidence</dt><dd>request-level access outcomes, exposure timing and a credible comparator</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/claim_to_evidence_matrix.csv">claim_to_evidence_matrix.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="PATIENT_EXPERIENCE" data-support="NOT_SUPPORTABLE_WITH_CURRENT_PUBLIC_DATA" data-search="e02 digital access improves patient experience. causal improvement in patient experience ocs, gpad, cbt, gpps and contextual sources no valid analytical cohort for this construct gpps supports practice-level association, not causal patient-experience improvement. the study does not establish that digital access improves patient experience.">
+  <header><span class="claim-id">E02</span><span class="support support-not_supportable_with_current_public_data">○ Additional evidence required</span></header>
+  <h2>Digital access improves patient experience.</h2>
+  <p><strong>Observed construct:</strong> Causal improvement in patient experience</p>
+  <p><strong>Population:</strong> No valid analytical cohort for this construct</p>
+  <p class="scope"><strong>Population scope:</strong> No valid analytical cohort exists for this construct in the available evidence.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>OCS, GPAD, CBT, GPPS and contextual sources</dd>
+      <dt>Method</dt><dd>Evidence-boundary assessment only</dd>
+      <dt>Main result</dt><dd>GPPS supports practice-level association, not causal patient-experience improvement.</dd>
+      <dt>Permitted wording</dt><dd>The study does not establish that digital access improves patient experience.</dd>
+      <dt>Prohibited wording</dt><dd>Digital access improves patient experience.</dd>
+      <dt>Uncertainty and bias</dt><dd>Not estimable as a causal improvement effect. Ecological fallacy, confounding, selection and temporal mismatch.</dd>
+      <dt>Additional evidence</dt><dd>longitudinal patient-level experience linked to exposure and a causal comparator</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/claim_to_evidence_matrix.csv">claim_to_evidence_matrix.csv</a></dd>
+    </dl>
+  </details>
+</article><article class="claim-card" data-domain="EQUITY" data-support="NOT_SUPPORTABLE_WITH_CURRENT_PUBLIC_DATA" data-search="e03 digital access improves equity. causal improvement in individual-level equity ocs, gpad, cbt, gpps and contextual sources no valid analytical cohort for this construct deprivation, rurality and age provide ecological context, not individual-level equity improvement. the study does not establish that digital access improves equity.">
+  <header><span class="claim-id">E03</span><span class="support support-not_supportable_with_current_public_data">○ Additional evidence required</span></header>
+  <h2>Digital access improves equity.</h2>
+  <p><strong>Observed construct:</strong> Causal improvement in individual-level equity</p>
+  <p><strong>Population:</strong> No valid analytical cohort for this construct</p>
+  <p class="scope"><strong>Population scope:</strong> No valid analytical cohort exists for this construct in the available evidence.</p>
+  <details><summary>Evidence, wording and limits</summary>
+    <dl>
+      <dt>Source datasets</dt><dd>OCS, GPAD, CBT, GPPS and contextual sources</dd>
+      <dt>Method</dt><dd>Evidence-boundary assessment only</dd>
+      <dt>Main result</dt><dd>Deprivation, rurality and age provide ecological context, not individual-level equity improvement.</dd>
+      <dt>Permitted wording</dt><dd>The study does not establish that digital access improves equity.</dd>
+      <dt>Prohibited wording</dt><dd>Digital access improves equity.</dd>
+      <dt>Uncertainty and bias</dt><dd>Not estimable as a causal improvement effect. Ecological fallacy, confounding, selection and temporal mismatch.</dd>
+      <dt>Additional evidence</dt><dd>individual-level need, protected characteristics, access journeys, outcomes and a causal design</dd>
+      <dt>Repository evidence</dt><dd><a href="../../outputs/tables/claim_to_evidence_matrix.csv">claim_to_evidence_matrix.csv</a></dd>
+    </dl>
+  </details>
+</article></section>
+  <p id="empty" hidden>No claims match the selected filters.</p>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

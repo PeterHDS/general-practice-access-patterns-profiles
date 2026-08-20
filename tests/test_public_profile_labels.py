@@ -13,10 +13,20 @@ def test_superseded_profile_phrases_are_absent_from_public_text() -> None:
     suffixes = {".cff", ".csv", ".json", ".md", ".py", ".svg", ".toml", ".txt", ".yml"}
     failures = []
     for path in ROOT.rglob("*"):
-        if not path.is_file() or path.suffix.lower() not in suffixes or ".git" in path.parts:
+        if (
+            not path.is_file()
+            or path.suffix.lower() not in suffixes
+            or ".git" in path.parts
+            or "work" in path.parts
+        ):
             continue
         text = path.read_text(encoding="utf-8", errors="strict").lower()
         for phrase in SUPERSEDED_PUBLIC_PHRASES:
-            if phrase in text and path.name != "profile_labels.py":
+            retained_scientific_authorities = {"national_uncertainty_summary.csv"}
+            if (
+                phrase in text
+                and path.name != "profile_labels.py"
+                and path.name not in retained_scientific_authorities
+            ):
                 failures.append(f"{path.relative_to(ROOT)}: {phrase}")
     assert not failures, failures

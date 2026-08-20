@@ -1,4 +1,4 @@
-"""Write compact machine-readable validation evidence for the public candidate."""
+"""Write compact machine-readable validation evidence for the reference repository."""
 
 from __future__ import annotations
 
