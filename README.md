@@ -54,7 +54,7 @@ The profiles describe configurations of **recorded practice activity**. They are
 | National model selection | Which descriptive partition is stable and interpretable? | [National model notebook](notebooks/02_select_national_access_pressure_profiles.ipynb), [model-selection summary](outputs/tables/national_model_selection_summary.csv) |
 | Profiles and uncertainty | What characterises each profile, and which assignments are uncertain? | [Profile interpretation](docs/profile-interpretation.md), [uncertainty summary](outputs/tables/national_uncertainty_summary.csv) |
 | Robustness and sensitivity | Do algorithms, features, telephony evidence or time windows alter the pattern? | [CBT inbound](notebooks/03_test_telephone_inbound_evidence.ipynb), [CBT outcomes](notebooks/04_test_telephone_outcome_composition.ipynb), [temporal analysis](notebooks/05_assess_temporal_persistence.ipynb) |
-| External interpretation | How are profiles associated with patient experience, workforce, deprivation and rurality? | [External-context notebook](notebooks/06_interpret_profiles_with_external_context.ipynb) |
+| External interpretation | How are profiles associated with patient experience, workforce, deprivation and rurality? | [External-context notebook](notebooks/06_interpret_profiles_with_external_context.ipynb), [GPPS interpretation](docs/gpps-interpretation.md) |
 | Geography | How are profiles distributed across 42 March 2026 ICB organisations? | [QGIS project](qgis/README.md), [geography guide](docs/geography-and-qgis.md) |
 | Evidence readiness | Which claims are supported, qualified or require more evidence? | [Evidence-readiness notebook](notebooks/07_translate_profiles_into_evidence_readiness.ipynb), [Evidence Map](docs/evidence-map/index.html) |
 
