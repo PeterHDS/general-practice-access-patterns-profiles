@@ -4,9 +4,12 @@ title: "GPAP²: General Practice Access Patterns and Profiles"
 type: software
 authors:
   - family-names: Oluwatimilehin
-    given-names: Peter
+    given-names: Peter Seyi
 version: 1.0.0
+date-released: 2026-08-20
 license: MIT
+repository-code: "https://github.com/PeterHDS/general-practice-access-patterns-profiles"
+url: "https://github.com/PeterHDS/general-practice-access-patterns-profiles"
 keywords:
   - primary care
   - digital access
